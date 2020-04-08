@@ -8,7 +8,6 @@ import Header from "../components/Header/Header"
 import Project from "../components/Project/Project"
 import Skills from "../components/Skills/Skills"
 import About from '../components/About/About'
-import Contact from '../components/Contact/Contact'
 
 
 const Index = ({ data, location }) => {
@@ -24,7 +23,6 @@ const Index = ({ data, location }) => {
 
       <Skills />
       <About />
-      <Contact />
     </Layout>
   )
 }

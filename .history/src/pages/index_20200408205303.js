@@ -24,7 +24,6 @@ const Index = ({ data, location }) => {
 
       <Skills />
       <About />
-      <Contact />
     </Layout>
   )
 }
