@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Leonardo Tononi`,
     author: {
-      name: `Leonardo Tononi`,
-      summary: `A React Developer.`,
+      name: `Kyle Mathews`,
+      summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `Hi, this is my website where I show what I can do.`,
-    siteUrl: ``,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `_Easaaa_`,
+      twitter: `kylemathews`,
     },
   },
   plugins: [

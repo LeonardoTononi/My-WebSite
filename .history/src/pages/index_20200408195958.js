@@ -6,12 +6,13 @@ import SEO from "../components/seo"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="My web site" />
 
-      <h1>Index</h1>
+      <h1>header</h1>
       <Link to="/blog">Blog</Link>
     </Layout>
   )

@@ -1,16 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>Project</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+      <header>{header}</header>
       <main>{children}</main>
       <footer>leonardotononi@gmail.com</footer>
     </>

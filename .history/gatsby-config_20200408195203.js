@@ -8,7 +8,7 @@ module.exports = {
     description: `Hi, this is my website where I show what I can do.`,
     siteUrl: ``,
     social: {
-      twitter: `_Easaaa_`,
+      twitter: `kylemathews`,
     },
   },
   plugins: [

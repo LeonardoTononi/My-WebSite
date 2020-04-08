@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
   return (
     <Layout location={location} title={siteTitle}>
