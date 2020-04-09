@@ -1,6 +1,5 @@
 import React from "react"
 import { StyledHeader, DownloadButton } from './Header.styles'
-
 const Header = () => {
   return (
     <StyledHeader>

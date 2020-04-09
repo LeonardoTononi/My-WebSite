@@ -2,11 +2,7 @@ import styled from "styled-components"
 
 export const StyledHeader = styled.header`
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
-
-  height: 80vh;
   padding: 2rem;
-  display: grid;
-  place-content: center;
 
   h5 {
     text-transform: uppercase;

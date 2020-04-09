@@ -18,10 +18,10 @@ const GlobalStyle = createGlobalStyle`
     color: #3F3D56; 
   }
 
-  h2,h4,h5 {
+  h1,h2,h4,h5 {
     font-family: 'Nunito Sans', sans-serif;
   }
-  h1,h3 {
+  h3 {
     font-family: 'Playfair Display', serif;
   }
 `

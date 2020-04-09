@@ -1,6 +1,5 @@
 import React from "react"
-import { StyledHeader, DownloadButton } from './Header.styles'
-
+import { StyledHeader } from './Header.styles'
 const Header = () => {
   return (
     <StyledHeader>
@@ -9,11 +8,9 @@ const Header = () => {
       <h4>I Love Learning</h4>
       <h4>I'm a Team Player</h4>
       <h4>I'm Really Determinate</h4>
-      <DownloadButton>
-        <a href="" download>
-          Download Resume
+      <a href="" download>
+        Download Resume
       </a>
-      </DownloadButton>
     </StyledHeader>
   )
 }

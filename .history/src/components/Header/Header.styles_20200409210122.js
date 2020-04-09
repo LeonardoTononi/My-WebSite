@@ -1,12 +1,7 @@
 import styled from "styled-components"
 
 export const StyledHeader = styled.header`
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
-
-  height: 80vh;
   padding: 2rem;
-  display: grid;
-  place-content: center;
 
   h5 {
     text-transform: uppercase;
@@ -34,16 +29,11 @@ export const StyledHeader = styled.header`
   h4:last-of-type {
     margin-bottom: 3rem;
   }
-`
 
-export const DownloadButton = styled.div`
-a {
+  a {
     padding: .7rem 1rem; 
-    border: 3px solid #3F3D56;
-    border-radius: 15px;    
-    font-weight: 600;
-    letter-spacing: 0.02em;
-     font-style:normal; 
-     mix-blend-mode: normal;
+    border: 2px solid #3F3D56;
+    border-radius: 10px;    
+    text-transform: uppercase;
   }
 `

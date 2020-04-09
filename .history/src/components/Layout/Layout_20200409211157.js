@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components"
 import { LayoutContainer, NavContainer, NavList, StyledFooter } from './Layout.styles'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900|Playfair+Display:400,500,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900|Playfair+Display:400,500,700|Quicksand:400,500,700&display=swap');
   
   body {
     font-family: 'Nunito Sans', sans-serif;
@@ -23,6 +23,9 @@ const GlobalStyle = createGlobalStyle`
   }
   h1,h3 {
     font-family: 'Playfair Display', serif;
+  }
+  header a {
+    font-family: 'Quicksand', sans-serif;
   }
 `
 
