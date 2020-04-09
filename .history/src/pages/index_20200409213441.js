@@ -12,7 +12,7 @@ import Contact from '../components/Contact/Contact'
 
 
 const ProjectTitle = styled.h3`
-   font-size: 2.5rem;
+   font-size: 2rem;
    padding: 2rem;
 `
 

@@ -14,8 +14,8 @@ const Project = ({ text, tags, GitHubLink, LiveLink }) => {
         ))}
       </Tags>
       <SocialsContainer>
-        <a href={GitHubLink} target="t_blank"><img src={GithubIcon} alt="github icon"/></a>
-        <a href={LiveLink} target="t_blank"><img src={WebIcon} alt="web icon"/></a>
+        <a href={GitHubLink}><img src={GithubIcon} alt=""/></a>
+        <a href={LiveLink}><img src={WebIcon} alt=""/> </a>
       </SocialsContainer>
     </ProjectContainer>
   )
