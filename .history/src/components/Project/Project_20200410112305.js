@@ -8,7 +8,7 @@ import WebIcon from '../../assets/web.png'
 const Project = ({ text, tags, GitHubLink, LiveLink }) => {
   return (
     <ProjectContainer>
-      <ImageProto src={BestfiveImg} alt=""/>
+      <imImageProto src={BestfiveImg} alt=""/>
       <Description>{text}</Description>
       <Tags>
         {tags.map(tag => (

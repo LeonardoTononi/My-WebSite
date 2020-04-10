@@ -9,7 +9,6 @@ export const ImageProto = styled.img`
     left: 12%;
     width: 80%;
     top: 3rem;
-    max-width: 550px;
 `
 
 export const Description = styled.p`

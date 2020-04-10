@@ -1,5 +1,5 @@
 import React from "react"
-import { ProjectContainer, ImageProto, Description, Tags, SocialsContainer } from './Project.styles'
+import { ProjectContainer, Description, Tags, SocialsContainer } from './Project.styles'
 
 import BestfiveImg from '../../assets/projects/bestfive.png'
 import GithubIcon from '../../assets/github.svg'
@@ -8,7 +8,7 @@ import WebIcon from '../../assets/web.png'
 const Project = ({ text, tags, GitHubLink, LiveLink }) => {
   return (
     <ProjectContainer>
-      <ImageProto src={BestfiveImg} alt=""/>
+      <img src={BestfiveImg} alt=""/>
       <Description>{text}</Description>
       <Tags>
         {tags.map(tag => (
