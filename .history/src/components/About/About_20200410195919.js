@@ -12,7 +12,7 @@ const About = () => {
 			</Text>
 			<ImageStyled src={MyPhoto} alt='' />
 			<Text>
-				I fell to enjoy the power of those technology and currently I also started studying <strong>ReactNative</strong>. I really like having to deal with new challenges and problems to solve, I am not afraid to learn new things.
+				I fell to enjoy the power of those technology and currently I also started studying ReactNative. I really like having to deal with new challenges and problems to solve, I am not afraid to learn new things.
 			</Text>
 		</AboutContainer>
 	);

@@ -14,6 +14,7 @@ import Contact from '../components/Contact/Contact'
 const ProjectTitle = styled.h3`
    font-size: 2.5rem;
    padding: 2rem;
+   margin: 2rem 0;
 `
 
 const Index = ({ data, location }) => {
