@@ -13,7 +13,7 @@ import Contact from '../components/Contact/Contact'
 
 const ProjectTitle = styled.h3`
    font-size: 2.5rem;
-   padding: 8rem 2rem 2rem 2rem;
+   padding: 2rem;
 `
 
 const Index = ({ data, location }) => {

@@ -22,7 +22,7 @@ const Contact = () => {
         <a href='mailto:leonardotononi@gmail.com'><IconSocial icon={mailIcon} /></a>
 			</SocialLink>
 			<SocialLink>
-				<a href='https://github.com/Easaaa' target="_blank"><IconSocial icon={githubFilled}/></a>
+				<a href='' target="_blank"><IconSocial icon={githubFilled}/></a>
 			</SocialLink>
 			<SocialLink>
 				<a href='https://www.linkedin.com/in/leonardo-tononi/' target="_blank"><IconSocial icon={linkedinIcon} /></a>
