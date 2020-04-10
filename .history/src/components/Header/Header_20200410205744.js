@@ -1,6 +1,6 @@
 import React from "react"
 
-import  BgHeader from '../BgHeader/BgHeader'
+import {BgHeader} from '../BgHeader/BgHeader'
 import { StyledHeader, DownloadButton } from './Header.styles'
 
 const Header = () => {

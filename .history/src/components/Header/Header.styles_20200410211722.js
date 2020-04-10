@@ -61,13 +61,7 @@ a {
     border-radius: 15px;    
     font-weight: 600;
     letter-spacing: 0.02em;
-    font-style:normal; 
-    mix-blend-mode: normal;
-
-    @media (min-width: 600px) {
-       font-size: 1.4rem;
-       font-weight: 400;
-       text-transform: uppercase;
-     }
+     font-style:normal; 
+     mix-blend-mode: normal;
   }
 `

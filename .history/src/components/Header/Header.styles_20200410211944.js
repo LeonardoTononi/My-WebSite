@@ -59,15 +59,13 @@ a {
     padding: .7rem 1rem; 
     border: 3px solid #3F3D56;
     border-radius: 15px;    
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.02em;
     font-style:normal; 
     mix-blend-mode: normal;
 
     @media (min-width: 600px) {
-       font-size: 1.4rem;
-       font-weight: 400;
-       text-transform: uppercase;
+       font-size: 1.3rem;
      }
   }
 `

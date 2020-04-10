@@ -7,13 +7,11 @@ import { LayoutContainer, NavContainer, NavList, StyledFooter } from './Layout.s
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900|Playfair+Display:400,500,700&display=swap');
   
-  html {
-    overflow-x: hidden;
-  }
   body {
     font-family: 'Nunito Sans', sans-serif;
     color: #3F3D56;
     font-size: 16px;
+    overflow: hidden;
   }
   a {
     text-decoration: none;

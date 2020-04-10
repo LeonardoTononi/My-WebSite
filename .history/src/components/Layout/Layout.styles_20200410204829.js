@@ -21,7 +21,7 @@ export const NavList = styled.ul`
     justify-content: flex-end;
 
     li {
-      padding: 1rem;
+      margin: 1rem 2rem
     }
   }
 

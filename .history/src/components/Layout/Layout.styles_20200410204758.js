@@ -19,10 +19,6 @@ export const NavList = styled.ul`
 
   @media (min-width: 600px) {
     justify-content: flex-end;
-
-    li {
-      padding: 1rem;
-    }
   }
 
   li {

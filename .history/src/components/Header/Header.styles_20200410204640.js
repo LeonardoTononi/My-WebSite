@@ -13,11 +13,11 @@ export const StyledHeader = styled.header`
   background-image: url(${Background});
   background-size: cover;
 
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     padding: 10rem;
     justify-content: start;
     align-content: center;
-    background-image: none;
+    background-size: initial;
   }
 
   h5 {
@@ -45,8 +45,6 @@ export const StyledHeader = styled.header`
     text-transform: initial;
     font-weight: 500;
     margin-bottom: 0.5rem;
-
-    @media (min-width: 600px) { font-size: 2rem}
   }
 
   h4:last-of-type {
@@ -61,13 +59,7 @@ a {
     border-radius: 15px;    
     font-weight: 600;
     letter-spacing: 0.02em;
-    font-style:normal; 
-    mix-blend-mode: normal;
-
-    @media (min-width: 600px) {
-       font-size: 1.4rem;
-       font-weight: 400;
-       text-transform: uppercase;
-     }
+     font-style:normal; 
+     mix-blend-mode: normal;
   }
 `

@@ -65,9 +65,7 @@ a {
     mix-blend-mode: normal;
 
     @media (min-width: 600px) {
-       font-size: 1.4rem;
-       font-weight: 400;
-       text-transform: uppercase;
+       font-size: 1.3rem;
      }
   }
 `
