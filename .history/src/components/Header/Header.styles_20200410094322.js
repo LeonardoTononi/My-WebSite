@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Background from '../../assets/PlayBG.png'
+import {Background} from '../../assets/PlayBG.png'
 export const StyledHeader = styled.header`
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
 
@@ -7,8 +7,7 @@ export const StyledHeader = styled.header`
   padding: 2rem;
   display: grid;
   place-content: center;
-  background-image: url(${Background});
-  background-size: cover;
+  background-image: url(Background);
 
   h5 {
     text-transform: uppercase;

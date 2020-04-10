@@ -7,8 +7,7 @@ export const StyledHeader = styled.header`
   padding: 2rem;
   display: grid;
   place-content: center;
-  background-image: url(${Background});
-  background-size: cover;
+  background: url(Background);
 
   h5 {
     text-transform: uppercase;

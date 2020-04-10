@@ -8,7 +8,6 @@ export const StyledHeader = styled.header`
   display: grid;
   place-content: center;
   background-image: url(${Background});
-  background-size: cover;
 
   h5 {
     text-transform: uppercase;
