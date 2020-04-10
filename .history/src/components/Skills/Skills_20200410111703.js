@@ -22,12 +22,12 @@ const Skills = () => {
       <ul>
         <li><img src={HtmlIcon} alt="html icon" /> <span>Html</span></li>
         <li><img src={CssIcon} alt="css icon" /> <span></span> Css</li>
-        <li><img src={SassIcon} alt=" icon" style={{ width: '50px' }}/> <span></span> Sass</li>
+        <li><img src={SassIcon} alt=" icon" /> <span></span> Sass</li>
         <li><img src={JsIcon} alt=" icon" /> <span></span> JavaScript</li>
         <li><img src={ReactIcon} alt=" icon" /> <span></span> React.js</li>
         <li><img src={ReduxIcon} alt=" icon" /> <span></span> Redux</li>
         <li><img src={GatsbyIcon} alt=" icon" /> <span></span> Gatsby.js</li>
-        <li><img src={PwaIcon} alt=" icon" style={{width: '60px'}}/> <span>Progressive Web App</span></li>
+        <li><img src={PwaIcon} alt=" icon" style={{width: '60px'}}/> <span></span></li>
         <li><img src={FirebaseIcon} alt=" icon" /> <span></span> Firebase</li>
         {/* <li><img src={MongoIcon} alt=" icon" /> <span></span> MongoDB</li>
         <li><img src={NodeIcon} alt=" icon" /> <span></span> Node.js</li>
