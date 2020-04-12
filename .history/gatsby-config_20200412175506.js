@@ -29,8 +29,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-mailchimp',
 			options: {
-				endpoint:
-					'https://leonardotononi.us19.list-manage.com/subscribe/post?u=0e17379be535600a870fd35b5&amp;id=fb07199113'
+				endpoint: '' // add your MC list endpoint here; see instructions below
 			}
 		},
 		{

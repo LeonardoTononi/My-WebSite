@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import BgHeader from '../BgHeader/BgHeader';
-import { StyledHeader, FormSubscribe, EmailInput, SubmitInput } from './BlogHeader.styles';
+import { StyledHeader, FormSubscribe, SubmitInput } from './BlogHeader.styles';
 
 const BlogHeader = () => {
 	const [ result, setResult ] = useState(null);
@@ -11,8 +11,8 @@ const BlogHeader = () => {
 		setEmail(e.target.value);
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
+	const handleSubmit = (event) => {
+		event.preventDefault();
 		addToMailchimp(email)
 			.then(({ msg, result }) => {
 				console.log('msg', `${result}: ${msg}`);
@@ -37,9 +37,9 @@ const BlogHeader = () => {
 				Subscribe to receive my new post <br /> directly to your inbox.
 			</h4>
 			<p>No spam guaranteed.</p>
-			<FormSubscribe onSubmit={handleSubmit}>
-				<EmailInput type='email' placeholder='Your E-mail' value={email} onChange={handleEmail} />
-				<SubmitInput type='submit' value='Subscribe' />
+			<FormSubscribe onSubmit={() => handleSubmit(email)}>
+				<input type='email' placeholder='Your E-mail' value={email} onChange={handleEmail} />
+				<SubmitInput type='submit'>Subscribe</SubmitInput>
 			</FormSubscribe>
 		</StyledHeader>
 	);

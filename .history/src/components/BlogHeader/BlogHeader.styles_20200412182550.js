@@ -68,20 +68,21 @@ export const StyledHeader = styled.header`
 export const FormSubscribe = styled.form`
 	position: relative;
 	top: 3rem;
-`;
 
-export const EmailInput = styled.input`
-	border: 2px solid #3f3d56;
-	border-radius: 15px 0px 0px 15px;
-	width: 50%;
-	height: 45px;
-	outline: none;
-	padding: 0 2rem;
+	input {
+		border: 2px solid #3f3d56;
+		border-radius: 15px 0px 0px 15px;
+		width: 50%;
+		height: 45px;
+		outline: none;
+		padding: 0 2rem;
 
-	@media only screen and (min-width: 600px) {
-		width: 250px;
+		@media only screen and (min-width: 600px) {
+			width: 250px;
+		}
 	}
 `;
+
 export const SubmitInput = styled.input`
 	background: #3f3d56;
 	border: 2px solid #3f3d56;
