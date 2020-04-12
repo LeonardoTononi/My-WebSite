@@ -45,8 +45,6 @@ const Index = ({ data, location }) => {
 				tags={[ 'React.js', 'Gatsby', 'Mobile & Desktop View' ]}
 				GitHubLink='https://github.com/Easaaa/hotel-vittoria-2020'
 				LiveLink='https://hotelvittoria.netlify.com/'
-				order1='2'
-				order2='1'
 			/>
 			<Project
 				imgLink={ToureAppImg}

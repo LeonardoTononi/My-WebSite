@@ -28,7 +28,7 @@ export const Title = styled.h3`
 	@media only screen and (min-width: 600px) {
 		text-align: end;
 		padding-top: 25rem;
-		padding-bottom: 10rem;
+		padding-bottom: 15rem;
 	}
 `;
 

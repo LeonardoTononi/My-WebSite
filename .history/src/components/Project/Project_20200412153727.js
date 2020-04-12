@@ -14,28 +14,26 @@ import {
 import GithubIcon from '../../assets/github.svg';
 import WebIcon from '../../assets/web.png';
 
-const Project = ({ text, tags, GitHubLink, LiveLink, firstProject, imgLink, mobile, workingOn, order1, order2 }) => {
+const Project = ({ text, tags, GitHubLink, LiveLink, firstProject, imgLink, mobile }) => {
 	return (
 		<React.Fragment>
 			{firstProject ? <Title>What I've done recently</Title> : <Space />}
-			{workingOn ? <Title>What I'm currently working on</Title> : null}
+			{workingOn ? <Title>What I've done recently</Title> : <Space />}
 			<ProjectContainer>
-				<Column order1={order1}>
+				<Column>
 					{mobile ? <ProjectImageMobile src={imgLink} alt='' /> : <ProjectImageDesk src={imgLink} alt='' />}
 				</Column>
-				<Column order2={order2}>
+				<Column>
 					<Description>{text}</Description>
 					<Tags>{tags.map((tag) => <p># {tag}</p>)}</Tags>
-					{GitHubLink && LiveLink ? (
-						<SocialsContainer>
-							<a href={GitHubLink} target='t_blank'>
-								<img src={GithubIcon} alt='github icon' />
-							</a>
-							<a href={LiveLink} target='t_blank'>
-								<img src={WebIcon} alt='web icon' />
-							</a>
-						</SocialsContainer>
-					) : null}
+					<SocialsContainer>
+						<a href={GitHubLink} target='t_blank'>
+							<img src={GithubIcon} alt='github icon' />
+						</a>
+						<a href={LiveLink} target='t_blank'>
+							<img src={WebIcon} alt='web icon' />
+						</a>
+					</SocialsContainer>
 				</Column>
 			</ProjectContainer>
 		</React.Fragment>

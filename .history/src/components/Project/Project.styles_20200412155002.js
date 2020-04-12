@@ -7,14 +7,17 @@ export const ProjectContainer = styled.section`
 	place-content: center;
 
 	@media (min-width: 850px) {
-		height: 40vh;
+		height: 60vh;
 		grid-template-columns: 1fr 1fr;
 	}
 `;
 
 export const Column = styled.div`
 	place-self: center;
-	order: ${({ order1, order2 }) => (order1 ? order1 : order2)};
+
+	&:first-of-type {
+		order: ${(props) => props.order || 1};
+	}
 `;
 
 export const Title = styled.h3`
@@ -28,7 +31,6 @@ export const Title = styled.h3`
 	@media only screen and (min-width: 600px) {
 		text-align: end;
 		padding-top: 25rem;
-		padding-bottom: 10rem;
 	}
 `;
 

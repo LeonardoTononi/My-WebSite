@@ -27,8 +27,6 @@ const Index = ({ data, location }) => {
 				tags={[ 'JavaScript', 'PWA', 'Google Analytics', 'SEO', 'Google Maps API' ]}
 				GitHubLink='https://github.com/Easaaa/Bestfive-bcn'
 				LiveLink='https://bestfivebcn.com/'
-				order1='2'
-				order2='1'
 				firstProject
 				mobile
 			/>
@@ -43,15 +41,15 @@ const Index = ({ data, location }) => {
 				imgLink={HotelImg}
 				text='This project with a italian hotel was my first approach to programming. In 2018 I made a web site with multilingual support with plain Html, css and JavaScript. On this link you can see the previous web and below you can see the new web app that is nearly ready to be deployed and so how my skills and tastes have evolved.'
 				tags={[ 'React.js', 'Gatsby', 'Mobile & Desktop View' ]}
-				GitHubLink='https://github.com/Easaaa/hotel-vittoria-2020'
-				LiveLink='https://hotelvittoria.netlify.com/'
-				order1='2'
-				order2='1'
+				GitHubLink='https://github.com/Easaaa/admin-app-bestfive'
+				LiveLink='https://bestfivebcn.netlify.com/'
 			/>
 			<Project
 				imgLink={ToureAppImg}
-				text='I am recreating the first application (bestfive). The aim is to create the application with React Native, building more complex features, such as a more functional map, with filters and better interactions.'
-				tags={[ 'React.js', 'ReactNative', 'Firebase' ]}
+				text='I am recreating the first application (bestfive). The aim is to create the application with React Native, building more complex features, such as a more functional map, with filters and better interactions.
+				tags={[ 'React.js', 'ReactNative', '' ]}
+				GitHubLink='https://github.com/Easaaa/admin-app-bestfive'
+				LiveLink='https://bestfivebcn.netlify.com/'
 				mobile
 				workingOn
 			/>
