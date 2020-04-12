@@ -56,7 +56,7 @@ export const Title = styled.h3`
 	max-width: 900px;
 	margin: 0 auto;
 	font-size: 2.5rem;
-	text-align: center;
+	text-align: start;
 	padding: 3rem 2rem;
 	width: 100%;
 

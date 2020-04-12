@@ -26,7 +26,7 @@ export const BlogPostContainer = styled.article`
 		@media only screen and (min-width: 800px) {
 			width: 350px;
 			height: 350px;
-			top: -9rem;
+			top: -12rem;
 			left: 5rem;
 		}
 	}
@@ -111,8 +111,5 @@ export const End = styled.div`
 		line-height: 2.5rem;
 		letter-spacing: 0.05em;
 		color: rgba(63, 61, 86);
-		background: #ff9797;
-		border-radius: 10px;
-		padding: 2rem;
 	}
 `;

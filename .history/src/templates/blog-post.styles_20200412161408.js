@@ -113,6 +113,5 @@ export const End = styled.div`
 		color: rgba(63, 61, 86);
 		background: #ff9797;
 		border-radius: 10px;
-		padding: 2rem;
 	}
 `;

@@ -57,6 +57,7 @@ const Index = ({ data, location }) => {
 			/>
 			<About />
 			<Skills />
+
 			<Contact id='contact' />
 		</Layout>
 	);
