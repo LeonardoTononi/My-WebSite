@@ -27,7 +27,7 @@ const ProjectTitle = styled.h3`
      padding: 14rem 2rem 2rem 2rem;
 
       &:first-of-type {
-     padding-bottom: 12rem;
+     padding-bottom: 6rem;
    }
   }
 `

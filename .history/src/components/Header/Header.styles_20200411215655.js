@@ -48,7 +48,7 @@ export const StyledHeader = styled.header`
 
     @media (min-width: 600px) { 
       font-size: 2rem;
-      line-height: 2.8rem;
+      line-height: 3rem;
     }
   }
 

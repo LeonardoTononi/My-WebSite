@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
-import BlogHeader from '../components/BlogHeader/BlogHeader'
+import {BlogHeader} from '../components/BlogHeader/BlogHeader'
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <BlogHeader/>
+
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (

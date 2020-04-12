@@ -56,21 +56,3 @@ export const StyledHeader = styled.header`
     margin-bottom: 3rem;
   }
 `
-
-export const DownloadButton = styled.div`
-a {
-    padding: .7rem 1rem; 
-    border: 3px solid #3F3D56;
-    border-radius: 15px;    
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    font-style:normal; 
-    mix-blend-mode: normal;
-
-    @media (min-width: 600px) {
-       font-size: 1.4rem;
-       font-weight: 400;
-       text-transform: uppercase;
-     }
-  }
-`

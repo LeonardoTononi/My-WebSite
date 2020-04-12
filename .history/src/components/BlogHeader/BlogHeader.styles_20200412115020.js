@@ -52,25 +52,28 @@ export const StyledHeader = styled.header`
     }
   }
 
-  h4:last-of-type {
-    margin-bottom: 3rem;
+  p {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #3F3D56;
+    opacity: .5;
   }
 `
 
-export const DownloadButton = styled.div`
-a {
-    padding: .7rem 1rem; 
-    border: 3px solid #3F3D56;
-    border-radius: 15px;    
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    font-style:normal; 
-    mix-blend-mode: normal;
+export const ButtonSubscribe = styled.div`
+   position: relative; 
+   top: 3rem;
 
-    @media (min-width: 600px) {
-       font-size: 1.4rem;
-       font-weight: 400;
-       text-transform: uppercase;
-     }
-  }
+   input {
+     border: 2px solid #3F3D56;
+     border-radius: 20px 0px 0px 20px;
+     width: 250px;
+     height: 45px;
+   }
+
+   button {
+     background: #3F3D56;
+     border: 4px solid #3F3D56;
+border-radius: 0px 20px 20px 0px;
+   }
 `
