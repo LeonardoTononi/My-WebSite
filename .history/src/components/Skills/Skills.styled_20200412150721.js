@@ -28,7 +28,6 @@ export const SkillsContainer = styled.section`
 			}
 
 			span {
-				font-size: 1rem;
 				transition: visibility 50ms ease-in-out;
 				visibility: hidden;
 				position: absolute;

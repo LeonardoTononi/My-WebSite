@@ -127,7 +127,7 @@ const BlogIndex = ({ data, location }) => {
 					</BlogPreviewContainer>
 				);
 			})}
-			<Contact id='contact' />
+			<Contact />
 		</Layout>
 	);
 };

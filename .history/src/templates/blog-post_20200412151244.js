@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 					Thanks to arrive till the end, I wish you a great day,<br /> Leonardo Tononi.
 				</p>
 			</End>
-			<Contact id='contact' />
+			<Contact />
 		</Layout>
 	);
 };

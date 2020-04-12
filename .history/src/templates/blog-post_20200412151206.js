@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import { BlogPostContainer, End } from './blog-post.styles';
+import { ArticleContainer, End } from './blog-post.styles';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
@@ -19,16 +19,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 		<Layout location={location} title={siteTitle}>
 			<SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 			<BlogPostHeader title={post.frontmatter.title} date={post.frontmatter.date} />
-			<BlogPostContainer>
+			<ArticleContainer>
 				<img src={PostImg} alt='' />
 				<section dangerouslySetInnerHTML={{ __html: post.html }} />
-			</BlogPostContainer>
+			</ArticleContainer>
 			<End>
 				<p>
 					Thanks to arrive till the end, I wish you a great day,<br /> Leonardo Tononi.
 				</p>
 			</End>
-			<Contact id='contact' />
+			<Contact />
 		</Layout>
 	);
 };

@@ -24,16 +24,15 @@ export const SkillsContainer = styled.section`
 			cursor: pointer;
 
 			&:hover span {
-				visibility: visible;
+				display: inline;
 			}
 
 			span {
-				font-size: 1rem;
-				transition: visibility 50ms ease-in-out;
-				visibility: hidden;
+				transition: display 500ms ease-in;
+				display: none;
 				position: absolute;
 				top: 7rem;
-				background: #7875a3;
+				background: #3f3d56;
 				color: #fff;
 				border-radius: 5px;
 				padding: .3rem .5rem;

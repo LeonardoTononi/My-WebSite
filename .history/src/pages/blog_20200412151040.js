@@ -10,7 +10,7 @@ import PostImg from '../../content/assets/gameboy.svg';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
-const BlogPreviewContainer = styled.article`
+const ArticleContainer = styled.article`
 	position: relative;
 	max-width: 1000px;
 	margin: 20em auto;
@@ -103,7 +103,7 @@ const BlogIndex = ({ data, location }) => {
 			{posts.map(({ node }) => {
 				const title = node.frontmatter.title || node.fields.slug;
 				return (
-					<BlogPreviewContainer key={node.fields.slug}>
+					<ArticleContainer key={node.fields.slug}>
 						<PostImage src={PostImg} alt='' />
 						<header>
 							<h3>
@@ -124,10 +124,10 @@ const BlogIndex = ({ data, location }) => {
 								<Tag>Productivity</Tag>
 							</Tags>
 						</section>
-					</BlogPreviewContainer>
+					</ArticleContainer>
 				);
 			})}
-			<Contact id='contact' />
+			<Contact />
 		</Layout>
 	);
 };
