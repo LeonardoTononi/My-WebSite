@@ -10,14 +10,13 @@ export const ContactContainer = styled.section`
 	p {
 		color: #61626d;
 		padding-bottom: 2rem;
-		text-align: start;
+		text-align: end;
 		font-weight: 200;
 		line-height: 35px;
 		font-size: 1.3rem;
 
 		@media (min-width: 600px) {
 			line-height: 2.7rem;
-			text-align: end;
 		}
 	}
 `;

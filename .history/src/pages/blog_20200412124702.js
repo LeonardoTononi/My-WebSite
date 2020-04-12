@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-
 import Layout from '../components/Layout/Layout';
 import BlogHeader from '../components/BlogHeader/BlogHeader';
-import Contact from '../components/Contact/Contact';
 
 import PostImg from '../../content/assets/gameboy.svg';
 import SEO from '../components/seo';
@@ -19,8 +17,7 @@ const ArticleContainer = styled.article`
 	border-radius: 20px;
 	display: grid;
 	grid-gap: 1rem;
-	justify-content: start;
-	align-content: center;
+	align-content: start;
 	align-items: center;
 	grid-template-areas: "img header header" "img sub sub";
 
@@ -62,16 +59,6 @@ const ArticleContainer = styled.article`
 	}
 `;
 
-const Tags = styled.div`display: flex;`;
-
-const Tag = styled.div`
-	padding: .1rem .5rem;
-	background: ${(props) => (props.coding ? '#5DCC7C' : '#5DB8CC')};
-	border-radius: 5px;
-	margin: 1rem .2rem;
-	font-size: .9rem;
-`;
-
 const BlogIndex = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
 	const posts = data.allMarkdownRemark.edges;
@@ -99,15 +86,10 @@ const BlogIndex = ({ data, location }) => {
 									__html: node.frontmatter.description || node.excerpt
 								}}
 							/>
-							<Tags>
-								<Tag coding>Coding</Tag>
-								<Tag>Productivity</Tag>
-							</Tags>
 						</section>
 					</ArticleContainer>
 				);
 			})}
-			<Contact />
 		</Layout>
 	);
 };

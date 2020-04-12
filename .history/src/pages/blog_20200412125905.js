@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-
 import Layout from '../components/Layout/Layout';
 import BlogHeader from '../components/BlogHeader/BlogHeader';
-import Contact from '../components/Contact/Contact';
 
 import PostImg from '../../content/assets/gameboy.svg';
 import SEO from '../components/seo';
@@ -107,7 +105,6 @@ const BlogIndex = ({ data, location }) => {
 					</ArticleContainer>
 				);
 			})}
-			<Contact />
 		</Layout>
 	);
 };

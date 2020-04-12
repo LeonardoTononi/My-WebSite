@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-
 import Layout from '../components/Layout/Layout';
 import BlogHeader from '../components/BlogHeader/BlogHeader';
-import Contact from '../components/Contact/Contact';
 
 import PostImg from '../../content/assets/gameboy.svg';
 import SEO from '../components/seo';
@@ -66,10 +64,13 @@ const Tags = styled.div`display: flex;`;
 
 const Tag = styled.div`
 	padding: .1rem .5rem;
-	background: ${(props) => (props.coding ? '#5DCC7C' : '#5DB8CC')};
+	background: #5dcc7c;
 	border-radius: 5px;
-	margin: 1rem .2rem;
-	font-size: .9rem;
+	margin: 1rem;
+
+	p {
+		font-size: .7rem;
+	}
 `;
 
 const BlogIndex = ({ data, location }) => {
@@ -100,14 +101,17 @@ const BlogIndex = ({ data, location }) => {
 								}}
 							/>
 							<Tags>
-								<Tag coding>Coding</Tag>
-								<Tag>Productivity</Tag>
+								<Tag>
+									<p>Coding</p>
+								</Tag>
+								<Tag>
+									<p>Productivity</p>
+								</Tag>
 							</Tags>
 						</section>
 					</ArticleContainer>
 				);
 			})}
-			<Contact />
 		</Layout>
 	);
 };

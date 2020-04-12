@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactContainer = styled.section`
-	padding: 4rem 2rem;
+	padding: 2rem;
 	display: grid;
 	place-items: center;
 	max-width: 900px;
@@ -10,26 +10,29 @@ export const ContactContainer = styled.section`
 	p {
 		color: #61626d;
 		padding-bottom: 2rem;
-		text-align: start;
+		text-align: end;
 		font-weight: 200;
 		line-height: 35px;
 		font-size: 1.3rem;
 
 		@media (min-width: 600px) {
 			line-height: 2.7rem;
-			text-align: end;
 		}
 	}
 `;
 
 export const Title = styled.h3`
 	font-size: 2.5rem;
-	text-align: start;
-	padding: 3rem 0;
-	width: 100%;
+	padding: 8rem 2rem 2rem 2rem;
+	max-width: 900px;
+	text-align: end;
 
-	@media only screen and (min-width: 600px) {
-		text-align: end;
+	@media (min-width: 800px) {
+		padding: 14rem 2rem 2rem 2rem;
+
+		&:first-of-type {
+			padding-bottom: 12rem;
+		}
 	}
 `;
 

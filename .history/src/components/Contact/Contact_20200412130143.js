@@ -5,7 +5,7 @@ import mailIcon from '@iconify/icons-entypo/mail';
 import githubFilled from '@iconify/icons-ant-design/github-filled';
 import linkedinIcon from '@iconify/icons-zmdi/linkedin';
 
-import { ContactContainer, Title, SocialLinkContainer, SocialLink } from './Contact.styles';
+import { ContactContainer, SocialLinkContainer, SocialLink } from './Contact.styles';
 
 const IconSocial = styled(Icon)`
 font-size: 45px;

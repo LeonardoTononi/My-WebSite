@@ -5,7 +5,7 @@ import mailIcon from '@iconify/icons-entypo/mail';
 import githubFilled from '@iconify/icons-ant-design/github-filled';
 import linkedinIcon from '@iconify/icons-zmdi/linkedin';
 
-import { ContactContainer, Title, SocialLinkContainer, SocialLink } from './Contact.styles';
+import { ContactContainer, SocialLinkContainer, SocialLink } from './Contact.styles';
 
 const IconSocial = styled(Icon)`
 font-size: 45px;
@@ -14,7 +14,7 @@ font-size: 45px;
 const Contact = () => {
 	return (
 		<ContactContainer>
-			<Title>How to contact me</Title>
+			<h3>How to contact me</h3>
 			<p>
 				I am available for freelancer jobs and to work in your company. If you think I would be a good fit for
 				you, send me an email.

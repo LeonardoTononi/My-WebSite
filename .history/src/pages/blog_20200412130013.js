@@ -107,7 +107,6 @@ const BlogIndex = ({ data, location }) => {
 					</ArticleContainer>
 				);
 			})}
-			<Contact />
 		</Layout>
 	);
 };
