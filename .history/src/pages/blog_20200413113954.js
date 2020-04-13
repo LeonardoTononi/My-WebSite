@@ -62,7 +62,6 @@ const BlogPreviewContainer = styled.article`
 		}
 
 		p {
-			margin: 0;
 			font-size: 1.1rem;
 			letter-spacing: 0.05em;
 			color: rgba(63, 61, 86, 0.6);

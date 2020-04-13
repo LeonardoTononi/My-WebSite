@@ -22,7 +22,6 @@ export const StyledHeader = styled.header`
 	}
 
 	h5 {
-		margin: 0;
 		text-transform: uppercase;
 		color: #3f3d56;
 		opacity: 0.5;
@@ -46,7 +45,6 @@ export const StyledHeader = styled.header`
 	}
 
 	h4 {
-		margin: 0;
 		letter-spacing: 0.07em;
 		font-size: 1.6rem;
 		text-transform: initial;

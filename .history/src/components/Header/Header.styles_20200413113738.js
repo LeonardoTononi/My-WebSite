@@ -46,7 +46,6 @@ export const StyledHeader = styled.header`
 	}
 
 	h4 {
-		margin: 0;
 		letter-spacing: 0.07em;
 		font-size: 1.6rem;
 		text-transform: initial;

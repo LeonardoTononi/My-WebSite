@@ -46,42 +46,22 @@ export const StyledHeader = styled.header`
 	}
 
 	h4 {
-		margin: 0;
 		letter-spacing: 0.07em;
 		font-size: 1.6rem;
 		text-transform: initial;
 		font-weight: 500;
 		margin-bottom: 0.5rem;
 
-		&:last-of-type {
-			margin-bottom: 3rem;
-		}
 		@media (min-width: 600px) {
 			font-size: 2rem;
 			line-height: 2.8rem;
-
-			&:last-of-type {
-				margin-bottom: 4rem;
-			}
 		}
 	}
-`;
 
-export const DownloadButton = styled.div`
-	a {
-		padding: .7rem 1rem;
-		background-color: #3f3d56;
-		color: #fff;
-		/* border: 3px solid #3f3d56; */
-		border-radius: 15px;
-		font-weight: 300;
-		letter-spacing: 0.02em;
-
-		@media (min-width: 600px) {
-			padding: 1rem 2rem;
-			font-size: 1.4rem;
-			font-weight: 200;
-			text-transform: uppercase;
-		}
+	p {
+		font-size: 1rem;
+		letter-spacing: 0.05em;
+		color: #3f3d56;
+		opacity: .5;
 	}
 `;

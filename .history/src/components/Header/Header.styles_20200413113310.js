@@ -22,7 +22,6 @@ export const StyledHeader = styled.header`
 	}
 
 	h5 {
-		margin: 0;
 		text-transform: uppercase;
 		color: #3f3d56;
 		opacity: 0.5;
@@ -46,24 +45,20 @@ export const StyledHeader = styled.header`
 	}
 
 	h4 {
-		margin: 0;
 		letter-spacing: 0.07em;
 		font-size: 1.6rem;
 		text-transform: initial;
 		font-weight: 500;
 		margin-bottom: 0.5rem;
 
-		&:last-of-type {
-			margin-bottom: 3rem;
-		}
 		@media (min-width: 600px) {
 			font-size: 2rem;
 			line-height: 2.8rem;
-
-			&:last-of-type {
-				margin-bottom: 4rem;
-			}
 		}
+	}
+
+	h4:last-of-type {
+		margin-bottom: 3rem;
 	}
 `;
 
@@ -76,11 +71,12 @@ export const DownloadButton = styled.div`
 		border-radius: 15px;
 		font-weight: 300;
 		letter-spacing: 0.02em;
+		font-style: normal;
+		mix-blend-mode: normal;
 
 		@media (min-width: 600px) {
-			padding: 1rem 2rem;
 			font-size: 1.4rem;
-			font-weight: 200;
+			font-weight: 400;
 			text-transform: uppercase;
 		}
 	}

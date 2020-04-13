@@ -46,6 +46,7 @@ const BlogPreviewContainer = styled.article`
 			color: #3f3d56;
 		}
 		small {
+			margin: 0;
 			font-weight: normal;
 			line-height: 3rem;
 			font-size: 1rem;
@@ -62,7 +63,6 @@ const BlogPreviewContainer = styled.article`
 		}
 
 		p {
-			margin: 0;
 			font-size: 1.1rem;
 			letter-spacing: 0.05em;
 			color: rgba(63, 61, 86, 0.6);
