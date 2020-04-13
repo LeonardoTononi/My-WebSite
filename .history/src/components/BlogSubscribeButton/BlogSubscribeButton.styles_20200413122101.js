@@ -34,6 +34,7 @@ export const SubmitInput = styled.input`
 `;
 
 export const SuccessModal = styled.div`
+	background-color: #ceffce;
 	border-radius: 15px;
 	text-align: center;
 	font-size: 1.5rem;

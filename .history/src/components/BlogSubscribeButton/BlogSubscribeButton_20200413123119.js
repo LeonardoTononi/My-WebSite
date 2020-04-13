@@ -7,6 +7,13 @@ const BlogSubscribeButton = () => {
 	const [ email, setEmail ] = useState('');
 	const [ successMsg, setSuccessMsg ] = useState('');
 
+	useEffect(
+		() => {
+			setTimeout(() => cleanInput(), 3000);
+		},
+		[ successMsg ]
+	);
+
 	const handleEmail = (e) => {
 		setEmail(e.target.value);
 	};
@@ -21,9 +28,6 @@ const BlogSubscribeButton = () => {
 				}
 				setSuccessMsg(msg);
 			})
-			.then(() => {
-				setTimeout(() => cleanInput(), 3000);
-			})
 			.catch((err) => {
 				console.log('err', err);
 				alert(err);
@@ -35,9 +39,13 @@ const BlogSubscribeButton = () => {
 		setSuccessMsg('');
 	};
 
+	const modal = () => {
+		return result === 'success' ? <SuccessModal>{successMsg}</SuccessModal> : null;
+	};
+
 	return (
 		<Fragment>
-			{result === 'success' ? <SuccessModal>{successMsg}</SuccessModal> : null}
+			{modal()}
 
 			<FormSubscribe onSubmit={handleSubmit}>
 				<EmailInput type='email' placeholder='Your E-mail' value={email} onChange={handleEmail} />

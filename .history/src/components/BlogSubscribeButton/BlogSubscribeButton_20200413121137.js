@@ -1,9 +1,9 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
-import { FormSubscribe, EmailInput, SubmitInput, SuccessModal } from './BlogSubscribeButton.styles';
+import { FormSubscribe, EmailInput, SubmitInput } from './BlogSubscribeButton.styles';
 
 const BlogSubscribeButton = () => {
-	const [ result, setResult ] = useState('');
+	const [ result, setResult ] = useState(null);
 	const [ email, setEmail ] = useState('');
 	const [ successMsg, setSuccessMsg ] = useState('');
 
@@ -19,7 +19,6 @@ const BlogSubscribeButton = () => {
 				if (result !== 'success') {
 					throw msg;
 				}
-				setSuccessMsg(msg);
 			})
 			.then(() => {
 				setTimeout(() => cleanInput(), 3000);
@@ -37,7 +36,11 @@ const BlogSubscribeButton = () => {
 
 	return (
 		<Fragment>
-			{result === 'success' ? <SuccessModal>{successMsg}</SuccessModal> : null}
+			{result === 'success' ? (
+				<div>
+					<h5>{successMsg}</h5>
+				</div>
+			) : null}
 
 			<FormSubscribe onSubmit={handleSubmit}>
 				<EmailInput type='email' placeholder='Your E-mail' value={email} onChange={handleEmail} />

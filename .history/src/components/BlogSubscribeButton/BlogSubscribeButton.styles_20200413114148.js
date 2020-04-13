@@ -32,12 +32,3 @@ export const SubmitInput = styled.input`
 	outline: none;
 	cursor: pointer;
 `;
-
-export const SuccessModal = styled.div`
-	border-radius: 15px;
-	text-align: center;
-	font-size: 1.5rem;
-	color: #3f3d56;
-	width: 60%;
-	padding: 0.2rem 1rem;
-`;

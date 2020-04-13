@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { FormSubscribe, EmailInput, SubmitInput, SuccessModal } from './BlogSubscribeButton.styles';
 

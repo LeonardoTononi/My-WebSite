@@ -18,7 +18,7 @@ export const EmailInput = styled.input`
 	width: 90%;
 	height: 45px;
 	outline: none;
-	padding: 0 2rem;
+	pa: 0 2rem;
 `;
 export const SubmitInput = styled.input`
 	background: #3f3d56;
@@ -34,10 +34,7 @@ export const SubmitInput = styled.input`
 `;
 
 export const SuccessModal = styled.div`
-	border-radius: 15px;
-	text-align: center;
-	font-size: 1.5rem;
+	padding: 1rem;
+	font-size: 2rem;
 	color: #3f3d56;
-	width: 60%;
-	padding: 0.2rem 1rem;
 `;

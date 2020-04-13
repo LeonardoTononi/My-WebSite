@@ -7,33 +7,35 @@ const BlogSubscribeButton = () => {
 	const [ email, setEmail ] = useState('');
 	const [ successMsg, setSuccessMsg ] = useState('');
 
-	const handleEmail = (e) => {
-		setEmail(e.target.value);
-	};
+	useEffect(() => {
+		const handleEmail = (e) => {
+			setEmail(e.target.value);
+		};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		addToMailchimp(email)
-			.then(({ msg, result }) => {
-				setResult(result);
-				if (result !== 'success') {
-					throw msg;
-				}
-				setSuccessMsg(msg);
-			})
-			.then(() => {
-				setTimeout(() => cleanInput(), 3000);
-			})
-			.catch((err) => {
-				console.log('err', err);
-				alert(err);
-			});
-	};
+		const handleSubmit = (e) => {
+			e.preventDefault();
+			addToMailchimp(email)
+				.then(({ msg, result }) => {
+					setResult(result);
+					if (result !== 'success') {
+						throw msg;
+					}
+					setSuccessMsg(msg);
+				})
+				.then(() => {
+					setTimeout(() => cleanInput(), 3000);
+				})
+				.catch((err) => {
+					console.log('err', err);
+					alert(err);
+				});
+		};
 
-	const cleanInput = () => {
-		setEmail('');
-		setSuccessMsg('');
-	};
+		const cleanInput = () => {
+			setEmail('');
+			setSuccessMsg('');
+		};
+	}, []);
 
 	return (
 		<Fragment>

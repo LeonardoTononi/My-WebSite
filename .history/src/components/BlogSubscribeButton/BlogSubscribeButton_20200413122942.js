@@ -7,6 +7,13 @@ const BlogSubscribeButton = () => {
 	const [ email, setEmail ] = useState('');
 	const [ successMsg, setSuccessMsg ] = useState('');
 
+	useEffect(
+		() => {
+			setTimeout(() => cleanInput(), 3000);
+		},
+		[ successMsg ]
+	);
+
 	const handleEmail = (e) => {
 		setEmail(e.target.value);
 	};
