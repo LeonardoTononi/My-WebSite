@@ -33,6 +33,7 @@ module.exports = {
 					'https://leonardotononi.us19.list-manage.com/subscribe/post?u=0e17379be535600a870fd35b5&amp;id=fb07199113'
 			}
 		},
+
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
@@ -83,10 +84,21 @@ module.exports = {
 			}
 		},
 		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-smoothscroll`,
 		{
 			resolve: `gatsby-plugin-typography`,
 			options: {
 				pathToConfigModule: `src/utils/typography`
+			}
+		},
+		{
+			resolve: 'gatsby-plugin-page-progress',
+			options: {
+				includePaths: [ '/', { regex: '^/blog' } ],
+				excludePaths: [],
+				height: 3,
+				prependToBody: false,
+				color: `#3F3D56`
 			}
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality
