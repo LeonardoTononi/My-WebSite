@@ -69,17 +69,15 @@ export const StyledHeader = styled.header`
 
 export const DownloadButton = styled.div`
 	a {
-		position: relative;
 		padding: .7rem 1rem;
 		background-color: #3f3d56;
 		color: #fff;
+		position: relative;
 		border-radius: 15px;
 		font-weight: 300;
 		letter-spacing: 0.02em;
-		transition: bottom 100ms ease-in-out;
 
 		&:hover {
-			bottom: .3rem;
 			/* box-shadow: 5px 5px 0 0 #3f3d56b8; */
 		}
 

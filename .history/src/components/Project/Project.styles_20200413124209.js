@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ProjectContainer = styled.section`
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 2rem;
 	display: grid;
 	place-content: center;
 
@@ -44,25 +43,13 @@ export const ProjectImageMobile = styled.img`
 
 	@media (min-width: 850px) {
 		width: 100%;
-		transition: transform 400ms ease-in-out;
-		&:hover {
-			transform: scale(1.2);
-		}
 	}
 `;
 
 export const ProjectImageDesk = styled.img`
 	position: relative;
 	width: 100%;
-	max-width: 600px;
-
-	@media (min-width: 850px) {
-		width: 100%;
-		transition: transform 400ms ease-in-out;
-		&:hover {
-			transform: scale(1.2);
-		}
-	}
+	max-width: 400px;
 `;
 
 export const Description = styled.p`
@@ -73,7 +60,7 @@ export const Description = styled.p`
 	font-weight: 200;
 	text-align: start;
 
-	@media only screen and (min-width: 600px) {
+	@media (min-width: 600px) {
 		line-height: 2.7rem;
 	}
 `;
@@ -99,34 +86,20 @@ export const SocialsContainer = styled.div`
 	position: relative;
 	left: 2rem;
 
+	&:hover {
+		transform: scale(1.05);
+	}
+
 	a {
-		padding: .4rem;
-		width: 55px;
-		height: 55px;
+		padding: .5rem;
+		width: 50px;
+		height: 50px;
 		color: #fff;
+		background-color: #618ee924;
 		margin: 0 10px;
 		border-radius: 50%;
 		cursor: pointer;
-		transition: background-color 100ms ease-in;
-
-		&:hover {
-			background-color: #618ee924;
-		}
 	}
 `;
 
-export const Space = styled.div`
-	padding: 4rem;
-
-	&:last-of-type {
-		padding: 0;
-	}
-
-	@media only screen and (min-width: 600px) {
-		padding: 10rem;
-
-		&:last-of-type {
-			padding: 0;
-		}
-	}
-`;
+export const Space = styled.div`padding: 4rem;`;

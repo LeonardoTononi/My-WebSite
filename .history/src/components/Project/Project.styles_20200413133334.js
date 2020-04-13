@@ -100,7 +100,7 @@ export const SocialsContainer = styled.div`
 	left: 2rem;
 
 	a {
-		padding: .4rem;
+		padding: .5rem;
 		width: 55px;
 		height: 55px;
 		color: #fff;

@@ -19,10 +19,6 @@ export const EmailInput = styled.input`
 	height: 45px;
 	outline: none;
 	padding: 0 2rem;
-
-	&:hover {
-		background-color: whitesmoke;
-	}
 `;
 export const SubmitInput = styled.input`
 	background: #3f3d56;

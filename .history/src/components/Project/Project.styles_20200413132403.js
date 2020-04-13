@@ -60,7 +60,7 @@ export const ProjectImageDesk = styled.img`
 		width: 100%;
 		transition: transform 400ms ease-in-out;
 		&:hover {
-			transform: scale(1.2);
+			transform: scale(1.5);
 		}
 	}
 `;
@@ -100,17 +100,18 @@ export const SocialsContainer = styled.div`
 	left: 2rem;
 
 	a {
-		padding: .4rem;
+		padding: .5rem;
 		width: 55px;
 		height: 55px;
 		color: #fff;
+		background-color: #618ee924;
 		margin: 0 10px;
 		border-radius: 50%;
 		cursor: pointer;
 		transition: background-color 100ms ease-in;
 
 		&:hover {
-			background-color: #618ee924;
+			background-color: #cedde5;
 		}
 	}
 `;
@@ -118,15 +119,7 @@ export const SocialsContainer = styled.div`
 export const Space = styled.div`
 	padding: 4rem;
 
-	&:last-of-type {
-		padding: 0;
-	}
-
 	@media only screen and (min-width: 600px) {
 		padding: 10rem;
-
-		&:last-of-type {
-			padding: 0;
-		}
 	}
 `;

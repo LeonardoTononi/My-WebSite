@@ -76,7 +76,7 @@ export const DownloadButton = styled.div`
 		border-radius: 15px;
 		font-weight: 300;
 		letter-spacing: 0.02em;
-		transition: bottom 100ms ease-in-out;
+		transition: bottom 200ms ease-in;
 
 		&:hover {
 			bottom: .3rem;

@@ -19,10 +19,6 @@ export const EmailInput = styled.input`
 	height: 45px;
 	outline: none;
 	padding: 0 2rem;
-
-	&:hover {
-		background-color: whitesmoke;
-	}
 `;
 export const SubmitInput = styled.input`
 	background: #3f3d56;
@@ -35,10 +31,9 @@ export const SubmitInput = styled.input`
 	font-size: 1rem;
 	outline: none;
 	cursor: pointer;
-	transition: transform 100ms ease-in-out;
 
 	&:hover {
-		transform: scale(1.1);
+		content: 'lets';
 	}
 `;
 

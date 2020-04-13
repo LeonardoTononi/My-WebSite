@@ -21,7 +21,7 @@ export const EmailInput = styled.input`
 	padding: 0 2rem;
 
 	&:hover {
-		background-color: whitesmoke;
+		background-color: #3f3d56;
 	}
 `;
 export const SubmitInput = styled.input`

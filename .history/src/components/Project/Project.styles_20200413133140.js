@@ -100,17 +100,18 @@ export const SocialsContainer = styled.div`
 	left: 2rem;
 
 	a {
-		padding: .4rem;
+		padding: .5rem;
 		width: 55px;
 		height: 55px;
 		color: #fff;
+		background-color: #618ee924;
 		margin: 0 10px;
 		border-radius: 50%;
 		cursor: pointer;
 		transition: background-color 100ms ease-in;
 
 		&:hover {
-			background-color: #618ee924;
+			padding: .2;
 		}
 	}
 `;
