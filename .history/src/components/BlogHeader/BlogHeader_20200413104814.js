@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import BgHeader from '../BgHeader/BgHeader';
-import BlogSubscribeButton from '../BlogSubscribeButton/BlogSubscribeButton';
 import { StyledHeader } from './BlogHeader.styles';
 
 const BlogHeader = () => {
@@ -14,7 +12,10 @@ const BlogHeader = () => {
 				Subscribe to receive my new post <br /> directly to your inbox.
 			</h4>
 			<p>No spam guaranteed.</p>
-			<BlogSubscribeButton />
+			<FormSubscribe onSubmit={handleSubmit}>
+				<EmailInput type='email' placeholder='Your E-mail' value={email} onChange={handleEmail} />
+				<SubmitInput type='submit' value='Subscribe' />
+			</FormSubscribe>
 		</StyledHeader>
 	);
 };
