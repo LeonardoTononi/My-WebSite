@@ -49,8 +49,8 @@ export const ImageStyled = styled.img`
 	place-self: center;
 	grid-area: img;
 	width: 280px;
-	height: 280px;
 	border-radius: 38% 75% 44% 98%;
+	height: 280px;
 	object-fit: cover;
 	background-color: #c1d6ff;
 	padding: 1rem;

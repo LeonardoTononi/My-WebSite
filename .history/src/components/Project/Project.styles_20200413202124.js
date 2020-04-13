@@ -9,7 +9,7 @@ export const ProjectContainer = styled.section`
 
 	@media (min-width: 850px) {
 		grid-template-columns: 1fr 1fr;
-		padding: 5rem 2rem;
+		padding: 10rem 2rem;
 	}
 `;
 
@@ -30,7 +30,7 @@ export const Title = styled.h3`
 
 	@media only screen and (min-width: 600px) {
 		text-align: end;
-		padding: 10rem 5rem 5rem 5rem;
+		padding: 15rem 5rem 20rem 5rem;
 	}
 `;
 

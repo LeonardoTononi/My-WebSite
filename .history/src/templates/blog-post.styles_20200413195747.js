@@ -96,7 +96,7 @@ export const HeaderImg = styled.img`
 	@media only screen and (min-width: 800px) {
 		width: 350px;
 		height: 350px;
-		top: -13rem;
+		top: -9rem;
 		left: 5rem;
 	}
 `;
@@ -106,14 +106,14 @@ export const SubscribeSection = styled.section`
 	position: relative;
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 4rem 2rem 7rem 2rem;
+	padding: 4rem 2rem;
 	border-radius: 20px;
 	justify-content: start;
 	align-content: center;
 	background: rgba(220, 219, 234, 0.3);
 
 	h3 {
-		margin: 2rem 0;
+		margin-top: 0;
 		font-size: 4rem;
 		letter-spacing: 0.05em;
 	}
@@ -130,14 +130,13 @@ export const SubscribeSection = styled.section`
 	p {
 		font-size: 1rem;
 		letter-spacing: 0.05em;
-		margin: 0;
+
 		color: #3f3d56;
 		opacity: .5;
 	}
 
 	@media only screen and (min-width: 600px) {
 		h3 {
-			margin: 0;
 			padding: 1rem 2rem;
 			font-size: 5rem;
 		}

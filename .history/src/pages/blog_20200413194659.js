@@ -16,7 +16,7 @@ const BlogPreviewContainer = styled.article`
 	margin: 20em auto;
 	padding: 10rem 2rem;
 	background: rgba(220, 219, 234, 0.3);
-	border-radius: 10px;
+	border-radius: 20px;
 	display: grid;
 	grid-gap: 1rem;
 	justify-content: start;

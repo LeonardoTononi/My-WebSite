@@ -96,7 +96,7 @@ export const HeaderImg = styled.img`
 	@media only screen and (min-width: 800px) {
 		width: 350px;
 		height: 350px;
-		top: -13rem;
+		top: -9rem;
 		left: 5rem;
 	}
 `;

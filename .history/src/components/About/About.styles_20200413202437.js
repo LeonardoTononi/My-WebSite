@@ -46,13 +46,13 @@ export const Text = styled.p`
 `;
 
 export const ImageStyled = styled.img`
-	place-self: center;
-	grid-area: img;
 	width: 280px;
-	height: 280px;
 	border-radius: 38% 75% 44% 98%;
+	height: 280px;
 	object-fit: cover;
 	background-color: #c1d6ff;
+	place-self: center;
+	grid-area: img;
 	padding: 1rem;
 
 	@media (min-width: 600px) {

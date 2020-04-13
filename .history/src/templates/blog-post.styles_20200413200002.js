@@ -96,7 +96,7 @@ export const HeaderImg = styled.img`
 	@media only screen and (min-width: 800px) {
 		width: 350px;
 		height: 350px;
-		top: -13rem;
+		top: -9rem;
 		left: 5rem;
 	}
 `;
@@ -106,7 +106,7 @@ export const SubscribeSection = styled.section`
 	position: relative;
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 4rem 2rem 7rem 2rem;
+	padding: 4rem 2rem;
 	border-radius: 20px;
 	justify-content: start;
 	align-content: center;

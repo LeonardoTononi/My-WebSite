@@ -4,7 +4,7 @@ import Background from '../../assets/PlayBG.png';
 export const StyledHeader = styled.header`
 	@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
 
-	height: 70vh;
+	height: 80vh;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 2rem;
@@ -13,6 +13,7 @@ export const StyledHeader = styled.header`
 	background: rgba(220, 219, 234, 0.4);
 
 	@media (min-width: 900px) {
+		height: 70vh;
 		padding: 10rem;
 		justify-content: start;
 		align-content: center;

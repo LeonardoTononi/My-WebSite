@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const ProjectContainer = styled.section`
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 3rem 2rem;
+	padding: 2rem;
 	display: grid;
 	place-content: center;
 
 	@media (min-width: 850px) {
+		height: 40vh;
 		grid-template-columns: 1fr 1fr;
-		padding: 5rem 2rem;
 	}
 `;
 
@@ -30,7 +30,7 @@ export const Title = styled.h3`
 
 	@media only screen and (min-width: 600px) {
 		text-align: end;
-		padding: 10rem 5rem 5rem 5rem;
+		padding: 15rem 5rem 20rem 5rem;
 	}
 `;
 
@@ -124,7 +124,9 @@ export const SocialsContainer = styled.div`
 `;
 
 export const Space = styled.div`
-	/* 	&:last-of-type {
+	padding: 4rem;
+
+	&:last-of-type {
 		padding: 0;
 	}
 
@@ -134,5 +136,5 @@ export const Space = styled.div`
 		&:last-of-type {
 			padding: 0;
 		}
-	} */
+	}
 `;
