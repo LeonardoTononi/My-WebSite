@@ -5,7 +5,7 @@ import mailIcon from '@iconify/icons-entypo/mail';
 import githubFilled from '@iconify/icons-ant-design/github-filled';
 import linkedinIcon from '@iconify/icons-zmdi/linkedin';
 
-import { ContactContainer, Title, SocialLinkContainer, SocialLink, ResumeButton } from './Contact.styles';
+import { ContactContainer, Title, SocialLinkContainer, SocialLink } from './Contact.styles';
 
 const IconSocial = styled(Icon)`
 font-size: 45px;
@@ -19,9 +19,9 @@ const Contact = ({ id }) => {
 				I am available for freelancer jobs and to work in your company. If you think I would be a good fit for
 				you, send me an email.
 			</p>
-			<ResumeButton href='/static/CV-Leonardo-Tononi-2020.pdf' download>
+			<a href='/static/CV-Leonardo-Tononi-2020.pdf' download>
 				Download Resume
-			</ResumeButton>
+			</a>
 			<SocialLinkContainer>
 				<SocialLink>
 					<a href='mailto:leonardotononi@gmail.com'>

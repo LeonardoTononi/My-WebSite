@@ -20,21 +20,21 @@ export const ContactContainer = styled.section`
 			text-align: end;
 		}
 	}
-`;
 
-export const ResumeButton = styled.a`
-	width: 100%;
-	color: #744c9e;
-	padding-bottom: 2rem;
-	text-align: start;
-	font-weight: 200;
-	line-height: 35px;
-	font-size: 1.2rem;
-	text-decoration: underline;
+	a {
+		width: 100%;
+		color: #61626d;
+		padding-bottom: 2rem;
+		text-align: start;
+		font-weight: 200;
+		line-height: 35px;
+		font-size: 1.1rem;
+		text-decoration: underline;
 
-	@media (min-width: 600px) {
-		line-height: 2.7rem;
-		text-align: end;
+		@media (min-width: 600px) {
+			line-height: 2.7rem;
+			text-align: end;
+		}
 	}
 `;
 
