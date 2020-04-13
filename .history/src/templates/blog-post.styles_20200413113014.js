@@ -138,15 +138,25 @@ export const SubscribeSection = styled.section`
 		h3 {
 			padding: 1rem 2rem;
 			font-size: 5rem;
+			letter-spacing: 0.05em;
 		}
 
 		h4 {
 			padding: 0 2rem;
+			margin: 0;
+			letter-spacing: 0.07em;
 			font-size: 1.7rem;
+			text-transform: initial;
+			font-weight: 500;
 		}
 
 		p {
 			padding: 0 2rem;
+			font-size: 1rem;
+			letter-spacing: 0.05em;
+
+			color: #3f3d56;
+			opacity: .5;
 		}
 
 		form {

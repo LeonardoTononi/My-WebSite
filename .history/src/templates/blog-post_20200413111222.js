@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import { BlogPostContainer, HeaderImg, SubscribeSection } from './blog-post.styles';
+import { BlogPostContainer, HeaderImg, End, SubscribeSection } from './blog-post.styles';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
@@ -30,7 +30,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 				<p>No spam guaranteed.</p>
 				<BlogSubscribeButton />
 			</SubscribeSection>
-
+			<End>
+				<p>
+					Thanks to arrive till the end, I wish you a great day,<br /> Leonardo Tononi.
+				</p>
 			<Contact id='contact' />
 		</Layout>
 	);

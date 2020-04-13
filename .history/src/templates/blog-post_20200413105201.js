@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import { BlogPostContainer, HeaderImg, SubscribeSection } from './blog-post.styles';
+import { BlogPostContainer, End, SubscribeSection } from './blog-post.styles';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 import BlogPostHeader from '../components/BlogPostHeader/BlogPostHeader';
 import Contact from '../components/Contact/Contact';
-import BlogSubscribeButton from '../components/BlogSubscribeButton/BlogSubscribeButton';
 
 import PostImg from '../../content/assets/gameboy.svg';
 
@@ -21,16 +20,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 			<SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 			<BlogPostHeader title={post.frontmatter.title} date={post.frontmatter.date} />
 			<BlogPostContainer>
-				<HeaderImg src={PostImg} alt='' />
+				<img src={PostImg} alt='' />
 				<section dangerouslySetInnerHTML={{ __html: post.html }} />
 			</BlogPostContainer>
-			<SubscribeSection>
-				<h3>Don't forget...</h3>
-				<h4>Subscribe to receive my new post directly in your inbox.</h4>
-				<p>No spam guaranteed.</p>
-				<BlogSubscribeButton />
-			</SubscribeSection>
-
+			<SubscribeSection />
+			<End>
+				<p>
+					Thanks to arrive till the end, I wish you a great day,<br /> Leonardo Tononi.
+				</p>
+			</End>
 			<Contact id='contact' />
 		</Layout>
 	);

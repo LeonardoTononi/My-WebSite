@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import { BlogPostContainer, HeaderImg, SubscribeSection } from './blog-post.styles';
+import { BlogPostContainer, End, SubscribeSection } from './blog-post.styles';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 			<SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 			<BlogPostHeader title={post.frontmatter.title} date={post.frontmatter.date} />
 			<BlogPostContainer>
-				<HeaderImg src={PostImg} alt='' />
+				<img src={PostImg} alt='' />
 				<section dangerouslySetInnerHTML={{ __html: post.html }} />
 			</BlogPostContainer>
 			<SubscribeSection>
@@ -30,7 +30,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 				<p>No spam guaranteed.</p>
 				<BlogSubscribeButton />
 			</SubscribeSection>
-
+			<End>
+				<p>
+					Thanks to arrive till the end, I wish you a great day,<br /> Leonardo Tononi.
+				</p>
+			</End>
 			<Contact id='contact' />
 		</Layout>
 	);

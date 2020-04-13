@@ -124,6 +124,11 @@ export const SubscribeSection = styled.section`
 		font-size: 1.6rem;
 		text-transform: initial;
 		font-weight: 500;
+
+		@media (min-width: 600px) {
+			font-size: 2rem;
+			line-height: 2.8rem;
+		}
 	}
 
 	p {
@@ -134,24 +139,12 @@ export const SubscribeSection = styled.section`
 		opacity: .5;
 	}
 
-	@media only screen and (min-width: 600px) {
-		h3 {
-			padding: 1rem 2rem;
-			font-size: 5rem;
-		}
-
-		h4 {
-			padding: 0 2rem;
-			font-size: 1.7rem;
-		}
-
-		p {
-			padding: 0 2rem;
-		}
-
-		form {
-			padding: 0 2rem;
-			max-width: 70%;
+	form {
+		max-width: 50%;
+		grid-gap: 1rem;
+		@media only screen and (min-width: 600px) {
+			grid-template-columns: 1fr;
+			grid-gap: .1rem;
 		}
 	}
 `;

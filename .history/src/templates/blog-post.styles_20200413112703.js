@@ -134,24 +134,12 @@ export const SubscribeSection = styled.section`
 		opacity: .5;
 	}
 
-	@media only screen and (min-width: 600px) {
-		h3 {
-			padding: 1rem 2rem;
-			font-size: 5rem;
-		}
+	form {
+		max-width: 50%;
 
-		h4 {
-			padding: 0 2rem;
-			font-size: 1.7rem;
-		}
-
-		p {
-			padding: 0 2rem;
-		}
-
-		form {
-			padding: 0 2rem;
-			max-width: 70%;
+		@media only screen and (min-width: 600px) {
+			grid-template-columns: 1fr;
+			grid-gap: 1rem;
 		}
 	}
 `;

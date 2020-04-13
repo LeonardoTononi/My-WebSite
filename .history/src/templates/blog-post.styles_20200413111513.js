@@ -113,45 +113,30 @@ export const SubscribeSection = styled.section`
 	background: rgba(220, 219, 234, 0.3);
 
 	h3 {
-		margin-top: 0;
 		font-size: 4rem;
 		letter-spacing: 0.05em;
+
+		@media (min-width: 600px) {
+			font-size: 6rem;
+		}
 	}
 
 	h4 {
-		margin: 0;
 		letter-spacing: 0.07em;
 		font-size: 1.6rem;
 		text-transform: initial;
 		font-weight: 500;
+
+		@media (min-width: 600px) {
+			font-size: 2rem;
+			line-height: 2.8rem;
+		}
 	}
 
 	p {
 		font-size: 1rem;
 		letter-spacing: 0.05em;
-
 		color: #3f3d56;
 		opacity: .5;
-	}
-
-	@media only screen and (min-width: 600px) {
-		h3 {
-			padding: 1rem 2rem;
-			font-size: 5rem;
-		}
-
-		h4 {
-			padding: 0 2rem;
-			font-size: 1.7rem;
-		}
-
-		p {
-			padding: 0 2rem;
-		}
-
-		form {
-			padding: 0 2rem;
-			max-width: 70%;
-		}
 	}
 `;

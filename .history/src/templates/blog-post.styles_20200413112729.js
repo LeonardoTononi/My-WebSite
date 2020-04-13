@@ -113,12 +113,14 @@ export const SubscribeSection = styled.section`
 	background: rgba(220, 219, 234, 0.3);
 
 	h3 {
+		padding: 2rem;
 		margin-top: 0;
 		font-size: 4rem;
 		letter-spacing: 0.05em;
 	}
 
 	h4 {
+		padding: 0 2rem;
 		margin: 0;
 		letter-spacing: 0.07em;
 		font-size: 1.6rem;
@@ -134,24 +136,12 @@ export const SubscribeSection = styled.section`
 		opacity: .5;
 	}
 
-	@media only screen and (min-width: 600px) {
-		h3 {
-			padding: 1rem 2rem;
-			font-size: 5rem;
-		}
+	form {
+		max-width: 50%;
 
-		h4 {
-			padding: 0 2rem;
-			font-size: 1.7rem;
-		}
-
-		p {
-			padding: 0 2rem;
-		}
-
-		form {
-			padding: 0 2rem;
-			max-width: 70%;
+		@media only screen and (min-width: 600px) {
+			grid-template-columns: 1fr;
+			grid-gap: 1rem;
 		}
 	}
 `;
