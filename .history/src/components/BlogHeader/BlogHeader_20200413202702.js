@@ -7,7 +7,6 @@ import { StyledHeader } from './BlogHeader.styles';
 const BlogHeader = () => {
 	return (
 		<StyledHeader>
-			{/* 	<BgHeader /> */}
 			<h5>Leonardo Tononi</h5>
 			<h1>Blog</h1>
 			<h4>
