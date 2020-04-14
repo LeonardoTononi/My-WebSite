@@ -91,14 +91,12 @@ export const HeaderImg = styled.img`
 	height: 200px;
 	position: relative;
 	bottom: 8rem;
-	left: 2rem;
 	object-fit: cover;
 	margin: 0;
 
 	@media only screen and (min-width: 800px) {
 		width: 300px;
 		height: 300px;
-		left: 3rem;
 	}
 `;
 

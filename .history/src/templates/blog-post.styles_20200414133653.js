@@ -13,7 +13,7 @@ export const BlogPostContainer = styled.article`
 	align-items: center;
 
 	@media only screen and (min-width: 800px) {
-		padding: 6rem 2rem;
+		padding: 15rem 2rem 6rem 2rem;
 	}
 
 	header {
@@ -63,8 +63,7 @@ export const BlogPostContainer = styled.article`
 			font-size: 1.4rem;
 			letter-spacing: 0.05em;
 			color: rgba(63, 61, 86, 0.6);
-			padding: 1rem 0;
-		}
+			padding: 0;
 
 		li {
 			font-size: 1.4rem;
@@ -90,15 +89,15 @@ export const HeaderImg = styled.img`
 	width: 200px;
 	height: 200px;
 	position: relative;
-	bottom: 8rem;
-	left: 2rem;
-	object-fit: cover;
+	bottom: 4rem;
 	margin: 0;
+	object-fit: cover;
 
 	@media only screen and (min-width: 800px) {
-		width: 300px;
-		height: 300px;
-		left: 3rem;
+		width: 350px;
+		height: 350px;
+		top: -13rem;
+		left: 5rem;
 	}
 `;
 

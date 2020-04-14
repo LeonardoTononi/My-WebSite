@@ -91,7 +91,6 @@ export const HeaderImg = styled.img`
 	height: 200px;
 	position: relative;
 	bottom: 8rem;
-	left: 2rem;
 	object-fit: cover;
 	margin: 0;
 

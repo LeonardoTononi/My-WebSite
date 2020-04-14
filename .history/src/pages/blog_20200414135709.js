@@ -27,7 +27,6 @@ const BlogPreviewContainer = styled.article`
 	@media only screen and (min-width: 800px) {
 		grid-template-areas: "img header header" "img sub sub";
 		margin: 5rem auto;
-		padding: 8rem 2rem 8rem 5rem;
 	}
 
 	header {
@@ -91,7 +90,7 @@ const Tags = styled.div`display: flex;`;
 
 const Tag = styled.div`
 	padding: .1rem .5rem;
-	background: ${(props) => (props.coding ? '#ddddff' : '#ffc4c4')};
+	background: ${(props) => (props.coding ? '#5DCC7C' : '#5DB8CC')};
 	border-radius: 5px;
 	margin: 1rem .2rem;
 	font-size: .9rem;

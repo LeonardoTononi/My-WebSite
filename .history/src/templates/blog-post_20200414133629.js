@@ -9,7 +9,7 @@ import BlogPostHeader from '../components/BlogPostHeader/BlogPostHeader';
 import Contact from '../components/Contact/Contact';
 import BlogSubscribeButton from '../components/BlogSubscribeButton/BlogSubscribeButton';
 
-import PostImg from '../../content/assets/comingsoon.svg';
+import PostImg from '../../content/assets/comingsoon.jpeg';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;

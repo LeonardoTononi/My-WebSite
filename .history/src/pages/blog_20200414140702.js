@@ -91,7 +91,7 @@ const Tags = styled.div`display: flex;`;
 
 const Tag = styled.div`
 	padding: .1rem .5rem;
-	background: ${(props) => (props.coding ? '#ddddff' : '#ffc4c4')};
+	background: ${(props) => (props.coding ? '#ddddff' : '#5DB8CC')};
 	border-radius: 5px;
 	margin: 1rem .2rem;
 	font-size: .9rem;

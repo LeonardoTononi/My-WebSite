@@ -64,6 +64,5 @@ export const StyledHeader = styled.header`
 		letter-spacing: 0.05em;
 		color: #3f3d56;
 		opacity: .5;
-		margin: 0;
 	}
 `;

@@ -13,7 +13,7 @@ export const BlogPostContainer = styled.article`
 	align-items: center;
 
 	@media only screen and (min-width: 800px) {
-		padding: 6rem 2rem;
+		padding: 15rem 2rem 6rem 2rem;
 	}
 
 	header {
@@ -91,14 +91,10 @@ export const HeaderImg = styled.img`
 	height: 200px;
 	position: relative;
 	bottom: 8rem;
-	left: 2rem;
 	object-fit: cover;
 	margin: 0;
 
 	@media only screen and (min-width: 800px) {
-		width: 300px;
-		height: 300px;
-		left: 3rem;
 	}
 `;
 

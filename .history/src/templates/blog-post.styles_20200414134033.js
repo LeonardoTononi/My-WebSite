@@ -13,7 +13,7 @@ export const BlogPostContainer = styled.article`
 	align-items: center;
 
 	@media only screen and (min-width: 800px) {
-		padding: 6rem 2rem;
+		padding: 15rem 2rem 6rem 2rem;
 	}
 
 	header {
@@ -64,6 +64,7 @@ export const BlogPostContainer = styled.article`
 			letter-spacing: 0.05em;
 			color: rgba(63, 61, 86, 0.6);
 			padding: 1rem 0;
+			margin: 0;
 		}
 
 		li {
@@ -87,18 +88,17 @@ export const BlogPostContainer = styled.article`
 `;
 
 export const HeaderImg = styled.img`
-	width: 200px;
+	width: 100%;
 	height: 200px;
 	position: relative;
-	bottom: 8rem;
-	left: 2rem;
+	bottom: 4rem;
 	object-fit: cover;
 	margin: 0;
 
 	@media only screen and (min-width: 800px) {
-		width: 300px;
-		height: 300px;
-		left: 3rem;
+		width: 100%;
+		height: 400px;
+		top: -13rem;
 	}
 `;
 
