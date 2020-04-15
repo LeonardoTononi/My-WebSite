@@ -14,7 +14,6 @@ import PostImg from '../../content/assets/comingsoon.svg';
 const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
 	const siteTitle = data.site.siteMetadata.title;
-	console.log(pageContext, 'PAGE CONTEXT');
 	const { previous, next } = pageContext;
 
 	return (
@@ -54,6 +53,7 @@ export const pageQuery = graphql`
 				title
 				date(formatString: "MMMM DD, YYYY")
 				description
+				image
 			}
 		}
 	}

@@ -14,7 +14,7 @@ import PostImg from '../../content/assets/comingsoon.svg';
 const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
 	const siteTitle = data.site.siteMetadata.title;
-	console.log(pageContext, 'PAGE CONTEXT');
+	console.log(pageContext);
 	const { previous, next } = pageContext;
 
 	return (

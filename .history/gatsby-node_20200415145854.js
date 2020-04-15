@@ -19,6 +19,13 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                image {
+                  childImageSharp{
+                    fixed(width: 200, height: 200) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
               }
             }
           }
