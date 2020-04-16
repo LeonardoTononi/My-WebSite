@@ -8,30 +8,22 @@ exports.createPages = async ({ graphql, actions }) => {
 	const result = await graphql(
 		`
       {
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          image {
-            childImageSharp {
-              fixed {
-                src
-                srcSet
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
               }
-              fluid {
-                src
-                srcSet
+              frontmatter {
+								title
+								image
               }
             }
           }
         }
-      }
-    }
-  }
       }
     `
 	);

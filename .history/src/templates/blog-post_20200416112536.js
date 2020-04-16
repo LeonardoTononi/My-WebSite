@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-
+import Img from 'gatsby-image';
 import { BlogPostContainer, HeaderImg, SubscribeSection } from './blog-post.styles';
 
 import Layout from '../components/Layout/Layout';
@@ -14,6 +14,7 @@ import PostImg from '../../content/assets/comingsoon.svg';
 const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const post = data.markdownRemark;
 	const siteTitle = data.site.siteMetadata.title;
+	console.log(post.frontmatter.image, 'DATA');
 	const { previous, next } = pageContext;
 
 	return (
@@ -21,7 +22,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 			<SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 			<BlogPostHeader title={post.frontmatter.title} date={post.frontmatter.date} />
 			<BlogPostContainer>
-				<HeaderImg fluid={post.frontmatter.image.childImageSharp.fluid} alt='' />
+				<Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+				<HeaderImg src={PostImg} alt='' />
 				<section dangerouslySetInnerHTML={{ __html: post.html }} />
 			</BlogPostContainer>
 			<SubscribeSection>
@@ -55,6 +57,9 @@ export const pageQuery = graphql`
 				description
 				image {
 					childImageSharp {
+						fixed {
+							...GatsbyImageSharpFixed
+						}
 						fluid {
 							...GatsbyImageSharpFluid
 						}

@@ -9,9 +9,7 @@ export const StyledHeader = styled.header`
 	margin: 0 auto;
 	padding: 2rem;
 	display: grid;
-	place-content: center;/* 
-	background-image: url(${Background});
-	background-size: cover; */
+	place-content: center;
 
 	@media (min-width: 900px) {
 		height: 50vh;

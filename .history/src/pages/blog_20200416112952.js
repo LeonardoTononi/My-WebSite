@@ -15,7 +15,7 @@ const BlogPreviewContainer = styled.article`
 	position: relative;
 	max-width: 1200px;
 	margin: 20em auto;
-	padding: 6rem 2rem;
+	padding: 8rem 2rem;
 	background: rgba(220, 219, 234, 0.3);
 	border-radius: 10px;
 	display: grid;
@@ -82,6 +82,8 @@ const PostImage = styled(Img)`
 
 	@media only screen and (min-width: 800px) {
 		position: initial;
+		left: 50%;
+		bottom: 40%;
 		padding-right: 2rem;
 	}
 `;
@@ -108,7 +110,7 @@ const BlogIndex = ({ data, location }) => {
 				const title = node.frontmatter.title || node.fields.slug;
 				return (
 					<BlogPreviewContainer key={node.fields.slug}>
-						<PostImage fluid={node.frontmatter.image.childImageSharp.fluid} alt='' />
+						<PostImage fluid={post.frontmatter.image.childImageSharp.fluid} alt='' />
 						<header>
 							<h3>
 								<Link style={{ boxShadow: `none` }} to={node.fields.slug}>

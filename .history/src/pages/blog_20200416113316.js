@@ -15,7 +15,7 @@ const BlogPreviewContainer = styled.article`
 	position: relative;
 	max-width: 1200px;
 	margin: 20em auto;
-	padding: 6rem 2rem;
+	padding: 8rem 2rem;
 	background: rgba(220, 219, 234, 0.3);
 	border-radius: 10px;
 	display: grid;
