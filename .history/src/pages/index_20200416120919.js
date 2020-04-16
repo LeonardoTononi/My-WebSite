@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 
@@ -9,16 +9,20 @@ import Skills from '../components/Skills/Skills';
 import About from '../components/About/About';
 import Contact from '../components/Contact/Contact';
 
+import BestfiveImg from '../assets/projects/bestfive.png';
+import ToureoImg from '../assets/projects/toureo-admin.png';
+import ToureAppImg from '../assets/projects/toureo-proto.png';
+import HotelImg from '../assets/projects/hotelVittoria.png';
+
 const Index = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
-	console.log(data);
 
 	return (
 		<Layout location={location} title={siteTitle}>
 			<SEO title='My web site' />
 			<Header />
 			<Project
-				imgLink={data.bestfiveImage.childImageSharp.fluid}
+				imgLink={bestfiveImage.childImageSharp.fluid}
 				title='Tourism Web Application'
 				numb='#1'
 				tags={[ 'JavaScript', 'PWA', 'Google Analytics', 'SEO', 'Google Maps API' ]}
@@ -31,7 +35,7 @@ const Index = ({ data, location }) => {
 				mobile
 			/>
 			<Project
-				imgLink={data.toureoadminImage.childImageSharp.fluid}
+				imgLink={toureoadminImage.childImageSharp.fluid}
 				title='Dashboard Administration App'
 				numb='#2'
 				tags={[ 'React.js', 'Redux', 'Firebase Auth', 'Firestore' ]}
@@ -39,7 +43,7 @@ const Index = ({ data, location }) => {
 				LiveLink='https://bestfivebcn.netlify.com/'
 			/>
 			<Project
-				imgLink={data.hotelvittoriaImage.childImageSharp.fluid}
+				imgLink={hotelvittoriaImage.childImageSharp.fluid}
 				title='Hospitality Business Web Site'
 				numb='#3'
 				tags={[ 'React.js', 'Gatsby', 'Mobile & Desktop View' ]}
@@ -50,7 +54,7 @@ const Index = ({ data, location }) => {
 				alignEnd
 			/>
 			<Project
-				imgLink={data.toureoprotoImage.childImageSharp.fluid}
+				imgLink={toureoprotoImage.childImageSharp.fluid}
 				title='Mobile App Prototype'
 				numb='#4'
 				tags={[ 'React.js', 'ReactNative', 'Firebase' ]}
@@ -81,7 +85,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		hotelvittoriaImage: file(relativePath: { eq: "projects/HotelVittoria.png" }) {
+		hotelvittoriaImage: file(relativePath: { eq: "projects/hotelVittoria.png" }) {
 			id
 			childImageSharp {
 				fluid {

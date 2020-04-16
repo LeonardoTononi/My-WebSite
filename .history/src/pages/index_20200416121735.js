@@ -76,7 +76,7 @@ export const pageQuery = graphql`
 		bestfiveImage: file(relativePath: { eq: "projects/bestfive.png" }) {
 			id
 			childImageSharp {
-				fluid {
+				fluid(maxWidth: 600) {
 					...GatsbyImageSharpFluid
 				}
 			}

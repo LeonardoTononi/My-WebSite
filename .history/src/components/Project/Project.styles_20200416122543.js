@@ -93,7 +93,7 @@ export const ProjectImageMobile = styled(Img)`
 	left: 4%;
 	width: 300px;
 		@media only screen and (min-width: 850px) {
-			width: 400px;
+			width: 500px;
 			bottom: 3rem;
 		 }
 `;

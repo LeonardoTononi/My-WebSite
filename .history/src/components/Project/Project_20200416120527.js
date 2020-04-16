@@ -39,11 +39,7 @@ const Project = ({
 					<Tags alignEnd={alignEnd}>{tags.map((tag) => <Tag>{tag}</Tag>)}</Tags>
 				</ColumnText>
 				<ColumnMedia order2={order2}>
-					{mobile ? (
-						<ProjectImageMobile fluid={imgLink} alt='' />
-					) : (
-						<ProjectImageDesk fluid={imgLink} alt='' />
-					)}
+					{mobile ? <ProjectImageMobile src={imgLink} alt='' /> : <ProjectImageDesk src={imgLink} alt='' />}
 					{GitHubLink && LiveLink ? (
 						<SocialsContainer>
 							<a href={LiveLink} target='t_blank'>

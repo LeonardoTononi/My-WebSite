@@ -91,23 +91,15 @@ export const ProjectNumb = styled.p`
 export const ProjectImageMobile = styled(Img)`
 	position: relative;
 	left: 4%;
-	width: 300px;
-		@media only screen and (min-width: 850px) {
-			width: 400px;
-			bottom: 3rem;
-		 }
+	width: 100%;
+	bottom: 3rem;
+	max-width: 400px;
 `;
 
 export const ProjectImageDesk = styled(Img)`
 	position: relative;
-	width: 300px;
-	margin: 2rem 0;
-
-	@media only screen and (min-width: 850px) {
-		width: 500px;
-		margin: 0;
-	  bottom: 4rem;
-  }
+	width: 100%;
+	max-width: 600px;
 `;
 
 export const Tags = styled.div`
@@ -160,10 +152,8 @@ export const SocialsContainer = styled.div`
 		}
 	}
 
-	@media only screen and (min-width: 850px) {
+	@media only screen and (min-width: 600px) {
 		padding: 0 2rem;
-		position: relative;
-		bottom: 2rem;
 	}
 `;
 

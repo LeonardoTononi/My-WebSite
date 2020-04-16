@@ -11,7 +11,6 @@ import Contact from '../components/Contact/Contact';
 
 const Index = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title;
-	console.log(data);
 
 	return (
 		<Layout location={location} title={siteTitle}>
@@ -81,7 +80,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		hotelvittoriaImage: file(relativePath: { eq: "projects/HotelVittoria.png" }) {
+		hotelvittoriaImage: file(relativePath: { eq: "projects/hotelVittoria.png" }) {
 			id
 			childImageSharp {
 				fluid {

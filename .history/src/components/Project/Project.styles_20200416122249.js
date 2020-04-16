@@ -91,23 +91,23 @@ export const ProjectNumb = styled.p`
 export const ProjectImageMobile = styled(Img)`
 	position: relative;
 	left: 4%;
-	width: 300px;
+	max-width: 400px;
 		@media only screen and (min-width: 850px) {
-			width: 400px;
-			bottom: 3rem;
+			max-width: 500px;
+
+	bottom: 3rem;
 		 }
 `;
 
 export const ProjectImageDesk = styled(Img)`
 	position: relative;
-	width: 300px;
-	margin: 2rem 0;
+	max-width: 600px;
 
 	@media only screen and (min-width: 850px) {
-		width: 500px;
-		margin: 0;
-	  bottom: 4rem;
-  }
+		max-width: 500px;
+
+	bottom: 4rem;
+		 }
 `;
 
 export const Tags = styled.div`

@@ -17,7 +17,7 @@ const Index = ({ data, location }) => {
 		<Layout location={location} title={siteTitle}>
 			<SEO title='My web site' />
 			<Header />
-			<Project
+			{/* 	<Project
 				imgLink={data.bestfiveImage.childImageSharp.fluid}
 				title='Tourism Web Application'
 				numb='#1'
@@ -56,7 +56,7 @@ const Index = ({ data, location }) => {
 				tags={[ 'React.js', 'ReactNative', 'Firebase' ]}
 				mobile
 				workingOn
-			/>
+			/> */}
 			<About />
 			<Skills />
 			<Contact id='contact' />
@@ -81,7 +81,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		hotelvittoriaImage: file(relativePath: { eq: "projects/HotelVittoria.png" }) {
+		hotelvittoriaImage: file(relativePath: { eq: "projects/hotelVittoria.png" }) {
 			id
 			childImageSharp {
 				fluid {

@@ -93,7 +93,7 @@ export const ProjectImageMobile = styled(Img)`
 	left: 4%;
 	width: 300px;
 		@media only screen and (min-width: 850px) {
-			width: 400px;
+			max-width: 500px;
 			bottom: 3rem;
 		 }
 `;
@@ -101,11 +101,9 @@ export const ProjectImageMobile = styled(Img)`
 export const ProjectImageDesk = styled(Img)`
 	position: relative;
 	width: 300px;
-	margin: 2rem 0;
 
 	@media only screen and (min-width: 850px) {
-		width: 500px;
-		margin: 0;
+		max-width: 500px;
 	  bottom: 4rem;
   }
 `;

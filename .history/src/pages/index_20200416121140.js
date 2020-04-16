@@ -81,7 +81,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		hotelvittoriaImage: file(relativePath: { eq: "projects/HotelVittoria.png" }) {
+		hotelvittoriaImage: file(relativePath: { eq: "projects/hotelVittoria.png" }) {
 			id
 			childImageSharp {
 				fluid {
