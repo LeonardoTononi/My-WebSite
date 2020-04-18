@@ -13,7 +13,7 @@ export const ProjectContainer = styled.section`
 	transition: background-color 100ms ease-in-out;
 
 	&:hover {
-		background-color: whitesmoke;
+		background-color: rgb(193, 214, 255);
 	}
 
 	&:active {

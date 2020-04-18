@@ -14,7 +14,7 @@ const Index = ({ data, location }) => {
 
 	return (
 		<Layout location={location} title={siteTitle}>
-			<SEO title='HOME' />
+			<SEO title='My web site' />
 			<Header />
 			<Project
 				imgLink={data.bestfiveImage.childImageSharp.fluid}
