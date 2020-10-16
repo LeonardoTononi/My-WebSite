@@ -16,7 +16,7 @@ import {
 } from "./Project.styles"
 
 import { VscDebugBreakpointLog } from "react-icons/vsc"
-import Iphone from "./iphone.png"
+import IphoneImg from "./iphone.png"
 import Hotel from "./hotel-mac.jpg"
 import MeImg from "./leo.png"
 
@@ -44,7 +44,7 @@ const Project = ({
         <StyledPopup
           trigger={
             <button>
-              <img src={Iphone} />
+              <img src={IphoneImg} />
             </button>
           }
           position="center center"
@@ -55,7 +55,7 @@ const Project = ({
             <CloseBtn onClick={() => ref.current.close()}>Close</CloseBtn>
             <PersonalImg src={MeImg} />
             <ColumnMedia>
-              <ProjectImg src={Iphone} />
+              <ProjectImg src={IphoneImg} />
             </ColumnMedia>
             <ColumnText>
               <Question>
