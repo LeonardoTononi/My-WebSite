@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { devices, colors, fonts } from "../../constants"
 import Popup from "reactjs-popup"
+import Img from "gatsby-image"
 
 export const ProjectContainer = styled.section`
   max-width: 1200px;
@@ -18,7 +19,7 @@ export const ProjectContainer = styled.section`
   }
 `
 
-export const ProjectImg = styled.img`
+export const ProjectImg = styled(Img)`
   width: 100%;
   max-width: 500px;
   height: 200px;
@@ -28,12 +29,12 @@ export const ProjectImg = styled.img`
   border: 4px solid #f4f4f4;
 `
 
-export const PersonalImg = styled.img`
+export const PersonalImg = styled(Img)`
   display: none;
 
   @media ${devices.tabletM} {
     display: block;
-    position: fixed;
+    position: fixed !important;
     left: 0;
     bottom: 0;
     width: 180px;
@@ -52,6 +53,7 @@ export const ProjectsPreview = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   button {
@@ -65,14 +67,13 @@ export const ProjectsPreview = styled.div`
     max-height: 240px;
     object-fit: cover;
     object-position: center;
-    margin: 10px 0;
     border-radius: 10px;
     cursor: pointer;
   }
 
   @media ${devices.tablet} {
     img {
-      max-height: 300px;
+      max-height: 400px;
     }
   }
 `
@@ -149,6 +150,7 @@ export const CloseBtn = styled.button`
   position: absolute;
   top: 30px;
   right: 25px;
+  z-index: 10;
   font-size: ${fonts.text.mobile};
   color: ${colors.primary};
   font-family: "Raleway";
@@ -183,9 +185,10 @@ export const StyledPopup = styled(Popup)`
     height: 100%;
     max-height: 750px;
     overflow: scroll;
+    margin: auto 10px !important;
 
     @media ${devices.tabletM} {
-      margin: auto 20px !important;
+      margin: auto !important;
     }
   }
 `

@@ -1,32 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
-import Background from '../../assets/PlayBG.png';
+import React from "react"
+import styled from "styled-components"
 
 const BackgroundStyle = styled.div`
-	display: none;
+  display: none;
 
-	img {
-		object-fit: cover;
-		position: absolute;
-		z-index: -1;
-		left: 40%;
-		bottom: 18%;
-	}
+  img {
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    left: 40%;
+    bottom: 18%;
+  }
 
-	@media (min-width: 900px) {
-		display: inline;
+  @media (min-width: 900px) {
+    display: inline;
 
-		img {
-			left: 45%;
-			bottom: 40%;
-		}
-	}
-`;
+    img {
+      left: 45%;
+      bottom: 40%;
+    }
+  }
+`
 
-const BgHeader = () => (
-	<BackgroundStyle>
-		<img src={Background} alt='' />
-	</BackgroundStyle>
-);
+const BgHeader = () => <BackgroundStyle></BackgroundStyle>
 
-export default BgHeader;
+export default BgHeader
