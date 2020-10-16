@@ -1,35 +1,41 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/seo';
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout/Layout"
+import SEO from "../components/seo"
 
-import Header from '../components/Header/Header';
-import Project from '../components/Project/Project';
-import Skills from '../components/Skills/Skills';
-import About from '../components/About/About';
-import Contact from '../components/Contact/Contact';
+import Header from "../components/Header/Header"
+import Project from "../components/Project/Project"
+import Skills from "../components/Skills/Skills"
+import About from "../components/About/About"
+import Contact from "../components/Contact/Contact"
 
 const Index = ({ data, location }) => {
-	const siteTitle = data.site.siteMetadata.title;
+  const siteTitle = data.site.siteMetadata.title
 
-	return (
-		<Layout location={location} title={siteTitle}>
-			<SEO title='HOME' />
-			<Header />
-			<Project
-				imgLink={data.bestfiveImage.childImageSharp.fluid}
-				title='Tourism Web Application'
-				numb='#1'
-				tags={[ 'JavaScript', 'PWA', 'Google Analytics', 'SEO', 'Google Maps API' ]}
-				GitHubLink='https://github.com/Easaaa/Bestfive-bcn'
-				LiveLink='https://bestfivebcn.com/'
-				order1='2'
-				order2='1'
-				alignEnd
-				firstProject
-				mobile
-			/>
-			<Project
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="My Ptf" />
+      <Header />
+      <Project
+        imgLink={data.bestfiveImage.childImageSharp.fluid}
+        title="Tourism Web Application"
+        numb="#1"
+        tags={[
+          "JavaScript",
+          "PWA",
+          "Google Analytics",
+          "SEO",
+          "Google Maps API",
+        ]}
+        GitHubLink="https://github.com/Easaaa/Bestfive-bcn"
+        LiveLink="https://bestfivebcn.com/"
+        order1="2"
+        order2="1"
+        alignEnd
+        firstProject
+        mobile
+      />
+      {/* 	<Project
 				imgLink={data.toureoadminImage.childImageSharp.fluid}
 				title='Dashboard Administration App'
 				numb='#2'
@@ -55,69 +61,71 @@ const Index = ({ data, location }) => {
 				tags={[ 'React.js', 'ReactNative', 'Firebase' ]}
 				mobile
 				workingOn
-			/>
-			<About />
-			<Skills />
-			<Contact id='contact' />
-		</Layout>
-	);
-};
+			/> */}
+      <About />
+      <Skills />
+      <Contact id="contact" />
+    </Layout>
+  )
+}
 
-export default Index;
+export default Index
 
 export const pageQuery = graphql`
-	query {
-		site {
-			siteMetadata {
-				title
-			}
-		}
-		bestfiveImage: file(relativePath: { eq: "projects/bestfive.png" }) {
-			id
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		hotelvittoriaImage: file(relativePath: { eq: "projects/hotel-vittoria.png" }) {
-			id
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		toureoadminImage: file(relativePath: { eq: "projects/toureo-admin.png" }) {
-			id
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		toureoprotoImage: file(relativePath: { eq: "projects/toureo-proto.png" }) {
-			id
-			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-			edges {
-				node {
-					excerpt
-					fields {
-						slug
-					}
-					frontmatter {
-						date(formatString: "MMMM DD, YYYY")
-						title
-						description
-					}
-				}
-			}
-		}
-	}
-`;
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    bestfiveImage: file(relativePath: { eq: "projects/bestfive.png" }) {
+      id
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    hotelvittoriaImage: file(
+      relativePath: { eq: "projects/hotel-vittoria.png" }
+    ) {
+      id
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    toureoadminImage: file(relativePath: { eq: "projects/toureo-admin.png" }) {
+      id
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    toureoprotoImage: file(relativePath: { eq: "projects/toureo-proto.png" }) {
+      id
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`

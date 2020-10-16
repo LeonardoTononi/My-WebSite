@@ -1,56 +1,64 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import scrollTo from 'gatsby-plugin-smoothscroll';
-import { createGlobalStyle } from 'styled-components';
-
-import { LayoutContainer, NavContainer, NavList, StyledFooter } from './Layout.styles';
+import React from "react"
+import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import { createGlobalStyle } from "styled-components"
+import Emoji from "./leo-emoji.jpg"
+import { colors } from "../../constants"
+import {
+  LayoutContainer,
+  NavContainer,
+  NavList,
+  StyledFooter,
+  Icon,
+} from "./Layout.styles"
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900|Playfair+Display:400,500,700&display=swap');
-  
   html {
     overflow-x: hidden;
   }
   body {
-    font-family: 'Nunito Sans', sans-serif;
-    color: #3F3D56;
+    font-family: 'Raleway';
+    color: ${colors.primary};
     font-size: 16px;
   }
   a {
     text-decoration: none;
     box-shadow: none;
-    color: #3F3D56; 
+    color: ${colors.primary};
   }
 
   h2,h4,h5 {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Raleway';
   }
   h1,h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display';
   }
-`;
+`
 
 const Layout = ({ children }) => {
-	return (
-		<LayoutContainer>
-			<GlobalStyle />
-			<NavContainer>
-				<NavList>
-					<li>
-						<Link to='/'>Project</Link>
-					</li>
-					<li>
-						<Link to='/blog'>Blog</Link>
-					</li>
-					<li>
-						<a onClick={() => scrollTo('#contact')}>Contact</a>
-					</li>
-				</NavList>
-			</NavContainer>
-			<main>{children}</main>
-			<StyledFooter>leonardotononi@gmail.com</StyledFooter>
-		</LayoutContainer>
-	);
-};
+  return (
+    <LayoutContainer>
+      <GlobalStyle />
+      <NavContainer>
+        <Icon>
+          <img src={Emoji} />
+        </Icon>
+        <NavList>
+          <li>
+            <Link to="/">Project</Link>
+          </li>
+          {/* <li>
+            <Link to="/blog">Blog</Link>
+          </li> */}
+          <li>
+            <a onClick={() => scrollTo("#contact")}>Contact</a>
+          </li>
+        </NavList>
+      </NavContainer>
+      <main>{children}</main>
+      <StyledFooter>leonardotononi@gmail.com</StyledFooter>
+    </LayoutContainer>
+  )
+}
 
-export default Layout;
+export default Layout

@@ -1,66 +1,35 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components"
+import { devices, colors, fonts } from "../../constants"
+import { Title } from "../Project/Project.styles"
 
 export const SkillsContainer = styled.section`
-	padding: 2rem 0.5rem; /* 
-  background-color: #F2F3F5; */
-	max-width: 1700px;
-	margin: 0 auto;
+  padding: 2rem 0.5rem;
+  max-width: 1700px;
+  margin: 0 auto;
+  background: ${colors.dirty_white};
+  margin: 60px 0;
 
-	ul {
-		max-width: 700px;
-		margin: 0 auto;
-		display: grid;
-		align-items: center;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  img {
+    width: 40px;
+  }
 
-		li {
-			list-style-type: none;
-			position: relative;
-			margin: 0 2rem;
-			font-size: 1.4rem;
-			align-items: center;
-			font-weight: 300;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			cursor: pointer;
+  ${Title} {
+    padding: 0 30px;
+  }
+`
 
-			&:hover span {
-				visibility: visible;
-			}
+export const SkillCard = styled.div`
+  display: inline-flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  box-shadow: ${colors.tiny_shadow};
+  padding: 20px;
+  margin-right: 30px;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
 
-			span {
-				font-size: 1rem;
-				transition: visibility 50ms ease-in-out;
-				visibility: hidden;
-				position: absolute;
-				top: 7rem;
-				background: #7875a3;
-				color: #fff;
-				border-radius: 5px;
-				padding: .3rem .5rem;
-				z-index: 1;
-			}
-
-			img {
-				margin: 1em;
-				width: 35px;
-				height: 60px;
-				position: relative;
-				top: 8px;
-			}
-		}
-	}
-`;
-export const Title = styled.h3`
-	max-width: 900px;
-	margin: 0 auto;
-	font-size: 2.5rem;
-	text-align: center;
-	padding: 3rem 2rem;
-	width: 100%;
-
-	@media only screen and (min-width: 600px) {
-		padding-top: 10rem;
-	}
-`;
+  span {
+    padding-top: 10px;
+  }
+`

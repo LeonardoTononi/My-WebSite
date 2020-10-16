@@ -1,60 +1,89 @@
-import React, { Fragment } from 'react';
-import { SkillsContainer, Title } from './Skills.styled';
+import React, { Fragment } from "react"
+import { SkillsContainer, SkillCard } from "./Skills.styled"
+import { Title } from "../Project/Project.styles"
+import Carousel from "../Carousel"
 
-import HtmlIcon from '../../assets/skills/html-5.svg';
-import CssIcon from '../../assets/skills/css-3.svg';
-import SassIcon from '../../assets/skills/sass.svg';
-import JsIcon from '../../assets/skills/javascript.svg';
-import ReactIcon from '../../assets/skills/react.svg';
-import ReduxIcon from '../../assets/skills/redux.svg';
-import GatsbyIcon from '../../assets/skills/gatsby.svg';
-import PwaIcon from '../../assets/skills/logo-pwa.svg';
-import FirebaseIcon from '../../assets/skills/firebase.svg';
-import FigmaIcon from '../../assets/skills/figma.svg';
+import HtmlIcon from "../../assets/skills/html-5.svg"
+import CssIcon from "../../assets/skills/css-3.svg"
+import SassIcon from "../../assets/skills/sass.svg"
+import JsIcon from "../../assets/skills/javascript.svg"
+import ReactIcon from "../../assets/skills/react.svg"
+import ReduxIcon from "../../assets/skills/redux.svg"
+import GatsbyIcon from "../../assets/skills/gatsby.svg"
+import PwaIcon from "../../assets/skills/logo-pwa.svg"
+import FirebaseIcon from "../../assets/skills/firebase.svg"
+import FigmaIcon from "../../assets/skills/figma.svg"
+import GoogleAnalyticsIcon from "../../assets/skills/google-anal.png"
+import StyledCompIcon from "../../assets/skills/styled.png"
+import StrapiIcon from "../../assets/skills/strapi.svg"
+
+const skillsArray = [
+  {
+    name: "JavaScript",
+    icon: JsIcon,
+  },
+  {
+    name: "React",
+    icon: ReactIcon,
+  },
+  {
+    name: "Gatsby",
+    icon: GatsbyIcon,
+  },
+  {
+    name: "Redux",
+    icon: ReduxIcon,
+  },
+  {
+    name: "StyledCom.",
+    icon: StyledCompIcon,
+  },
+  {
+    name: "Sass",
+    icon: SassIcon,
+  },
+  {
+    name: "Firebase",
+    icon: FirebaseIcon,
+  },
+  {
+    name: "GAnalytics",
+    icon: GoogleAnalyticsIcon,
+  },
+  {
+    name: "Strapi",
+    icon: StrapiIcon,
+  },
+  {
+    name: "Html",
+    icon: HtmlIcon,
+  },
+  {
+    name: "Css",
+    icon: CssIcon,
+  },
+  {
+    name: "PWA",
+    icon: PwaIcon,
+  },
+]
 
 const Skills = () => {
-	return (
-		<React.Fragment>
-			<Title>Skills</Title>
-			<SkillsContainer numberElem='4'>
-				<ul>
-					<li>
-						<img src={HtmlIcon} alt='html icon' /> <span>Html</span>
-					</li>
-					<li>
-						<img src={CssIcon} alt='css icon' /> <span>Css</span>
-					</li>
-					<li>
-						<img src={SassIcon} alt=' icon' style={{ width: '50px' }} /> <span>Sass</span>
-					</li>
-					<li>
-						<img src={JsIcon} alt=' icon' /> <span>JavaScript</span>{' '}
-					</li>
-					<li>
-						<img src={ReactIcon} alt=' icon' /> <span>React.js</span>{' '}
-					</li>
-					<li>
-						<img src={ReduxIcon} alt=' icon' /> <span>Redux</span>{' '}
-					</li>
-					<li>
-						<img src={GatsbyIcon} alt=' icon' /> <span>Gatsby.js</span>
-					</li>
-					<li>
-						<img src={PwaIcon} alt=' icon' style={{ width: '60px' }} /> <span>Progressive Web App</span>
-					</li>
-					<li>
-						<img src={FirebaseIcon} alt=' icon' /> <span>Firebase</span>{' '}
-					</li>
-					{/* <li><img src={MongoIcon} alt=" icon" /> <span></span> MongoDB</li>
-        <li><img src={NodeIcon} alt=" icon" /> <span></span> Node.js</li>
-        <li><img src={ExpressIcon} alt=" icon" /> <span></span> Express</li> */}
-					<li>
-						<img src={FigmaIcon} alt=' icon' /> <span>Figma</span>{' '}
-					</li>
-				</ul>
-			</SkillsContainer>
-		</React.Fragment>
-	);
-};
+  return (
+    <React.Fragment>
+      <SkillsContainer numberElem="4">
+        <Title>Skills</Title>
+        <Carousel>
+          {skillsArray.map(skill => (
+            <SkillCard>
+              <span>{skill.name}</span>
+              <img src={skill.icon} />
+            </SkillCard>
+          ))}
+        </Carousel>
+      </SkillsContainer>
+    </React.Fragment>
+  )
+}
 
-export default Skills;
+export default Skills

@@ -1,93 +1,84 @@
-import styled from 'styled-components';
-import Background from '../../assets/PlayBG.png';
+import styled from "styled-components"
+import { fonts, devices, colors } from "../../constants/index"
 
 export const StyledHeader = styled.header`
-	@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  place-content: center;
 
-	height: 80vh;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 2rem;
-	display: grid;
-	place-content: center;/* 
-	background-image: url(${Background});
-	background-size: cover; */
+  h5 {
+    margin: 0;
+    text-transform: capitalize;
+    color: #3f3d56;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: ${fonts.smalltitle.mobile};
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
 
-	@media (min-width: 900px) {
-		height: 70vh;
-		padding: 10rem;
-		justify-content: start;
-		align-content: center;
-		background-image: none;
-	}
+  h1 {
+    margin: 0;
+    font-size: ${fonts.title.mobile};
+    letter-spacing: 0.05em;
 
-	h5 {
-		margin: 0;
-		text-transform: uppercase;
-		color: #3f3d56;
-		opacity: 0.5;
-		font-weight: 400;
-		font-size: .9rem;
-		letter-spacing: 0.08em;
+    mark {
+      background: ${colors.mint};
+    }
 
-		@media (min-width: 600px) {
-			font-size: 1.2rem;
-		}
-	}
+    span {
+      font-weight: 400;
+      font-size: ${fonts.subtitle.mobile};
+      letter-spacing: initial;
+    }
+  }
 
-	h1 {
-		margin: 0.2em 0;
-		font-size: 4rem;
-		letter-spacing: 0.05em;
+  @media ${devices.tabletM} {
+    padding: 30px;
+    height: 70vh;
+    padding: 60px;
+    justify-content: start;
+    align-content: center;
+    background-image: none;
 
-		@media (min-width: 600px) {
-			font-size: 6rem;
-		}
-	}
+    h5 {
+      font-size: ${fonts.smalltitle.tablet};
+    }
 
-	h4 {
-		margin: 0;
-		letter-spacing: 0.07em;
-		font-size: 1.6rem;
-		text-transform: initial;
-		font-weight: 500;
-		margin-bottom: 0.5rem;
+    h1 {
+      font-size: ${fonts.title.tablet};
+      span {
+        font-size: ${fonts.subtitle.mobile};
+      }
+    }
+  }
+`
 
-		&:last-of-type {
-			margin-bottom: 3rem;
-		}
-		@media (min-width: 600px) {
-			font-size: 2rem;
-			line-height: 2.8rem;
+export const DownloadButton = styled.a`
+  width: 250px;
+  height: 60px;
+  box-shadow: ${colors.base_shadow};
+  background: #ffffff;
+  display: grid;
+  align-items: center;
+  place-content: center;
+  margin: 30px 0;
+  position: relative;
+  transition: box-shadow 100ms ease-in-out;
+  font-size: ${fonts.text.mobile};
+  font-weight: bold;
+  border-radius: 10px;
 
-			&:last-of-type {
-				margin-bottom: 4rem;
-			}
-		}
-	}
-`;
+  text-transform: capitalize;
 
-export const DownloadButton = styled.div`
-	a {
-		position: relative;
-		padding: .7rem 1rem;
-		background-color: #3f3d56;
-		color: #fff;
-		border-radius: 15px;
-		font-weight: 300;
-		letter-spacing: 0.02em;
-		transition: bottom 100ms ease-in-out;
+  &:hover {
+    box-shadow: ${colors.base_shadow_hover};
+  }
 
-		&:hover {
-			bottom: .3rem;
-			/* box-shadow: 5px 5px 0 0 #3f3d56b8; */
-		}
-
-		@media (min-width: 600px) {
-			padding: 1rem 2rem;
-			font-size: 1.4rem;
-			font-weight: 200;
-			text-transform: uppercase;
-		}
-	}
-`;
+  @media ${devices.tabletM} {
+    margin-top: 40px;
+  }
+`

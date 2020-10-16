@@ -1,73 +1,67 @@
-import styled from 'styled-components';
+import styled from "styled-components"
+import { devices, colors, fonts } from "../../constants"
 
 export const AboutContainer = styled.section`
-	position: relative;
-	padding: 0 2rem;
-	display: grid;
-	place-content: center;
-	align-items: center;
-	max-width: 900px;
-	margin: 0 auto;
-	grid-template-areas: "text1" "img" "text2";
+  position: relative;
+  padding: 0 20px;
+  display: grid;
+  place-content: center;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  grid-template-areas: "text1" "img" "text2";
 
-	@media (min-width: 1400px) {
-		grid-template-areas: "img" "text1" "text2";
+  @media (min-width: 1400px) {
+    grid-template-areas: "img" "text1" "text2";
 
-		img {
-			width: 200px;
-			height: 200px;
-			position: absolute;
-			bottom: -8rem;
-			left: -16rem;
-		}
-	}
-`;
+    img {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      bottom: -8rem;
+      left: -16rem;
+    }
+  }
+`
 
 export const Text = styled.p`
-	color: #61626d;
-	padding: 2rem 0;
-	text-align: start;
-	font-weight: 200;
-	line-height: 35px;
-	font-size: 1.3rem;
+  text-align: start;
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 0;
 
-	&:first-of-type {
-		grid-area: text1;
-	}
+  &:first-of-type {
+    grid-area: text1;
+  }
 
-	&:last-of-type {
-		grid-area: text2;
-	}
+  &:last-of-type {
+    grid-area: text2;
+  }
 
-	@media (min-width: 600px) {
-		line-height: 2.7rem;
-		padding-bottom: 0;
-	}
-`;
+  @media (min-width: 600px) {
+    line-height: 2.7rem;
+    padding-bottom: 0;
+  }
+`
 
 export const ImageStyled = styled.img`
-	place-self: center;
-	grid-area: img;
-	width: 280px;
-	height: 280px;
-	border-radius: 38% 75% 44% 98%;
-	object-fit: cover;
-	background-color: #c1d6ff;
-	padding: 1rem;
+  place-self: center;
+  grid-area: img;
+  width: 100%;
+  max-width: 400px;
+  height: 320px;
+  margin-bottom: 40px;
+  /* filter: grayscale(1);
 
-	@media (min-width: 600px) {
-		margin: 3rem 0;
-	}
-`;
-export const Title = styled.h3`
-	max-width: 900px;
-	margin: 0 auto;
-	font-size: 2.5rem;
-	text-align: start;
-	padding: 3rem 2rem;
-	width: 100%;
+  &:hover {
+    filter: none;
+  } */
+  /*  border-radius: 38% 75% 44% 98%; */
 
-	@media only screen and (min-width: 600px) {
-		padding-top: 25rem;
-	}
-`;
+  /*   filter: drop-shadow(2px 4px 6px grey); */
+
+  @media (min-width: 600px) {
+    margin: 3rem 0;
+  }
+`

@@ -1,179 +1,191 @@
-import styled from 'styled-components';
-import Img from 'gatsby-image';
+import styled from "styled-components"
+import { devices, colors, fonts } from "../../constants"
+import Popup from "reactjs-popup"
+
 export const ProjectContainer = styled.section`
-	@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Quicksand:400,600&display=swap');
-	max-width: 1200px;
-	margin: 5rem 1rem;
-	padding: 4rem 1rem;
-	display: grid;
-	place-content: center;
-	background: #ffffff;
-	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-	border-radius: 30px;
-	transition: background-color 100ms ease-in-out;
+  max-width: 1200px;
+  padding: 10px;
+  display: grid;
+  place-content: center;
+  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+  transition: background-color 100ms ease-in-out;
 
-	&:hover {
-		background-color: whitesmoke;
-	}
+  @media ${devices.tablet} {
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+`
 
-	&:active {
-		background-color: none;
-	}
+export const ProjectImg = styled.img`
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 20px 20px 60px #d7d7d7, -20px -20px 60px #ffffff;
+  border: 4px solid #f4f4f4;
+`
 
-	@media (min-width: 850px) {
-		grid-template-columns: 1fr 1fr;
-		height: 500px;
-		margin: 5rem auto;
-		padding: 4rem;
-	}
-`;
+export const PersonalImg = styled.img`
+  display: none;
+
+  @media ${devices.tabletM} {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+  }
+`
+
+export const Wrapper = styled.div`
+  padding-bottom: 30px;
+
+  @media ${devices.tablet} {
+    padding-bottom: 90px;
+  }
+`
+
+export const ProjectsPreview = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
+
+  img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: center;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  @media ${devices.tablet} {
+    img {
+      max-height: 300px;
+    }
+  }
+`
+
+export const ColumnMedia = styled.div`
+  text-align: center;
+`
+
+export const Title = styled.h3`
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: ${fonts.subtitle.tablet};
+  text-align: start;
+  padding: 30px 20px;
+  width: 100%;
+`
 
 export const ColumnText = styled.div`
-	place-self: center;
-	position: relative;
-	@media only screen and (min-width: 850px) {
-		order: ${({ order1, order2 }) => (order1 ? order1 : order2)};
-	}
-`;
-export const ColumnMedia = styled.div`
-	place-self: center;
-	place-content: center;
-	display: grid;
-	position: relative;
+  display: grid;
+  grid-gap: 20px;
+  padding: 30px 10px;
 
-	@media only screen and (min-width: 850px) {
-		order: ${({ order1, order2 }) => (order1 ? order1 : order2)};
-		top: 15rem;
-	}
-`;
-export const Title = styled.h3`
-	max-width: 900px;
-	margin: 0 auto;
-	font-size: 2.5rem;
-	text-align: start;
-	padding: 3rem 2rem;
-	width: 100%;
-
-	@media only screen and (min-width: 600px) {
-		text-align: end;
-		font-size: 3.5rem;
-		padding: 10rem 5rem 5rem 5rem;
-	}
-`;
-
-export const ProjectTitle = styled.h4`
-	font-family: 'Montserrat', sans-serif;
-	font-size: 2.5rem;
-	line-height: 55px;
-	text-transform: inherit;
-	display: flex;
-	align-items: center;
-	letter-spacing: 0.05em;
-	color: #3f3d56;
-	font-weight: 600;
-	margin: 3rem 0 1rem 0;
-
-	@media only screen and (min-width: 850px) {
-		text-align: ${({ alignEnd }) => (alignEnd ? 'end' : 'start')};
-	}
-`;
-
-export const ProjectNumb = styled.p`
-	position: relative;
-	font-weight: bold;
-	font-size: 200px;
-	line-height: 65px;
-	letter-spacing: 0.05em;
-	color: rgba(14, 14, 14, 0.06);
-
-	@media only screen and (min-width: 850px) {
-		text-align: ${({ alignEnd }) => (alignEnd ? 'end' : 'start')};
-		left: ${({ alignEnd }) => (alignEnd ? '2rem' : 'start')};
-	}
-`;
-
-export const ProjectImageMobile = styled(Img)`
-	position: relative;
-	left: 4%;
-	width: 300px;
-		@media only screen and (min-width: 850px) {
-			width: 400px;
-			bottom: 3rem;
-		 }
-`;
-
-export const ProjectImageDesk = styled(Img)`
-	position: relative;
-	width: 300px;
-	margin: 2rem 0;
-
-	@media only screen and (min-width: 850px) {
-		width: 500px;
-		margin: 0;
-	  bottom: 4rem;
+  @media ${devices.tabletM} {
+    grid-template-columns: 1fr 1fr;
   }
-`;
+`
 
-export const Tags = styled.div`
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	padding-top: 1rem;
+export const Question = styled.div`
+  h4 {
+    font-size: ${fonts.subtitle.mobile};
+    background: ${colors.mint};
+    display: initial;
+    margin: 0;
+  }
 
-	@media only screen and (min-width: 850px) {
-		justify-content: ${({ alignEnd }) => (alignEnd ? 'flex-end' : 'flex-start')};
-	}
-`;
+  ul {
+    display: grid;
+    padding: 0 0 0 10px;
+    grid-gap: 10px;
+    font-size: ${fonts.text.mobile};
+    list-style: none;
 
-export const Tag = styled.p`
-	font-family: 'Quicksand', sans-serif;
-	background: #f2f3f5;
-	padding: 0.1rem 1.5rem;
-	height: 40px;
-	margin: 0.5rem;
-	font-size: 1rem;
-	border-radius: 20px;
-	font-weight: 400;
-	font-style: normal;
-	line-height: 45px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	letter-spacing: 0.05em;
-`;
+    li {
+      display: inline-flex;
+      align-items: center;
 
-export const SocialsContainer = styled.div`
-	padding: 1rem 0;
-	display: inline-flex;
-	justify-content: center;
-	position: relative;
+      svg {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
 
-	a {
-		font-family: 'Montserrat', sans-serif;
-		text-transform: uppercase;
-		padding: .4rem 1rem;
-		color: #3f3d56;
-		font-weight: bold;
-		margin: 0 10px;
-		cursor: pointer;
-		transition: background-color 100ms ease-in;
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 
-		&:first-of-type {
-			border: 3px solid #3f3d56;
-			border-radius: 20px;
-		}
-	}
+  p {
+    font-size: ${fonts.text.mobile};
+    line-height: 2rem;
+  }
+`
 
-	@media only screen and (min-width: 850px) {
-		padding: 0 2rem;
-		position: relative;
-		bottom: 2rem;
-	}
-`;
+export const CloseBtn = styled.button`
+  outline: none;
+  background: white;
+  border-radius: 10px;
+  border: none;
 
-export const Space = styled.div`
-	padding: 2rem;
-	@media (min-width: 850px) {
-		padding: 15rem;
-	}
-`;
+  height: 25px;
+  width: 60px;
+
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-size: ${fonts.text.mobile};
+  color: ${colors.primary};
+  font-family: "Raleway";
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  @media ${devices.tablet} {
+    box-shadow: ${colors.base_shadow};
+    font-size: ${fonts.text.tablet};
+    height: 35px;
+    width: 90px;
+  }
+`
+
+export const StyledPopup = styled(Popup)`
+  // use your custom style for ".popup-overlay"
+  &-overlay {
+    background: #f4f4f4;
+  }
+  // use your custom style for ".popup-content"
+  &-content {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 40px;
+    background: #f4f4f4;
+    box-shadow: 9px 11px 22px 12px #ebebeb, -11px -9px 22px 11px #ffffff;
+    border: 0;
+    height: 100%;
+    max-height: 750px;
+    overflow: scroll;
+
+    @media ${devices.tabletM} {
+      margin: auto 20px !important;
+    }
+  }
+`
