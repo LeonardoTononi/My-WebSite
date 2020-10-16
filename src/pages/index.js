@@ -16,25 +16,7 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="My Ptf" />
       <Header />
-      <Project
-        imgLink={data.bestfiveImage.childImageSharp.fluid}
-        title="Tourism Web Application"
-        numb="#1"
-        tags={[
-          "JavaScript",
-          "PWA",
-          "Google Analytics",
-          "SEO",
-          "Google Maps API",
-        ]}
-        GitHubLink="https://github.com/Easaaa/Bestfive-bcn"
-        LiveLink="https://bestfivebcn.com/"
-        order1="2"
-        order2="1"
-        alignEnd
-        firstProject
-        mobile
-      />
+      <Project order1="2" order2="1" alignEnd firstProject mobile />
       {/* 	<Project
 				imgLink={data.toureoadminImage.childImageSharp.fluid}
 				title='Dashboard Administration App'

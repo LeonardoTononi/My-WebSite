@@ -16,26 +16,12 @@ import {
 } from "./Project.styles"
 
 import { VscDebugBreakpointLog } from "react-icons/vsc"
-import IphoneImg from "./iphone.png"
-import Hotel from "./hotel-mac.jpg"
-import MeImg from "./leo.png"
+import IphoneImg from "../../assets/iphone.png"
+import MeImg from "../../assets/leo.png"
 
 const DiamondIcon = <VscDebugBreakpointLog />
 
-const Project = ({
-  title,
-  numb,
-  tags,
-  GitHubLink,
-  LiveLink,
-  firstProject,
-  imgLink,
-  mobile,
-  workingOn,
-  order1,
-  order2,
-  alignEnd,
-}) => {
+const Project = () => {
   const ref = useRef()
   return (
     <Wrapper>
