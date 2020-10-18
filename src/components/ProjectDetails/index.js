@@ -21,7 +21,7 @@ export const ProjectDetails = ({ closeModal, data, projectData }) => {
       <PersonalImg fluid={data.MeImg.childImageSharp.fluid} />
       <ColumnMedia>
         <ProjectImg
-          fluid={data.IphoneImg.childImageSharp.fluid}
+          fluid={projectData.img}
           style={{ maxWidth: "400px", margin: "0 auto" }}
         />
       </ColumnMedia>
