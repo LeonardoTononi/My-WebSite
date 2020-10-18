@@ -3,11 +3,9 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import Layout from "../components/Layout/Layout"
-import BlogHeader from "../components/BlogHeader/BlogHeader"
-import Contact from "../components/Contact/Contact"
-
-import PostImg from "../../content/assets/comingsoon.svg"
+import Layout from "../components/Layout"
+import BlogHeader from "../components/BlogHeader"
+import Contact from "../components/Contact"
 import SEO from "../components/seo"
 
 const BlogPreviewContainer = styled.article`

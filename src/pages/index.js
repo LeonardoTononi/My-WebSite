@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/seo"
 
-import Header from "../components/Header/Header"
-import Project from "../components/Project/Project"
-import Skills from "../components/Skills/Skills"
-import About from "../components/About/About"
-import Contact from "../components/Contact/Contact"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
+import Header from "../components/Header"
+import Project from "../components/Project"
+import Skills from "../components/Skills"
+import About from "../components/About"
+import Contact from "../components/Contact"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -17,33 +17,6 @@ const Index = ({ data, location }) => {
       <SEO title="My Ptf" />
       <Header />
       <Project order1="2" order2="1" alignEnd firstProject mobile />
-      {/* 	<Project
-				imgLink={data.toureoadminImage.childImageSharp.fluid}
-				title='Dashboard Administration App'
-				numb='#2'
-				tags={[ 'React.js', 'Redux', 'Firebase Auth', 'Firestore' ]}
-				GitHubLink='https://github.com/Easaaa/admin-app-bestfive'
-				LiveLink='https://bestfivebcn.netlify.com/'
-			/>
-			<Project
-				imgLink={data.hotelvittoriaImage.childImageSharp.fluid}
-				title='Hospitality Business Web Site'
-				numb='#3'
-				tags={[ 'React.js', 'Gatsby', 'Mobile & Desktop View' ]}
-				GitHubLink='https://github.com/Easaaa/hotel-vittoria-2020'
-				LiveLink='https://hotelvittoria.netlify.com/'
-				order1='2'
-				order2='1'
-				alignEnd
-			/>
-			<Project
-				imgLink={data.toureoprotoImage.childImageSharp.fluid}
-				title='Mobile App Prototype'
-				numb='#4'
-				tags={[ 'React.js', 'ReactNative', 'Firebase' ]}
-				mobile
-				workingOn
-			/> */}
       <About />
       <Skills />
       <Contact id="contact" />

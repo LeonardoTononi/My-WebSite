@@ -1,7 +1,7 @@
 import React from "react"
 
-import { AboutContainer, Text, ImageStyled } from "./About.styles"
-import { Title, Wrapper } from "../Project/Project.styles"
+import { AboutContainer, Text } from "./style"
+import { Title, Wrapper } from "../Project/style"
 
 const About = () => {
   return (

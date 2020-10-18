@@ -1,8 +1,4 @@
 import React from "react"
-import styled from "styled-components"
-import { Icon, InlineIcon } from "@iconify/react"
-import mailIcon from "@iconify/icons-entypo/mail"
-import githubFilled from "@iconify/icons-ant-design/github-filled"
 import { FiGithub } from "react-icons/fi"
 import { BsEnvelope } from "react-icons/bs"
 import { RiLinkedinLine } from "react-icons/ri"
@@ -11,8 +7,8 @@ import {
   SocialLinkContainer,
   SocialLink,
   ResumeButton,
-} from "./Contact.styles"
-import { Title } from "../Project/Project.styles"
+} from "./style"
+import { Title } from "../Project/style"
 
 const Contact = ({ id }) => {
   return (

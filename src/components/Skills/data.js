@@ -1,8 +1,3 @@
-import React, { Fragment } from "react"
-import { SkillsContainer, SkillCard } from "./Skills.styled"
-import { Title } from "../Project/Project.styles"
-import Carousel from "../Carousel"
-
 import HtmlIcon from "../../assets/skills/html-5.svg"
 import CssIcon from "../../assets/skills/css-3.svg"
 import SassIcon from "../../assets/skills/sass.svg"
@@ -17,7 +12,7 @@ import GoogleAnalyticsIcon from "../../assets/skills/google-anal.png"
 import StyledCompIcon from "../../assets/skills/styled.png"
 import StrapiIcon from "../../assets/skills/strapi.svg"
 
-const skillsArray = [
+export const skillsArray = [
   {
     name: "JavaScript",
     icon: JsIcon,
@@ -63,27 +58,11 @@ const skillsArray = [
     icon: CssIcon,
   },
   {
+    name: "Figma",
+    icon: FigmaIcon,
+  },
+  {
     name: "PWA",
     icon: PwaIcon,
   },
 ]
-
-const Skills = () => {
-  return (
-    <React.Fragment>
-      <SkillsContainer numberElem="4">
-        <Title>Skills</Title>
-        <Carousel>
-          {skillsArray.map(skill => (
-            <SkillCard>
-              <span>{skill.name}</span>
-              <img src={skill.icon} />
-            </SkillCard>
-          ))}
-        </Carousel>
-      </SkillsContainer>
-    </React.Fragment>
-  )
-}
-
-export default Skills

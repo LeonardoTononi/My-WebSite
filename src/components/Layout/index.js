@@ -2,15 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { createGlobalStyle } from "styled-components"
-import Emoji from "./leo-emoji.jpg"
 import { colors } from "../../constants"
+
+import Emoji from "./leo-emoji.jpg"
 import {
   LayoutContainer,
   NavContainer,
   NavList,
   StyledFooter,
   Icon,
-} from "./Layout.styles"
+} from "./style"
 
 const GlobalStyle = createGlobalStyle`
   html {

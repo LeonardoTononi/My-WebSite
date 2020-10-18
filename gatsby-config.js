@@ -5,8 +5,8 @@ module.exports = {
       name: `Leonardo Tononi`,
       summary: `A React Developer.`,
     },
-    description: `Hi, this is my website where I show what I can do.`,
-    siteUrl: `https://leonardotononi.netlify.com/`,
+    description: `Hi, this is my website where I show to people who I am.`,
+    siteUrl: `https://leonardotononi.com/`,
     social: {
       twitter: `_Easaaa_`,
     },
@@ -132,9 +132,5 @@ module.exports = {
         },
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

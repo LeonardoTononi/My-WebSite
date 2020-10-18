@@ -1,12 +1,10 @@
 import React from "react"
 
-import BgHeader from "../BgHeader/BgHeader"
-import { StyledHeader, DownloadButton } from "./Header.styles"
+import { StyledHeader, DownloadButton } from "./style"
 
 const Header = () => {
   return (
     <StyledHeader>
-      {/* 	<BgHeader /> */}
       <h5>Leonardo Tononi</h5>
       <h1>
         <mark>I'm a Front-End Developer,</mark>

@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components"
 import { devices, colors, fonts } from "../../constants"
-import { Title } from "../Project/Project.styles"
+import { Title } from "../Project/style"
 
 export const SkillsContainer = styled.section`
   padding: 2rem 0.5rem;

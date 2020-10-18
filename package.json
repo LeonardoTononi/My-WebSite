@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Leonardo Tononi Portfolio",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Hi, this is my website where I show to people who I am.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Leonardo Tononi",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
