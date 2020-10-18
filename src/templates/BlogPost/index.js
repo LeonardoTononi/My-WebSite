@@ -3,11 +3,11 @@ import { Link, graphql } from "gatsby"
 
 import { BlogPostContainer, HeaderImg, SubscribeSection } from "./style"
 
-import Layout from "../components/Layout"
+import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
-import BlogPostHeader from "../components/BlogPostHeader"
-import Contact from "../components/Contact"
-import BlogSubscribeButton from "../components/BlogSubscribeButton"
+import BlogPostHeader from "../../components/BlogPostHeader"
+import Contact from "../../components/Contact"
+import BlogSubscribeButton from "../../components/BlogSubscribeButton"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark

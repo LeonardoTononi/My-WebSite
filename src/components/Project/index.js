@@ -7,9 +7,6 @@ import { projectsArray } from "./data"
 import { ProjectDetails } from "../ProjectDetails"
 import "reactjs-popup/dist/index.css"
 import { Title, ProjectsPreview, Wrapper, StyledPopup } from "./style"
-import { VscDebugBreakpointLog } from "react-icons/vsc"
-
-const DiamondIcon = <VscDebugBreakpointLog />
 
 const Project = () => {
   const ref = useRef()

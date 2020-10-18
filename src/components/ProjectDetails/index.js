@@ -10,6 +10,10 @@ import {
   PersonalImg,
 } from "./style"
 
+import { VscDebugBreakpointLog } from "react-icons/vsc"
+
+const DiamondIcon = <VscDebugBreakpointLog />
+
 export const ProjectDetails = ({ ref, data, projectData }) => {
   return (
     <ProjectContainer>
