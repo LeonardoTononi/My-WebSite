@@ -14,10 +14,10 @@ import { VscDebugBreakpointLog } from "react-icons/vsc"
 
 const DiamondIcon = <VscDebugBreakpointLog />
 
-export const ProjectDetails = ({ ref, data, projectData }) => {
+export const ProjectDetails = ({ closeModal, data, projectData }) => {
   return (
     <ProjectContainer>
-      <CloseBtn onClick={() => ref.current.close()}>Close</CloseBtn>
+      <CloseBtn onClick={closeModal}>Close</CloseBtn>
       <PersonalImg fluid={data.MeImg.childImageSharp.fluid} />
       <ColumnMedia>
         <ProjectImg

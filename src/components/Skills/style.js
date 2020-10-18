@@ -4,10 +4,10 @@ import { Title } from "../Project/style"
 
 export const SkillsContainer = styled.section`
   padding: 2rem 0.5rem;
-  max-width: 1700px;
+  max-width: 1920px;
   margin: 0 auto;
   background: ${colors.dirty_white};
-  margin: 60px 0;
+  margin: 60px auto;
 
   img {
     width: 40px;

@@ -10,6 +10,7 @@ import { Title, ProjectsPreview, Wrapper, StyledPopup } from "./style"
 
 const Project = () => {
   const ref = useRef()
+  const closeModal = () => ref.current.close()
   const data = useStaticQuery(graphql`
     query {
       IphoneImg: file(relativePath: { eq: "Iphone.png" }) {
@@ -50,7 +51,11 @@ const Project = () => {
             modal
             ref={ref}
           >
-            <ProjectDetails data={data} projectData={project} ref={ref} />
+            <ProjectDetails
+              data={data}
+              projectData={project}
+              closeModal={closeModal}
+            />
           </StyledPopup>
         ))}
       </ProjectsPreview>
