@@ -1,18 +1,18 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import { BlogPostContainer, HeaderImg, SubscribeSection } from "./style"
+import { BlogPostContainer, HeaderImg, SubscribeSection } from './style';
 
-import Layout from "../../components/Layout"
-import SEO from "../../components/seo"
-import BlogPostHeader from "../../components/BlogPostHeader"
-import Contact from "../../components/Contact"
-import BlogSubscribeButton from "../../components/BlogSubscribeButton"
+import Layout from '../../components/Layout';
+import SEO from '../../components/seo';
+import BlogPostHeader from '../../components/BlogPostHeader';
+import Contact from '../../components/Contact';
+import BlogSubscribeButton from '../../components/BlogSubscribeButton';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
+  const { previous, next } = pageContext;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -33,17 +33,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       </BlogPostContainer>
       <SubscribeSection>
         <h3>Don't forget...</h3>
-        <h4>Subscribe to receive my new post directly in your inbox.</h4>
-        <p>No spam guaranteed.</p>
-        <BlogSubscribeButton />
+        <h4>
+          You can follow me on Twitter, sometimes I write something meaningful.
+        </h4>
+        <p>Thanks for reading.</p>
       </SubscribeSection>
-
-      <Contact id="contact" />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -70,4 +69,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

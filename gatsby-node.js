@@ -1,3 +1,4 @@
+const { projects } = require('./src/data/projects');
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -39,6 +40,27 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   );
 
+  const projectsImgs = await graphql(`
+    query {
+      BestfivePhone: file(relativePath: { eq: "bestfive-3iphone.png" }) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      WeLearn: file(relativePath: { eq: "welearn-3mock.png" }) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   if (result.errors) {
     throw result.errors;
   }
@@ -63,30 +85,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const projectTemplate = path.resolve(`./src/templates/Project/index.js`);
 
-  const projects = [
-    {
-      title: 'BestFive Bcn',
-      name: 'A tourism web app',
-      stack: ['JavaScript', 'Firebase', 'Google Maps', 'Google Analytics'],
-      demo_url: 'https://bestfivebcn.com/',
-      github_url: 'https://github.com/Easaaa/Bestfive-bcn',
-      description: 'COMING SOON',
-      img: '',
-      slug: 'bestfive-bcn',
-    },
-    {
-      title: 'Hotel Vittoria',
-      name: 'An business web site',
-      stack: ['Gatsby', 'Netlify', 'Google Analytics', 'Google Sheets DB'],
-      demo_url: 'https://hotelvittoria.netlify.app/',
-      github_url: 'https://github.com/Easaaa/hotel-vittoria-2020',
-      description: 'COMING SOON',
-      img: '',
-      slug: 'hotel-vittoria',
-    },
-  ];
-
-  projects.forEach((project, index) => {
+  projects().forEach((project, index) => {
     createPage({
       path: `project/${project.slug}`,
       component: projectTemplate,

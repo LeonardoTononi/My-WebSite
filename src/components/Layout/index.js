@@ -49,11 +49,7 @@ const Layout = ({ children }) => {
         </Icon>
         <NavList>
           <Link to="/">Home</Link>
-
-          {/* <li>
-            <Link to="/blog">Blog</Link>
-          </li> */}
-
+          <Link to="/blog">Blog</Link>
           <a onClick={() => scrollTo('#contact')}>Contact</a>
         </NavList>
       </NavContainer>

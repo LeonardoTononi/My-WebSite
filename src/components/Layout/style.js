@@ -19,8 +19,14 @@ export const NavContainer = styled.nav`
     width: 60px;
   }
   @media ${devices.tablet} {
+    justify-content: center;
+    position: relative;
+
     img {
-      width: 100px;
+      width: 80px;
+      position: absolute;
+      left: 10px;
+      top: 0;
     }
   }
 `;

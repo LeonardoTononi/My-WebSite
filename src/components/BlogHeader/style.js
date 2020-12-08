@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap");
+  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
 
   height: 80vh;
   max-width: 1200px;
@@ -11,9 +11,12 @@ export const StyledHeader = styled.header`
   place-content: center; /* 
 	background-size: cover; */
 
+  mark {
+    background-color: #ceffbb;
+  }
+
   @media (min-width: 900px) {
     height: 50vh;
-    padding: 10rem;
     justify-content: start;
     align-content: center;
     background-image: none;
@@ -21,7 +24,7 @@ export const StyledHeader = styled.header`
 
   h5 {
     margin: 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #3f3d56;
     opacity: 0.5;
     font-weight: 400;
@@ -34,7 +37,7 @@ export const StyledHeader = styled.header`
   }
 
   h1 {
-    margin: 0.2em 0;
+    margin: 0;
     font-size: 4rem;
     letter-spacing: 0.05em;
 
@@ -46,14 +49,14 @@ export const StyledHeader = styled.header`
   h4 {
     margin: 0;
     letter-spacing: 0.07em;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-transform: initial;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    font-weight: 400;
 
     @media (min-width: 600px) {
       font-size: 2rem;
       line-height: 2.8rem;
+      margin-top: 30px;
     }
   }
 
@@ -64,4 +67,4 @@ export const StyledHeader = styled.header`
     opacity: 0.5;
     margin: 0;
   }
-`
+`;

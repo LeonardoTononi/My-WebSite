@@ -1,12 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import styled from "styled-components"
-import Img from "gatsby-image"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 
-import Layout from "../components/Layout"
-import BlogHeader from "../components/BlogHeader"
-import Contact from "../components/Contact"
-import SEO from "../components/seo"
+import Layout from '../components/Layout';
+import BlogHeader from '../components/BlogHeader';
+import Contact from '../components/Contact';
+import SEO from '../components/seo';
 
 const BlogPreviewContainer = styled.article`
   position: relative;
@@ -20,12 +20,11 @@ const BlogPreviewContainer = styled.article`
   justify-content: start;
   align-content: center;
   align-items: center;
-  grid-template-areas: "img" "header" "sub";
+  grid-template-areas: 'img' 'header' 'sub';
 
   @media only screen and (min-width: 800px) {
-    grid-template-areas: "img header header" "img sub sub";
+    grid-template-areas: 'img header header' 'img sub sub';
     margin: 5rem auto;
-    padding: 8rem 2rem 8rem 5rem;
   }
 
   header {
@@ -37,7 +36,7 @@ const BlogPreviewContainer = styled.article`
 
     h3 {
       margin: 0;
-      font-family: "Playfair Display";
+      font-family: 'Playfair Display';
       font-weight: bold;
       font-size: 3rem;
       letter-spacing: 0.05em;
@@ -66,7 +65,7 @@ const BlogPreviewContainer = styled.article`
       color: rgba(63, 61, 86, 0.6);
     }
   }
-`
+`;
 
 const PostImage = styled(Img)`
   grid-area: img;
@@ -81,30 +80,30 @@ const PostImage = styled(Img)`
     position: initial;
     padding-right: 2rem;
   }
-`
+`;
 
 const Tags = styled.div`
   display: flex;
-`
+`;
 
 const Tag = styled.div`
   padding: 0.1rem 0.5rem;
-  background: ${props => (props.coding ? "#ddddff" : "#ffc4c4")};
+  background: ${props => (props.coding ? '#ddddff' : '#ffc4c4')};
   border-radius: 5px;
   margin: 1rem 0.2rem;
   font-size: 0.9rem;
-`
+`;
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="BLOG" />
       <BlogHeader />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.title || node.fields.slug;
         return (
           <BlogPreviewContainer key={node.fields.slug}>
             <PostImage
@@ -131,14 +130,13 @@ const BlogIndex = ({ data, location }) => {
               </Tags>
             </section>
           </BlogPreviewContainer>
-        )
+        );
       })}
-      <Contact id="contact" />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -170,4 +168,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

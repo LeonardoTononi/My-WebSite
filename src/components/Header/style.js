@@ -39,6 +39,7 @@ export const StyledHeader = styled.header`
   @media ${devices.tabletM} {
     padding: 30px;
     height: 70vh;
+    max-height: 720px;
     padding: 60px;
     justify-content: start;
     align-content: center;
@@ -49,9 +50,10 @@ export const StyledHeader = styled.header`
     }
 
     h1 {
-      font-size: ${fonts.title.tablet};
+      font-size: ${fonts.title.laptop};
       span {
         font-size: ${fonts.subtitle.mobile};
+        line-height: 1rem;
       }
     }
   }

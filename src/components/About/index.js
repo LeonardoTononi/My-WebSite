@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { AboutContainer, Text, Button } from './style';
+import { AboutContainer, Text, Button, BigPar, Quote } from './style';
 import { Title, Wrapper } from '../ProjectPreview/style';
 import { BrowserView, MobileView, isTablet } from 'react-device-detect';
 
@@ -24,26 +24,43 @@ export default About;
 
 const TabletText = () => (
   <Text>
-    Hi there! I'm Leonardo. I'm a passionate learner that love experiment new
-    things. <mark>My background</mark> is really far from tech, back to 2017 I
-    was an <mark>online poker player.</mark> I was so anti tech that I remember
-    a day where while I was playing poker the PC turned off unexpectedly, I was
-    so furious that to fix that I was punching the case 😂. Don't worry, now I
-    practice meditation since a while, I'm more <mark> quiet and calm 🧘.</mark>
-    <br></br> <br></br>
-    After <mark>years of travelling ✈️</mark> around the world and thousand of
-    euro won with poker I understood that money were not so important to achieve
-    happiness in my life. Therefore I started to <mark>question my self</mark>{' '}
-    about what I was doing, and if was right for my soul. <br></br> At the end
-    of 2017, I started to grow an interest in blockchain and cryptocurrencies ₿.
-    Obviously I didn't understand at all how all the thing was working but I
-    invested and lost some money anyway. Then I thought it was better start{' '}
-    <mark>studying programming</mark> from the basics and only try to understand
-    more complex concepts like crypto and blockchain.
+    <p>Hi there! I'm Leonardo.</p>
+    <p> I'm a passionate learner that love experiment new things.</p>
+    <p>
+      <mark>My background</mark> is really far from tech, back to 2017 I was an{' '}
+      online poker player. I know it's shocking, but I was so anti tech that I
+      remember that for every kind of problem I turned off my PC (It still works
+      sometimes).
+    </p>
     <br></br>
+    <p>
+      After <mark>years of travelling ✈️</mark> around the world and thousand of
+      euro won with poker I understood that money were not so important for my
+      self, and that if I would achieve happiness I had to change the main focus
+      in my life.
+    </p>
     <br></br>
-    Now here we are, I'm super happy for my decision and really excited every
-    day to <mark>learn and understand</mark> new subject.
+    <p>
+      Therefore I started to <mark>question my self</mark> about what I was
+      doing, and if was right for my soul.
+    </p>
+    <p>
+      During this process, at the end of 2017, I started to grow an interest in
+      blockchain and without have a real understanding I invested and lost some
+      money.
+    </p>
+    <p>
+      After that, if I understand something was that know about crypto it would
+      happen only if I would start studying about programming from the basics
+      and only then try to understand more complex concepts like crypto and
+      blockchain..
+    </p>
+    <br></br>
+    <p>
+      Now here we are, I'm super happy for my decision and really excited (Ohh
+      I'm so thrilled!!!) every day to <mark>learn and understand</mark> new
+      tools and languages.
+    </p>
   </Text>
 );
 
