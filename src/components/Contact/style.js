@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { devices, colors, fonts } from "../../constants"
+import styled from 'styled-components';
+import { devices, colors, fonts } from '../../constants';
 
 export const ContactContainer = styled.section`
   padding: 20px;
@@ -15,7 +15,7 @@ export const ContactContainer = styled.section`
   p {
     text-align: start;
     font-weight: 200;
-    font-size: 1.2rem;
+    font-size: ${fonts.text.mobile};
     line-height: 2rem;
     width: 100%;
   }
@@ -28,7 +28,7 @@ export const ContactContainer = styled.section`
       text-align: center;
     }
   }
-`
+`;
 
 export const ResumeButton = styled.a`
   width: 100%;
@@ -43,7 +43,7 @@ export const ResumeButton = styled.a`
     line-height: 2.7rem;
     text-align: end;
   }
-`
+`;
 
 export const Title = styled.h3`
   font-size: 2.5rem;
@@ -55,7 +55,7 @@ export const Title = styled.h3`
   @media only screen and (min-width: 600px) {
     text-align: end;
   }
-`
+`;
 
 export const SocialLinkContainer = styled.div`
   display: grid;
@@ -63,7 +63,7 @@ export const SocialLinkContainer = styled.div`
   align-items: center;
   grid-gap: 20px;
   grid-auto-flow: column;
-`
+`;
 
 export const SocialLink = styled.div`
   a {
@@ -82,4 +82,4 @@ export const SocialLink = styled.div`
       font-size: 24px;
     }
   }
-`
+`;

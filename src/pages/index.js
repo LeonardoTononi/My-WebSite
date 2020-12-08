@@ -1,30 +1,29 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import Header from "../components/Header"
-import Project from "../components/Project"
-import Skills from "../components/Skills"
-import About from "../components/About"
-import Contact from "../components/Contact"
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import Header from '../components/Header';
+import ProjectPreview from '../components/ProjectPreview';
+import Skills from '../components/Skills';
+import About from '../components/About';
+import Contact from '../components/Contact';
 
 const Index = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="My Ptf" />
       <Header />
-      <Project order1="2" order2="1" alignEnd firstProject mobile />
+      <ProjectPreview order1="2" order2="1" alignEnd firstProject mobile />
       <About />
       <Skills />
-      <Contact id="contact" />
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export const pageQuery = graphql`
   query {
@@ -83,4 +82,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

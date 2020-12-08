@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import Carousel from "../Carousel"
-import { skillsArray } from "./data"
+import Carousel from '../Carousel';
+import { skillsArray } from './data';
 
-import { SkillsContainer, SkillCard } from "./style"
-import { Title } from "../Project/style"
+import { SkillsContainer, SkillCard } from './style';
+import { Title } from '../ProjectPreview/style';
 
 const Skills = () => (
   <SkillsContainer numberElem="4">
@@ -18,6 +18,6 @@ const Skills = () => (
       ))}
     </Carousel>
   </SkillsContainer>
-)
+);
 
-export default Skills
+export default Skills;

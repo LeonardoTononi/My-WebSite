@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { devices, colors, fonts } from "../../constants"
+import styled from 'styled-components';
+import { devices, colors, fonts } from '../../constants';
 
 export const AboutContainer = styled.section`
   position: relative;
@@ -9,59 +9,41 @@ export const AboutContainer = styled.section`
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
-  grid-template-areas: "text1" "img" "text2";
-
-  @media (min-width: 1400px) {
-    grid-template-areas: "img" "text1" "text2";
-
-    img {
-      width: 200px;
-      height: 200px;
-      position: absolute;
-      bottom: -8rem;
-      left: -16rem;
-    }
-  }
-`
+`;
 
 export const Text = styled.p`
   text-align: start;
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: ${fonts.text.mobile};
   line-height: 2rem;
   margin: 0;
 
-  &:first-of-type {
-    grid-area: text1;
-  }
-
-  &:last-of-type {
-    grid-area: text2;
+  mark {
+    background: ${colors.mint};
   }
 
   @media (min-width: 600px) {
-    line-height: 2.7rem;
     padding-bottom: 0;
+    line-height: 2.5rem;
   }
-`
+`;
 
-export const ImageStyled = styled.img`
-  place-self: center;
-  grid-area: img;
-  width: 100%;
-  max-width: 400px;
-  height: 320px;
-  margin-bottom: 40px;
-  /* filter: grayscale(1);
+export const Button = styled.button`
+  width: 160px;
+  height: 40px;
+  background: #ffffff;
+  display: grid;
+  align-items: center;
+  place-content: center;
+  margin: 30px 0;
+  position: relative;
+  font-size: ${fonts.text.base};
+  border-radius: 5px;
+  border: 1px solid ${colors.primary};
+  color: ${colors.primary};
+  outline: none;
 
-  &:hover {
-    filter: none;
-  } */
-  /*  border-radius: 38% 75% 44% 98%; */
-
-  /*   filter: drop-shadow(2px 4px 6px grey); */
-
-  @media (min-width: 600px) {
-    margin: 3rem 0;
+  @media ${devices.tabletM} {
+    margin-top: 40px;
   }
-`
+`;

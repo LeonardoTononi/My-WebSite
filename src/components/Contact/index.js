@@ -1,19 +1,19 @@
-import React from "react"
-import { FiGithub } from "react-icons/fi"
-import { BsEnvelope } from "react-icons/bs"
-import { RiLinkedinLine } from "react-icons/ri"
+import React from 'react';
+import { FiGithub } from 'react-icons/fi';
+import { BsEnvelope } from 'react-icons/bs';
+import { RiLinkedinLine } from 'react-icons/ri';
 import {
   ContactContainer,
   SocialLinkContainer,
   SocialLink,
   ResumeButton,
-} from "./style"
-import { Title } from "../Project/style"
+} from './style';
+import { Title } from '../ProjectPreview/style';
 
 const Contact = ({ id }) => {
   return (
     <ContactContainer id={id}>
-      <Title style={{ padding: "0" }}>How to contact me</Title>
+      <Title style={{ padding: '0' }}>How to contact me</Title>
       <p>
         Currently <strong>I'm working</strong> for a company in Barcelona, but
         I'm <mark>available for freelancing</mark> jobs. <br />
@@ -43,7 +43,7 @@ const Contact = ({ id }) => {
         </SocialLink>
       </SocialLinkContainer>
     </ContactContainer>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

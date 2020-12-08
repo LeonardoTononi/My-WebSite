@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components"
-import { devices, colors, fonts } from "../../constants"
-import { Title } from "../Project/style"
+import styled, { keyframes } from 'styled-components';
+import { devices, colors, fonts } from '../../constants';
+import { Title } from '../ProjectPreview/style';
 
 export const SkillsContainer = styled.section`
   padding: 2rem 0.5rem;
@@ -16,7 +16,7 @@ export const SkillsContainer = styled.section`
   ${Title} {
     padding: 0 30px;
   }
-`
+`;
 
 export const SkillCard = styled.div`
   display: inline-flex;
@@ -32,4 +32,4 @@ export const SkillCard = styled.div`
   span {
     padding-top: 10px;
   }
-`
+`;
