@@ -1,68 +1,73 @@
-import HtmlIcon from "../../assets/skills/html-5.svg"
-import CssIcon from "../../assets/skills/css-3.svg"
-import SassIcon from "../../assets/skills/sass.svg"
-import JsIcon from "../../assets/skills/javascript.svg"
-import ReactIcon from "../../assets/skills/react.svg"
-import ReduxIcon from "../../assets/skills/redux.svg"
-import GatsbyIcon from "../../assets/skills/gatsby.svg"
-import PwaIcon from "../../assets/skills/logo-pwa.svg"
-import FirebaseIcon from "../../assets/skills/firebase.svg"
-import FigmaIcon from "../../assets/skills/figma.svg"
-import GoogleAnalyticsIcon from "../../assets/skills/google-anal.png"
-import StyledCompIcon from "../../assets/skills/styled.png"
-import StrapiIcon from "../../assets/skills/strapi.svg"
+import HtmlIcon from '../../assets/skills/html-5.svg';
+import CssIcon from '../../assets/skills/css-3.svg';
+import SassIcon from '../../assets/skills/sass.svg';
+import JsIcon from '../../assets/skills/javascript.svg';
+import ReactIcon from '../../assets/skills/react.svg';
+import ReduxIcon from '../../assets/skills/redux.svg';
+import GatsbyIcon from '../../assets/skills/gatsby.svg';
+import PwaIcon from '../../assets/skills/logo-pwa.svg';
+import FirebaseIcon from '../../assets/skills/firebase.svg';
+import FigmaIcon from '../../assets/skills/figma.svg';
+import GoogleAnalyticsIcon from '../../assets/skills/google-anal.png';
+import StyledCompIcon from '../../assets/skills/styled.png';
+import StrapiIcon from '../../assets/skills/strapi.svg';
+import WpIcon from '../../assets/skills/wordpress.png';
 
 export const skillsArray = [
   {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: JsIcon,
   },
   {
-    name: "React",
+    name: 'React',
     icon: ReactIcon,
   },
   {
-    name: "Gatsby",
+    name: 'Gatsby',
     icon: GatsbyIcon,
   },
   {
-    name: "Redux",
+    name: 'WordPress',
+    icon: WpIcon,
+  },
+  {
+    name: 'Redux',
     icon: ReduxIcon,
   },
   {
-    name: "StyledCom.",
+    name: 'StyledCom.',
     icon: StyledCompIcon,
   },
   {
-    name: "Sass",
+    name: 'Sass',
     icon: SassIcon,
   },
   {
-    name: "Firebase",
+    name: 'Firebase',
     icon: FirebaseIcon,
   },
   {
-    name: "GAnalytics",
+    name: 'GAnalytics',
     icon: GoogleAnalyticsIcon,
   },
   {
-    name: "Strapi",
+    name: 'Strapi',
     icon: StrapiIcon,
   },
   {
-    name: "Html",
+    name: 'Html',
     icon: HtmlIcon,
   },
   {
-    name: "Css",
+    name: 'Css',
     icon: CssIcon,
   },
   {
-    name: "Figma",
+    name: 'Figma',
     icon: FigmaIcon,
   },
   {
-    name: "PWA",
+    name: 'PWA',
     icon: PwaIcon,
   },
-]
+];

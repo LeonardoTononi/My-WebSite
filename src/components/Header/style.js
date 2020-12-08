@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { fonts, devices, colors } from "../../constants/index"
+import styled from 'styled-components';
+import { fonts, devices, colors } from '../../constants/index';
 
 export const StyledHeader = styled.header`
   height: 100%;
@@ -55,7 +55,7 @@ export const StyledHeader = styled.header`
       }
     }
   }
-`
+`;
 
 export const DownloadButton = styled.a`
   width: 250px;
@@ -81,4 +81,4 @@ export const DownloadButton = styled.a`
   @media ${devices.tabletM} {
     margin-top: 40px;
   }
-`
+`;

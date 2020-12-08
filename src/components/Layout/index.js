@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${colors.primary};
     font-size: 16px;
   }
+
   a {
     text-decoration: none;
     box-shadow: none;
