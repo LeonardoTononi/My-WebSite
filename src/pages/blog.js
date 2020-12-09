@@ -94,7 +94,10 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
-            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+            <Link
+              style={{ boxShadow: `none` }}
+              to={`/blog/${node.fields.slug}`}
+            >
               <BlogPreviewContainer key={node.fields.slug}>
                 <header>
                   <h3>{title}</h3>

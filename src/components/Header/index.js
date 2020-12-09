@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledHeader, DownloadButton, BgPattern } from './style';
+import { StyledHeader, DownloadButton } from './style';
 
 const Header = () => {
   return (

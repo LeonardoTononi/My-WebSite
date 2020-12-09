@@ -1,4 +1,3 @@
-const { projects } = require('./src/data/projects');
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -10,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `
       {
         allMarkdownRemark(
-          filter: { frontmatter: { project: { eq: false } } }
+          filter: { frontmatter: { project: { eq: null } } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -19,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
               fields {
                 slug
               }
+              id
               frontmatter {
                 title
                 image {
@@ -90,10 +90,11 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node;
 
     createPage({
-      path: post.node.fields.slug,
+      path: `blog/${post.node.fields.slug}`,
       component: blogPost,
       context: {
         slug: post.node.fields.slug,
+        id: post.node.id,
         previous,
         next,
       },
