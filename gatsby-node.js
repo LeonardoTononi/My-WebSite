@@ -6,10 +6,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = path.resolve(`./src/templates/BlogPost/index.js`);
-  const result = await graphql(
+  const resultBlog = await graphql(
     `
       {
         allMarkdownRemark(
+          filter: { frontmatter: { project: { eq: false } } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -40,33 +41,49 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   );
 
-  const projectsImgs = await graphql(`
-    query {
-      BestfivePhone: file(relativePath: { eq: "bestfive-3iphone.png" }) {
-        id
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+  const resultProject = await graphql(
+    `
+      {
+        allMarkdownRemark(filter: { frontmatter: { project: { eq: true } } }) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              html
+              id
+              frontmatter {
+                demo_url
+                description
+                github_url
+                slug
+                stack
+                title
+                date(locale: "")
+                project
+                imagePreview {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                  }
+                }
+              }
+              rawMarkdownBody
+            }
           }
         }
       }
-      WeLearn: file(relativePath: { eq: "welearn-3mock.png" }) {
-        id
-        childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+    `
+  );
 
-  if (result.errors) {
-    throw result.errors;
+  if (resultBlog.errors) {
+    throw resultBlog.errors;
   }
 
   // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = resultBlog.data.allMarkdownRemark.edges;
+  const projects = resultProject.data.allMarkdownRemark.edges;
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
@@ -85,12 +102,19 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const projectTemplate = path.resolve(`./src/templates/Project/index.js`);
 
-  projects().forEach((project, index) => {
+  projects.forEach((project, index) => {
+    const previous =
+      index === projects.length - 1 ? null : projects[index + 1].node;
+    const next = index === 0 ? null : projects[index - 1].node;
+
     createPage({
-      path: `project/${project.slug}`,
+      path: `project/${project.node.frontmatter.slug}`,
       component: projectTemplate,
       context: {
-        data: project,
+        slug: project.node.frontmatter.slug,
+        id: project.node.id,
+        previous,
+        next,
       },
     });
   });

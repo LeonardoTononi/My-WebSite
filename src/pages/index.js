@@ -16,7 +16,14 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="My Ptf" />
       <Header />
-      <ProjectPreview order1="2" order2="1" alignEnd firstProject mobile />
+      <ProjectPreview
+        projects={data.allMarkdownRemark.edges}
+        order1="2"
+        order2="1"
+        alignEnd
+        firstProject
+        mobile
+      />
       <About />
       <Skills />
     </Layout>
@@ -32,51 +39,32 @@ export const pageQuery = graphql`
         title
       }
     }
-    bestfiveImage: file(relativePath: { eq: "projects/bestfive.png" }) {
-      id
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    hotelvittoriaImage: file(
-      relativePath: { eq: "projects/hotel-vittoria.png" }
-    ) {
-      id
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    toureoadminImage: file(relativePath: { eq: "projects/toureo-admin.png" }) {
-      id
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    toureoprotoImage: file(relativePath: { eq: "projects/toureo-proto.png" }) {
-      id
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+
+    allMarkdownRemark(filter: { frontmatter: { project: { eq: true } } }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
+          html
+          id
+          rawMarkdownBody
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
+            demo_url
             description
+            github_url
+            slug
+            stack
+            title
+            date(locale: "")
+            project
+            imagePreview {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

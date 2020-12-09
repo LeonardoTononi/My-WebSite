@@ -12,7 +12,7 @@ const BlogPreviewContainer = styled.article`
   position: relative;
   max-width: 1200px;
   margin: 20em auto;
-  padding: 6rem 2rem;
+  padding: 2rem;
   background: rgba(220, 219, 234, 0.3);
   border-radius: 10px;
   display: grid;
@@ -106,10 +106,10 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <BlogPreviewContainer key={node.fields.slug}>
-            <PostImage
+            {/*  <PostImage
               fluid={node.frontmatter.image.childImageSharp.fluid}
               alt=""
-            />
+            /> */}
             <header>
               <h3>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -145,7 +145,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { project: { eq: null } } }
+    ) {
       edges {
         node {
           excerpt

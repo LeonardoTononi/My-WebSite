@@ -77,5 +77,6 @@ export const StyledFooter = styled.footer`
   letter-spacing: 0.05em;
   text-align: center;
   font-weight: bold;
-  font-size: ${fonts.text.mobile};
+  font-size: 1.1rem;
+  background: #d3d3de63;
 `;

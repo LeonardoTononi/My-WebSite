@@ -39,19 +39,19 @@ export const ProjectContainer = styled.section`
   h3 {
     font-size: ${fonts.subtitle.mobile};
     margin: 0;
-    padding: 20px 0;
+    padding: 60px 0 40px 0;
   }
 
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 0 0 0 10px;
+    padding: 0 0 20px 40px;
     grid-gap: 10px;
-    list-style: none;
 
     li {
-      display: inline-flex;
       align-items: center;
+      font-size: ${fonts.text.mobile};
+      line-height: 2rem;
 
       svg {
         font-size: 14px;
@@ -62,6 +62,20 @@ export const ProjectContainer = styled.section`
     a {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+
+  ol {
+    display: grid;
+    padding: 20px 0 0 40px;
+    grid-gap: 10px;
+    line-height: 2rem;
+    font-size: ${fonts.text.mobile};
+
+    li {
+      align-items: center;
+      font-size: ${fonts.text.mobile};
+      line-height: 2rem;
     }
   }
 
@@ -80,10 +94,24 @@ export const ProjectContainer = styled.section`
     margin: 30px 0;
   }
 
-  @media ${devices.tablet} {
+  blockquote {
+    border: 2px solid #2c2c32;
+    border-radius: 15px;
+    margin: 60px 45px;
+    max-width: 760px;
+
     p {
-      max-width: 80%;
+      margin: 0;
+      width: 100%;
+      padding: 20px;
     }
+  }
+`;
+
+export const Content = styled.div`
+  .gatsby-resp-image-wrapper {
+    margin-top: 60px;
+    max-width: 100%;
   }
 `;
 

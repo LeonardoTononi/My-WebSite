@@ -1,8 +1,8 @@
 ---
 title: Second Blog Post
-date: "2020-04-15T22:40:32.169Z"
+date: '2020-04-15T22:40:32.169Z'
 description: Second blog post, When she reached the first hills of the.
-image: ./header.jpg   
+image: ./header.jpg
 ---
 
 My first blog post is coming soon, I promise!
@@ -24,6 +24,8 @@ view back on the skyline of her hometown _Bookmarksgrove_, the headline of
 [Alphabet Village](http://google.com) and the subline of her own road, the Line
 Lane. Pityful a rhetoric question ran over her cheek, then she continued her
 way. On her way she met a copy.
+
+![](./header.jpg)
 
 ### Overlaid the jeepers uselessly much excluding
 
@@ -72,4 +74,3 @@ and dragged her into their agency, where they abused her for their projects
 again and again. And if she hasn’t been rewritten, then they are still using
 her. Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts.
-

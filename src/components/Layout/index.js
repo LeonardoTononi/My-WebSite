@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway';
     color: ${colors.primary};
     font-size: 16px;
+    margin: 0;
   }
 
   a {

@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <BlogPostContainer>
         <HeaderImg
-          fluid={post.frontmatter.image.childImageSharp.fluid}
+          fluid={post.frontmatter.image?.childImageSharp.fluid}
           alt=""
         />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />

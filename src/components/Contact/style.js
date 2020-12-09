@@ -5,7 +5,7 @@ export const ContactContainer = styled.section`
   padding: 20px;
   display: grid;
   place-items: center;
-  max-width: 900px;
+  background-color: #d3d3de26;
   margin: 0 auto;
 
   mark {
