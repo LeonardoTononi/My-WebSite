@@ -4,9 +4,8 @@ export const StyledHeader = styled.header`
   @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
 
   height: 70vh;
-  max-width: 1200px;
+  max-width: 1020px;
   margin: 0 auto;
-  padding: 2rem;
   display: grid;
   place-content: center; /* 
 	background-size: cover; */

@@ -10,29 +10,17 @@ import SEO from '../components/seo';
 
 const BlogPreviewContainer = styled.article`
   position: relative;
-  max-width: 1200px;
-  margin: 20em auto;
+  max-width: 920px;
   padding: 2rem;
-  background: rgba(220, 219, 234, 0.3);
+  background: rgb(94 99 121);
   border-radius: 10px;
   display: grid;
-  grid-gap: 1rem;
-  justify-content: start;
-  align-content: center;
-  align-items: center;
-  grid-template-areas: 'img' 'header' 'sub';
-
-  @media only screen and (min-width: 800px) {
-    grid-template-areas: 'img header header' 'img sub sub';
-    margin: 5rem auto;
-  }
+  margin: 60px 0;
 
   header {
-    grid-area: header;
-
-    @media only screen and (min-width: 800px) {
+    /* @media only screen and (min-width: 800px) {
       padding-left: 2rem;
-    }
+    } */
 
     h3 {
       margin: 0;
@@ -40,31 +28,31 @@ const BlogPreviewContainer = styled.article`
       font-weight: bold;
       font-size: 3rem;
       letter-spacing: 0.05em;
-      color: #3f3d56;
+      color: white;
     }
     small {
       font-weight: normal;
       line-height: 3rem;
       font-size: 1rem;
       letter-spacing: 0.05em;
-      color: rgba(63, 61, 86, 0.6);
+      color: whitesmoke;
     }
   }
 
   section {
-    grid-area: sub;
-
-    @media only screen and (min-width: 800px) {
-      padding-left: 2rem;
-    }
-
+    color: white;
     p {
       margin: 0;
       font-size: 1.1rem;
       letter-spacing: 0.05em;
-      color: rgba(63, 61, 86, 0.6);
+      color: white;
     }
   }
+`;
+
+const BlogsWrapper = styled.div`
+  max-width: 1020px;
+  margin: 0 auto;
 `;
 
 const PostImage = styled(Img)`
@@ -90,7 +78,7 @@ const Tag = styled.div`
   padding: 0.1rem 0.5rem;
   background: ${props => (props.coding ? '#ddddff' : '#ffc4c4')};
   border-radius: 5px;
-  margin: 1rem 0.2rem;
+  margin: 1rem 0.4rem 1rem 0;
   font-size: 0.9rem;
 `;
 
@@ -102,36 +90,30 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="BLOG" />
       <BlogHeader />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <BlogPreviewContainer key={node.fields.slug}>
-            {/*  <PostImage
-              fluid={node.frontmatter.image.childImageSharp.fluid}
-              alt=""
-            /> */}
-            <header>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-              <Tags>
-                <Tag coding>Coding</Tag>
-                <Tag>Productivity</Tag>
-              </Tags>
-            </section>
-          </BlogPreviewContainer>
-        );
-      })}
+      <BlogsWrapper>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug;
+          return (
+            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <BlogPreviewContainer key={node.fields.slug}>
+                <header>
+                  <h3>{title}</h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+                <Tags>
+                  <Tag coding>Coding</Tag>
+                  <Tag>Productivity</Tag>
+                </Tags>
+                <section
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                ></section>
+              </BlogPreviewContainer>
+            </Link>
+          );
+        })}
+      </BlogsWrapper>
     </Layout>
   );
 };
