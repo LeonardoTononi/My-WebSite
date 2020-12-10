@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
 
-  height: 70vh;
   max-width: 1020px;
   margin: 0 auto;
   display: grid;
-  place-content: center; /* 
-	background-size: cover; */
+  place-content: center;
+  padding: 20px;
 
   mark {
     background-color: #ceffbb;
@@ -27,8 +26,7 @@ export const StyledHeader = styled.header`
     color: #3f3d56;
     opacity: 0.5;
     font-weight: 400;
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
+    font-size: 1rem;
 
     @media (min-width: 600px) {
       font-size: 1.1rem;
@@ -51,6 +49,7 @@ export const StyledHeader = styled.header`
     font-size: 1.2rem;
     text-transform: initial;
     font-weight: 400;
+    line-height: 2rem;
 
     @media (min-width: 600px) {
       font-size: 1.4rem;

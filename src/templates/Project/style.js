@@ -97,7 +97,7 @@ export const ProjectContainer = styled.section`
   blockquote {
     border: 2px solid #2c2c32;
     border-radius: 15px;
-    margin: 60px 45px;
+    margin: 60px 20px;
     max-width: 760px;
 
     p {

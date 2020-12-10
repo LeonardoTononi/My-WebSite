@@ -1,8 +1,10 @@
 ---
 title: Who Am I?
-date: "2020-04-15T22:40:32.169Z"
+slug: who-am-i
+date: '2020-04-15T22:40:32.169Z'
 description: Hi, I'm a person who is trying hard to achieve success but what is success? What I want?
 image: ./header.jpg
+tags: ['Life', 'Productivity']
 ---
 
 My first blog post is coming soon, I promise!
@@ -72,4 +74,3 @@ and dragged her into their agency, where they abused her for their projects
 again and again. And if she hasn’t been rewritten, then they are still using
 her. Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts.
-

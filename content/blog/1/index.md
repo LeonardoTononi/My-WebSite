@@ -1,8 +1,10 @@
 ---
 title: Second Blog Post
+slug: my-second-blog-post
 date: '2020-04-15T22:40:32.169Z'
 description: Second blog post, When she reached the first hills of the.
 image: ./header.jpg
+tags: ['Productivity', 'Coding', 'Blockchain']
 ---
 
 My first blog post is coming soon, I promise!

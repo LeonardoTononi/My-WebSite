@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-
-import { BlogPostContainer, HeaderImg, SubscribeSection } from './style';
-
 import Layout from '../../components/Layout';
+
+import {
+  BlogPostContainer,
+  HeaderImg,
+  SubscribeSection,
+  FollowMe,
+} from './style';
+import { ProjectContainer } from '../Project/style';
 import SEO from '../../components/seo';
 import BlogPostHeader from '../../components/BlogPostHeader';
-import Contact from '../../components/Contact';
-import BlogSubscribeButton from '../../components/BlogSubscribeButton';
+import { SiTwitter } from 'react-icons/si';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
@@ -15,7 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -24,19 +27,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         date={post.frontmatter.date}
       />
-      <BlogPostContainer>
-        <HeaderImg
-          fluid={post.frontmatter.image?.childImageSharp.fluid}
-          alt=""
-        />
+      <ProjectContainer>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-      </BlogPostContainer>
+      </ProjectContainer>
       <SubscribeSection>
         <h3>Don't forget...</h3>
         <h4>
           You can follow me on Twitter, sometimes I write something meaningful.
         </h4>
         <p>Thanks for reading.</p>
+        <FollowMe>
+          <SiTwitter />
+          Follow Me
+        </FollowMe>
       </SubscribeSection>
     </Layout>
   );
@@ -45,27 +48,20 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostById($id: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        tags
       }
     }
   }

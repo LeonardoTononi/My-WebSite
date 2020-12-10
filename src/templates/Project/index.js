@@ -32,9 +32,6 @@ export default Project;
 export const pageQuery = graphql`
   query ProjectById($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      fields {
-        slug
-      }
       html
       id
       frontmatter {
