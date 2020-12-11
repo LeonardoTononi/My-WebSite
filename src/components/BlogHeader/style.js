@@ -14,10 +14,10 @@ export const StyledHeader = styled.header`
   }
 
   @media (min-width: 900px) {
-    height: 40vh;
     justify-content: start;
     align-content: center;
     background-image: none;
+    border-bottom: 6px solid #d3d3de26;
   }
 
   h5 {
