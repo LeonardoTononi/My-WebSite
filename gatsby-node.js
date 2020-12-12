@@ -1,5 +1,6 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const { paginate } = require('gatsby-awesome-pagination');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -48,7 +49,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog posts pages.
   const posts = resultBlog.data.allMarkdownRemark.edges;
-  const projects = resultProject.data.allMarkdownRemark.edges;
+
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: 10,
+    pathPrefix: '/blog',
+    component: path.resolve(`./src/templates/Blog/index.js`),
+  });
 
   const blogPostTemplate = path.resolve(`./src/templates/BlogPost/index.js`);
   posts.forEach((post, index) => {
@@ -68,6 +76,8 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  const projects = resultProject.data.allMarkdownRemark.edges;
+  // Create projects pages.
   const projectTemplate = path.resolve(`./src/templates/Project/index.js`);
   projects.forEach((project, index) => {
     const previous =

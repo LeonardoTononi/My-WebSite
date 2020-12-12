@@ -87,9 +87,11 @@ const Tag = styled.div`
   font-size: 0.9rem;
 `;
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
+
+  console.log(pageContext);
 
   return (
     <Layout location={location} title={siteTitle}>
