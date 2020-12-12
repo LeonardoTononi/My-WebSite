@@ -40,7 +40,7 @@ export const StyledImg = styled(Img)`
 
 export const StyledLink = styled(Link)`
   position: relative;
-
+  transform: scale(0.95);
   transition: transform 100ms ease;
 
   span {
@@ -62,14 +62,14 @@ export const StyledLink = styled(Link)`
   }
 
   &:hover {
-    transform: scale(0.95);
+    transform: scale(1);
     span {
       display: inline-flex;
       opacity: 1;
     }
 
     ${StyledImg} {
-      filter: grayscale(50%);
+      box-shadow: ${colors.base_shadow};
     }
   }
 `;

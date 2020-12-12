@@ -24,6 +24,10 @@ export const SubscribeSection = styled.section`
     line-height: 35px;
     text-transform: initial;
     font-weight: 500;
+    span {
+      color: rgb(29, 161, 242);
+      font-weight: 800;
+    }
   }
 
   p {

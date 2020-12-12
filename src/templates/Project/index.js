@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../../components/Layout';
-import { ProjectContainer, Row, Content } from './style';
+import { ProjectContainer, Row, Content, BackBtn } from './style';
 
 import { VscDebugBreakpointLog } from 'react-icons/vsc';
+import { IoIosArrowBack } from 'react-icons/io';
 
 const DiamondIcon = <VscDebugBreakpointLog />;
 
@@ -12,6 +14,10 @@ const Project = ({ data, pageContext }) => {
   return (
     <Layout>
       <ProjectContainer>
+        <BackBtn to="/">
+          <IoIosArrowBack />
+          Back
+        </BackBtn>
         <Row>
           <h5>{description}</h5>
           <h1>{title}</h1>

@@ -33,7 +33,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SubscribeSection>
         <h3>Don't forget...</h3>
         <h4>
-          You can follow me on Twitter, sometimes I write something meaningful.
+          You can follow me on <span>Twitter</span>, sometimes I write something
+          meaningful.
         </h4>
         <p>Thanks for reading.</p>
         <FollowMe>

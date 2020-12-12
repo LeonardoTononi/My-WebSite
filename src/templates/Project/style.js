@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { devices, colors, fonts } from '../../constants';
-import Popup from 'reactjs-popup';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
 export const ProjectContainer = styled.section`
   height: 100%;
@@ -116,5 +115,38 @@ export const Content = styled.div`
 `;
 
 export const Row = styled.div`
-  padding: 40px 0;
+  padding-bottom: 40px;
+`;
+
+export const BackBtn = styled(Link)`
+  margin-bottom: 20px;
+  border: 1px solid #d3d3de26;
+  background-color: #d3d3de26;
+  width: 60px;
+  padding: 0 5px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 5px;
+  transition: padding 250ms ease-in;
+  position: relative;
+
+  svg {
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    transition: left 200ms ease-in;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: ${colors.base_shadow};
+    padding: 0 18px;
+
+    svg {
+      opacity: 1;
+      left: 2px;
+    }
+  }
 `;
