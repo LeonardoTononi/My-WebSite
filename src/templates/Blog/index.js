@@ -26,7 +26,7 @@ const Blog = ({ pageContext, data }) => {
 
   const RenderPageBtn = () => {
     let items = [];
-    for (let i = 1; i < numberOfPages; i++) {
+    for (let i = 1; i <= numberOfPages; i++) {
       items.push(
         <PageBtn
           to={(i === 1 && `/blog`) || `/blog/${i}`}
@@ -43,9 +43,10 @@ const Blog = ({ pageContext, data }) => {
     <PageBtn to={previousPagePath}>&#60;</PageBtn>
   );
 
-  const RenderNextBtn = pageNumber !== numberOfPages - 2 && (
-    <PageBtn to={nextPagePath}>&#62;</PageBtn>
-  );
+  const RenderNextBtn = numberOfPages !== 1 &&
+    pageNumber !== numberOfPages - 2 && (
+      <PageBtn to={nextPagePath}>&#62;</PageBtn>
+    );
 
   return (
     <Layout title={siteTitle}>
