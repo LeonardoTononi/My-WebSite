@@ -21,26 +21,27 @@ I made this app to solve a problem that my girlfriend and I had before summer (2
 - Google Maps
 - Google Analytics
 
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
-
 ### Why I built it?
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+I built this app to test my skills, at that time I had practically zero experience on how to plan and structure a new
+project.
 
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
+In short:
+
+1.  I'm so intriguied by new challenge.
+2.  I was totally motivated to solve a common problem for my girlfriend and I.
 3.  Dear foresaw hungry and much some overhung
 4.  Rash opossum less because less some amid besides yikes jeepers frenetic
     impassive fruitlessly shut
 
 ![](./twoIphone.png)
 
+> I'm conscious that the code is not well written and organized, I could improve the use of JavaScript
+> and the data management, also I could improve the file structure. However is for those reasones that
+> I'm re doing this app with a new design and a new base concept.
+
 ### What I've learned?
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
+1.  How to use externals sass like google maps.
+2.  How to deal with external library and customize it for the project needs.
+3.  How to create an app with simple Html, Css and JavaScript
