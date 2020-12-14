@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { colors } from '../../constants';
 
 export const SubscribeSection = styled.section`
   display: grid;
@@ -11,6 +11,10 @@ export const SubscribeSection = styled.section`
   justify-content: start;
   align-content: center;
   box-shadow: 6px 6px 22px #ebebeb, -6px -6px 22px #ffffff;
+
+  mark {
+    background: ${colors.mint};
+  }
 
   h3 {
     margin: 2rem 0;

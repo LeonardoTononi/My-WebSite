@@ -25,6 +25,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <BlogPostHeader
         title={post.frontmatter.title}
         date={post.frontmatter.date}
+        tags={post.frontmatter.tags}
       />
       <ProjectContainer>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />

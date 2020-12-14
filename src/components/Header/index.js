@@ -7,7 +7,7 @@ const Header = () => {
     <StyledHeader>
       <h5>Leonardo Tononi</h5>
       <h1>
-        <mark>I'm a Front-End Developer to work with,</mark>
+        <mark>I'm a Front-End Developer,</mark>
         <br />
         <span>
           I feel hungry to learn every day, <br /> ready to work and determinate

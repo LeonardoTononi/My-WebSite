@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { devices, colors, fonts } from '../../constants';
+import { Link } from 'gatsby';
 
 export const AboutContainer = styled.section`
   position: relative;
@@ -9,6 +10,63 @@ export const AboutContainer = styled.section`
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+
+  img {
+    max-width: 620px;
+    width: 100%;
+    border-radius: 15px;
+    place-self: start;
+    box-shadow: 6px 6px 22px #ebebeb8a, 8px 11px 10px #eeeeee21;
+    transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
+    transform: scale(0.9);
+    filter: grayscale(40%);
+  }
+`;
+
+export const TextContainer = styled.div`
+  text-align: center;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 6px 6px 22px #ebebeb8a, 8px 11px 10px #eeeeee21;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 60px;
+  background: white;
+  transform: scale(0.9);
+  transition: transform 300ms ease-in-out;
+
+  p {
+    font-size: ${fonts.text.mobile};
+    color: #423a3a;
+  }
+
+  h5 {
+    font-size: ${fonts.text.laptop};
+    font-weight: bold;
+    margin: 0;
+  }
+
+  @media ${devices.tablet} {
+    padding: 30px;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  &:hover,
+  &:active {
+    h5 {
+      text-decoration: underline;
+    }
+    img {
+      filter: grayscale(0);
+      transform: scale(1);
+    }
+
+    ${TextContainer} {
+      transform: scale(1);
+    }
+  }
 `;
 
 export const Text = styled.div`

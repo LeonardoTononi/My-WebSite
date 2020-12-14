@@ -42,15 +42,3 @@ export const StyledHeader = styled.header`
     margin: 0;
   }
 `;
-
-export const Tags = styled.div`
-  display: flex;
-`;
-
-export const Tag = styled.div`
-  padding: 5px 8px;
-  background: ${props => (props.coding ? '#ddddff' : '#ffc4c4')};
-  border-radius: 5px;
-  margin: 1rem 0.4rem 1rem 0;
-  font-size: 0.9rem;
-`;

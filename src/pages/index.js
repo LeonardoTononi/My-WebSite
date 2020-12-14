@@ -24,8 +24,8 @@ const Index = ({ data, location }) => {
         firstProject
         mobile
       />
-      <About />
       <Skills />
+      <About />
     </Layout>
   );
 };

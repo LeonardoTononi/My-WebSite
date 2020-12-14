@@ -15,6 +15,7 @@ export const SkillsContainer = styled.section`
 
   ${Title} {
     padding: 0 30px;
+    text-align: end;
   }
 `;
 

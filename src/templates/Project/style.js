@@ -19,6 +19,10 @@ export const ProjectContainer = styled.section`
     font-size: ${fonts.smalltitle.mobile};
   }
 
+  mark {
+    background: ${colors.mint};
+  }
+
   h1 {
     margin: 0;
     font-size: ${fonts.title.mobile};
