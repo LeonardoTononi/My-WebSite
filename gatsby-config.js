@@ -3,7 +3,7 @@ module.exports = {
     title: `Leonardo Tononi`,
     author: {
       name: `Leonardo Tononi`,
-      summary: `A React Developer.`,
+      summary: `A Front-End Developer.`,
     },
     description: `Hi, this is my website where I show to people who I am.`,
     siteUrl: `https://leonardotononi.com/`,
@@ -116,7 +116,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
+        icon: `${__dirname}/content/assets/favicon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
