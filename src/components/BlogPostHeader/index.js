@@ -10,7 +10,7 @@ const BlogPostHeader = ({ title, date, tags }) => {
       <h1>{title}</h1>
       <p>{date}</p>
       <Tags>
-        {tags.map(tag => (
+        {tags?.map(tag => (
           <Tag type={tag.toLowerCase()}>{tag}</Tag>
         ))}
       </Tags>
