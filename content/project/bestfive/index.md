@@ -10,7 +10,7 @@ imagePreview: ./bestfive-3iphone.png
 project: true
 ---
 
-I made this app to solve a problem that my girlfriend and I had before summer (2019), we thought that it would be cool have a simple app to find where to go in Barcelona, during a sunny day, and then we start adding more categories. At the moment I'm rebuilding this app, with a new style and new functionality.
+I made this app to solve a problem that my girlfriend and I had before summer (2019), we thought that it would be cool to have a simple app to find where to go in Barcelona, during a sunny day, and then we started adding more categories. At the moment I’m rebuilding this app, with a new style and new functionalities.
 
 ![](./bestfive-3iphone.png)
 
@@ -28,20 +28,18 @@ project.
 
 In short:
 
-1.  I'm so intriguied by new challenge.
+1.  I'm really intrigued by new challenges.
 2.  I was totally motivated to solve a common problem for my girlfriend and I.
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
+3.  I was attracted by create my first business.
 
 ![](./twoIphone.png)
 
-> I'm conscious that the code is not well written and organized, I could improve the use of JavaScript
-> and the data management, also I could improve the file structure. However is for those reasones that
-> I'm re doing this app with a new design and a new base concept.
+> I'm conscious that the code is not well written and organized, I could improve > the use of JavaScript
+> and the data management, also I could improve the file structure. However, it > is for those reasons that
+> I'm re-doing this app with a new design and a new base concept. Stay tuned to > know more!
 
 ### What I've learned?
 
-1.  How to use externals sass like google maps.
-2.  How to deal with external library and customize it for the project needs.
-3.  How to create an app with simple Html, Css and JavaScript
+1.  How to use externals Saas like Google Maps.
+2.  How to deal with external libraries and customize it for the project needs.
+3.  How to create an app with simple Html, Css and JavaScript.
