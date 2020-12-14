@@ -1,16 +1,11 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 
-import {
-  BlogPostContainer,
-  HeaderImg,
-  SubscribeSection,
-  FollowMe,
-} from './style';
+import { BlogPostContainer, HeaderImg } from './style';
+import { CallToAction } from '../../components/CallToAction';
 import { ProjectContainer } from '../Project/style';
 import SEO from '../../components/seo';
 import BlogPostHeader from '../../components/BlogPostHeader';
-import { SiTwitter } from 'react-icons/si';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
@@ -30,18 +25,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <ProjectContainer>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
       </ProjectContainer>
-      <SubscribeSection>
-        <h3>Don't forget...</h3>
-        <h4>
-          You can follow me on <span>Twitter</span>, sometimes I write something
-          meaningful.
-        </h4>
-        <p>Thanks for reading.</p>
-        <FollowMe>
-          <SiTwitter />
-          Follow Me
-        </FollowMe>
-      </SubscribeSection>
+      <CallToAction />
     </Layout>
   );
 };

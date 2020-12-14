@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../../components/Layout';
 import { ProjectContainer, Row, Content, BackBtn } from './style';
-
+import { CallToAction } from '../../components/CallToAction';
 import { VscDebugBreakpointLog } from 'react-icons/vsc';
 import { IoIosArrowBack } from 'react-icons/io';
 
@@ -22,12 +22,10 @@ const Project = ({ data, pageContext }) => {
           <h5>{description}</h5>
           <h1>{title}</h1>
         </Row>
-
         <Content
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
-
-        <Row></Row>
+        <CallToAction />
       </ProjectContainer>
     </Layout>
   );
