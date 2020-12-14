@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import { StyledHeader, DownloadButton } from "./style"
+import { StyledHeader, DownloadButton } from './style';
 
 const Header = () => {
   return (
@@ -8,10 +8,10 @@ const Header = () => {
       <h5>Leonardo Tononi</h5>
       <h1>
         <mark>I'm a Front-End Developer,</mark>
+        <br />
         <span>
-          {" "}
-          I feel hungry to learn every day, ready to work with my team and
-          determinate to deal with every kind of problems.
+          I feel hungry to learn every day, <br /> ready to work and determinate
+          to deal with every kind of problems.
         </span>
       </h1>
 
@@ -21,9 +21,10 @@ const Header = () => {
         download
       >
         Download Resume
+        <span>Updated on Dec 2020</span>
       </DownloadButton>
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

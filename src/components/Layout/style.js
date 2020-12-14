@@ -1,12 +1,12 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { devices, fonts, colors } from "../../constants"
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { devices, fonts, colors } from '../../constants';
 
 export const LayoutContainer = styled.div`
   * {
     box-sizing: border-box;
   }
-`
+`;
 
 export const NavContainer = styled.nav`
   padding: 10px;
@@ -19,21 +19,27 @@ export const NavContainer = styled.nav`
     width: 60px;
   }
   @media ${devices.tablet} {
+    justify-content: center;
+    position: relative;
+
     img {
-      width: 100px;
+      width: 80px;
+      position: absolute;
+      left: 10px;
+      top: 0;
     }
   }
-`
+`;
 
-export const Icon = styled.div``
+export const Icon = styled.div``;
 
-export const NavList = styled.ul`
+export const NavList = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   padding: 0;
 
-  li {
+  a {
     list-style-type: none;
     margin: 5px;
     padding: 5px;
@@ -53,17 +59,17 @@ export const NavList = styled.ul`
     flex-direction: row;
     justify-content: flex-end;
 
-    li {
+    a {
       padding: 1rem;
     }
   }
-`
+`;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
   box-shadow: none;
   cursor: pointer;
-`
+`;
 
 export const StyledFooter = styled.footer`
   width: 100%;
@@ -71,5 +77,6 @@ export const StyledFooter = styled.footer`
   letter-spacing: 0.05em;
   text-align: center;
   font-weight: bold;
-  font-size: ${fonts.text.mobile};
-`
+  font-size: 1.1rem;
+  background: #d3d3de63;
+`;

@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { fonts, devices, colors } from "../../constants/index"
+import styled from 'styled-components';
+import { fonts, devices, colors } from '../../constants/index';
 
 export const StyledHeader = styled.header`
   height: 100%;
@@ -39,6 +39,7 @@ export const StyledHeader = styled.header`
   @media ${devices.tabletM} {
     padding: 30px;
     height: 70vh;
+    max-height: 720px;
     padding: 60px;
     justify-content: start;
     align-content: center;
@@ -49,13 +50,14 @@ export const StyledHeader = styled.header`
     }
 
     h1 {
-      font-size: ${fonts.title.tablet};
+      font-size: ${fonts.title.laptop};
       span {
         font-size: ${fonts.subtitle.mobile};
+        line-height: 1rem;
       }
     }
   }
-`
+`;
 
 export const DownloadButton = styled.a`
   width: 250px;
@@ -71,14 +73,27 @@ export const DownloadButton = styled.a`
   font-size: ${fonts.text.mobile};
   font-weight: bold;
   border-radius: 10px;
-
   text-transform: capitalize;
+
+  span {
+    font-size: 12px;
+    color: #bcbcbc;
+    font-style: italic;
+    padding-top: 5px;
+    opacity: 0;
+    position: absolute;
+  }
 
   &:hover {
     box-shadow: ${colors.base_shadow_hover};
+
+    span {
+      opacity: 1;
+      position: relative;
+    }
   }
 
   @media ${devices.tabletM} {
     margin-top: 40px;
   }
-`
+`;

@@ -1,11 +1,11 @@
-import styled from "styled-components"
-import { devices, colors, fonts } from "../../constants"
+import styled from 'styled-components';
+import { devices, colors, fonts } from '../../constants';
 
 export const ContactContainer = styled.section`
   padding: 20px;
   display: grid;
   place-items: center;
-  max-width: 900px;
+  background-color: #d3d3de26;
   margin: 0 auto;
 
   mark {
@@ -15,7 +15,7 @@ export const ContactContainer = styled.section`
   p {
     text-align: start;
     font-weight: 200;
-    font-size: 1.2rem;
+    font-size: ${fonts.text.mobile};
     line-height: 2rem;
     width: 100%;
   }
@@ -28,7 +28,7 @@ export const ContactContainer = styled.section`
       text-align: center;
     }
   }
-`
+`;
 
 export const ResumeButton = styled.a`
   width: 100%;
@@ -43,7 +43,7 @@ export const ResumeButton = styled.a`
     line-height: 2.7rem;
     text-align: end;
   }
-`
+`;
 
 export const Title = styled.h3`
   font-size: 2.5rem;
@@ -55,7 +55,7 @@ export const Title = styled.h3`
   @media only screen and (min-width: 600px) {
     text-align: end;
   }
-`
+`;
 
 export const SocialLinkContainer = styled.div`
   display: grid;
@@ -63,7 +63,7 @@ export const SocialLinkContainer = styled.div`
   align-items: center;
   grid-gap: 20px;
   grid-auto-flow: column;
-`
+`;
 
 export const SocialLink = styled.div`
   a {
@@ -76,10 +76,19 @@ export const SocialLink = styled.div`
     margin: 1.3rem 0;
     box-shadow: ${colors.tiny_shadow};
     border-radius: 10px;
-   // background-color: ${colors.dirty_white};
+
+    &:hover,
+    &:active {
+      box-shadow: ${colors.base_shadow_hover};
+
+      svg {
+        transform: scale(1.05);
+      }
+    }
 
     svg {
       font-size: 24px;
+      transition: transform 100ms ease-in-out;
     }
   }
-`
+`;

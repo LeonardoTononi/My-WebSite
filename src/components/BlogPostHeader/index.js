@@ -1,19 +1,21 @@
-import React from "react"
+import React from 'react';
 
-import { StyledHeader, Tags, Tag } from "./style"
+import { StyledHeader } from './style';
+import { Tag, Tags } from '../../templates/Blog/style';
 
-const BlogPostHeader = ({ title, date }) => {
+const BlogPostHeader = ({ title, date, tags }) => {
   return (
     <StyledHeader>
       <h5>Leonardo Tononi</h5>
       <h1>{title}</h1>
       <p>{date}</p>
       <Tags>
-        <Tag coding>Coding</Tag>
-        <Tag>Productivity</Tag>
+        {tags.map(tag => (
+          <Tag type={tag.toLowerCase()}>{tag}</Tag>
+        ))}
       </Tags>
     </StyledHeader>
-  )
-}
+  );
+};
 
-export default BlogPostHeader
+export default BlogPostHeader;

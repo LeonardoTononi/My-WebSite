@@ -28,9 +28,10 @@ export const SubscribeSection = styled.section`
     line-height: 35px;
     text-transform: initial;
     font-weight: 500;
-    span {
+    a {
       color: rgb(29, 161, 242);
       font-weight: 800;
+      text-decoration: underline;
     }
   }
 
@@ -56,7 +57,7 @@ export const SubscribeSection = styled.section`
   }
 `;
 
-export const FollowMe = styled.div`
+export const FollowMe = styled.a`
   text-decoration: underline;
   position: absolute;
   top: 20px;

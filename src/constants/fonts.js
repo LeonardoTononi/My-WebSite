@@ -15,8 +15,9 @@ export const fonts = {
     laptop: `1.4rem`,
   },
   text: {
+    base: `1rem`,
     mobile: `1.2rem`,
     tablet: `1.4rem`,
     laptop: `1.6rem`,
   },
-}
+};

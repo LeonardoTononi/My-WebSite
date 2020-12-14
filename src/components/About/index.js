@@ -1,29 +1,34 @@
-import React from "react"
+import React, { useState } from 'react';
 
-import { AboutContainer, Text } from "./style"
-import { Title, Wrapper } from "../Project/style"
+import {
+  AboutContainer,
+  Text,
+  Button,
+  BigPar,
+  Quote,
+  TextContainer,
+  StyledLink,
+} from './style';
+import { Title, Wrapper } from '../ProjectPreview/style';
+import LeoFranImg from '../../assets/me-in-london.jpg';
 
 const About = () => {
   return (
     <Wrapper>
-      <Title>About Me</Title>
+      <Title id="about" style={{ textAlign: 'center' }}>
+        About Me
+      </Title>
       <AboutContainer>
-        <Text>
-          I have <strong>two year of experience</strong> in web developing and
-          I’m a self though programmer. I’m proficient with{" "}
-          <strong>React</strong> and I can say to have built solid basis to deal
-          with this framework. I also know how to deal with{" "}
-          <strong>Redux and Gatsby</strong>.
-        </Text>
-        <Text>
-          I fell to enjoy the power of those technology and currently I also
-          started studying <strong>ReactNative</strong>. I really like having to
-          deal with new challenges and problems to solve, I am not afraid to
-          learn new things.
-        </Text>
+        <StyledLink to="/blog/nice-to-meet-you">
+          <img src={LeoFranImg} />
+          <TextContainer>
+            <h5>Read My Story</h5>
+            <p>Do you want to know more about me? Read this post.</p>
+          </TextContainer>
+        </StyledLink>
       </AboutContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default About
+export default About;

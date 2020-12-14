@@ -1,21 +1,18 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import Layout from '../../components/Layout';
 
-import { BlogPostContainer, HeaderImg, SubscribeSection } from "./style"
-
-import Layout from "../../components/Layout"
-import SEO from "../../components/seo"
-import BlogPostHeader from "../../components/BlogPostHeader"
-import Contact from "../../components/Contact"
-import BlogSubscribeButton from "../../components/BlogSubscribeButton"
+import { BlogPostContainer, HeaderImg } from './style';
+import { CallToAction } from '../../components/CallToAction';
+import { ProjectContainer } from '../Project/style';
+import SEO from '../../components/seo';
+import BlogPostHeader from '../../components/BlogPostHeader';
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -23,51 +20,35 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <BlogPostHeader
         title={post.frontmatter.title}
         date={post.frontmatter.date}
+        tags={post.frontmatter.tags}
       />
-      <BlogPostContainer>
-        <HeaderImg
-          fluid={post.frontmatter.image.childImageSharp.fluid}
-          alt=""
-        />
+      <ProjectContainer>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-      </BlogPostContainer>
-      <SubscribeSection>
-        <h3>Don't forget...</h3>
-        <h4>Subscribe to receive my new post directly in your inbox.</h4>
-        <p>No spam guaranteed.</p>
-        <BlogSubscribeButton />
-      </SubscribeSection>
-
-      <Contact id="contact" />
+      </ProjectContainer>
+      <CallToAction />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostById($id: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        tags
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
-`
+`;

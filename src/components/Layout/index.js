@@ -1,17 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
-import scrollTo from "gatsby-plugin-smoothscroll"
-import { createGlobalStyle } from "styled-components"
-import { colors } from "../../constants"
+import React from 'react';
+import { Link } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import { createGlobalStyle } from 'styled-components';
+import { colors } from '../../constants';
 
-import Emoji from "./leo-emoji.jpg"
+import Contact from '../Contact';
+
+import Emoji from './leo-emoji.jpg';
 import {
   LayoutContainer,
   NavContainer,
   NavList,
   StyledFooter,
   Icon,
-} from "./style"
+} from './style';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -21,7 +23,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway';
     color: ${colors.primary};
     font-size: 16px;
+    margin: 0;
   }
+
   a {
     text-decoration: none;
     box-shadow: none;
@@ -34,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   h1,h3 {
     font-family: 'Playfair Display';
   }
-`
+`;
 
 const Layout = ({ children }) => {
   return (
@@ -45,21 +49,16 @@ const Layout = ({ children }) => {
           <img src={Emoji} />
         </Icon>
         <NavList>
-          <li>
-            <Link to="/">Project</Link>
-          </li>
-          {/* <li>
-            <Link to="/blog">Blog</Link>
-          </li> */}
-          <li>
-            <a onClick={() => scrollTo("#contact")}>Contact</a>
-          </li>
+          <Link to="/">Home</Link>
+          <Link to="/blog">Blog</Link>
+          <a onClick={() => scrollTo('#contact')}>Contact</a>
         </NavList>
       </NavContainer>
       <main>{children}</main>
+      <Contact id="contact" />
       <StyledFooter>leonardotononi@gmail.com</StyledFooter>
     </LayoutContainer>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
