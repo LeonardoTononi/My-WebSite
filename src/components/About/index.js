@@ -10,7 +10,7 @@ import {
   StyledLink,
 } from './style';
 import { Title, Wrapper } from '../ProjectPreview/style';
-import LeoFranImg from '../../assets/me-in-london.jpg';
+import LeoFranImg from '../../assets/me-in-london.png';
 
 const About = () => {
   return (
