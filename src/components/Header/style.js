@@ -73,18 +73,24 @@ export const DownloadButton = styled.a`
   font-size: ${fonts.text.mobile};
   font-weight: bold;
   border-radius: 10px;
-
   text-transform: capitalize;
-
-  &:hover {
-    box-shadow: ${colors.base_shadow_hover};
-  }
 
   span {
     font-size: 12px;
     color: #bcbcbc;
     font-style: italic;
     padding-top: 5px;
+    opacity: 0;
+    position: absolute;
+  }
+
+  &:hover {
+    box-shadow: ${colors.base_shadow_hover};
+
+    span {
+      opacity: 1;
+      position: relative;
+    }
   }
 
   @media ${devices.tabletM} {
