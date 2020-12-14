@@ -76,10 +76,19 @@ export const SocialLink = styled.div`
     margin: 1.3rem 0;
     box-shadow: ${colors.tiny_shadow};
     border-radius: 10px;
-   // background-color: ${colors.dirty_white};
+
+    &:hover,
+    &:active {
+      box-shadow: ${colors.base_shadow_hover};
+
+      svg {
+        transform: scale(1.05);
+      }
+    }
 
     svg {
       font-size: 24px;
+      transition: transform 100ms ease-in-out;
     }
   }
 `;
