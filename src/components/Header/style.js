@@ -80,6 +80,13 @@ export const DownloadButton = styled.a`
     box-shadow: ${colors.base_shadow_hover};
   }
 
+  span {
+    font-size: 12px;
+    color: #bcbcbc;
+    font-style: italic;
+    padding-top: 5px;
+  }
+
   @media ${devices.tabletM} {
     margin-top: 40px;
   }

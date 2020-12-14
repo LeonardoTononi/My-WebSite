@@ -21,6 +21,7 @@ const Header = () => {
         download
       >
         Download Resume
+        <span>Updated on Dec 2020</span>
       </DownloadButton>
     </StyledHeader>
   );
