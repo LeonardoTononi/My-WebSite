@@ -157,9 +157,7 @@ module.exports = {
                 edges {
                   node {
                     id
-                    frontmatter {
-                      slug
-                    }
+                    slug: path
                   }
                 }
               }
@@ -167,9 +165,8 @@ module.exports = {
                 edges {
                   node {
                     id
-                    frontmatter {
-                      slug
-                    }
+                    path
+                    slug: path
                   }
                 }
               }      
@@ -177,7 +174,7 @@ module.exports = {
                 edges {
                   node {
                     id
-                    path
+                    slug: path
                   }
                 }
             }   
