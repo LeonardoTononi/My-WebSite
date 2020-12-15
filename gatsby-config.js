@@ -147,5 +147,66 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        // 1 query for each data type
+        query: `
+          {
+            allProject: allMarkdownRemark(filter: { frontmatter: { project: { eq: true } } }) {
+                edges {
+                  node {
+                    id
+                    frontmatter {
+                      slug
+                    }
+                  }
+                }
+              }
+            allBlogPost: allMarkdownRemark(filter: { frontmatter: { project: { eq: false } } }) {
+                edges {
+                  node {
+                    id
+                    frontmatter {
+                      slug
+                    }
+                  }
+                }
+              }      
+            allSitePage(filter: {componentChunkName: {in: ["component---src-pages-index-js", "component---src-templates-blog-index-js"]}}) {
+                edges {
+                  node {
+                    id
+                    path
+                  }
+                }
+            }   
+          }`,
+        mapping: {
+          // Each data type can be mapped to a predefined sitemap
+          // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
+          // The default sitemap - if none is passed - will be pages
+          allBlogPost: {
+            sitemap: `posts`,
+          },
+          allProject: {
+            sitemap: `projects`,
+          },
+          allSitePage: {
+            sitemap: `pages`,
+          },
+        },
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+          `/my-excluded-page`,
+          /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
+        ],
+        createLinkInHead: true, // optional: create a link in the `<head>` of your site
+        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under
+      },
+    },
   ],
 };
