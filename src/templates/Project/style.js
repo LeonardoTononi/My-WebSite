@@ -90,11 +90,14 @@ export const ProjectContainer = styled.section`
   img {
     width: 100%;
     max-width: 600px;
-    max-height: 300px;
     border-radius: 20px;
     object-fit: cover;
     object-position: center;
     margin: 30px 0;
+  }
+
+  .gatsby-resp-image-wrapper {
+    margin-left: 0 !important;
   }
 
   blockquote {
