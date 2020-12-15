@@ -59,11 +59,21 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const DownloadButton = styled.a`
+export const WrapperBtn = styled.div`
+  @media ${devices.tablet} {
+    display: flex;
+    gap: 40px;
+  }
+`;
+
+export const StyledButton = styled.a`
   width: 250px;
   height: 60px;
-  box-shadow: ${colors.base_shadow};
-  background: #ffffff;
+  box-shadow: ${({ secondary }) => secondary && `${colors.base_shadow}`};
+  background: ${({ secondary }) =>
+    (secondary && `${colors.white}`) || `${colors.primary400}`};
+  color: ${({ secondary }) =>
+    (secondary && `${colors.primary}`) || `${colors.white}`};
   display: grid;
   align-items: center;
   place-content: center;
@@ -86,6 +96,8 @@ export const DownloadButton = styled.a`
 
   &:hover {
     box-shadow: ${colors.base_shadow_hover};
+    background: ${({ secondary }) =>
+      (secondary && `initial`) || `${colors.primary}`};
 
     span {
       opacity: 1;

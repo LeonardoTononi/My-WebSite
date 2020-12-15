@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledHeader, DownloadButton } from './style';
+import { StyledHeader, StyledButton, WrapperBtn } from './style';
 
 const Header = () => {
   return (
@@ -15,14 +15,20 @@ const Header = () => {
         </span>
       </h1>
 
-      <DownloadButton
-        className="circleScaleBtn"
-        href="/static/CV-Leonardo-Tononi-2020.pdf"
-        download
-      >
-        Download Resume
-        <span>Updated on Dec 2020</span>
-      </DownloadButton>
+      <WrapperBtn>
+        <StyledButton
+          className="circleScaleBtn"
+          href="/static/CV-Leonardo-Tononi-2020.pdf"
+          download
+          secondary
+        >
+          Download Resume
+          <span>Updated on Dec 2020</span>
+        </StyledButton>
+        {/* <StyledButton className="circleScaleBtn" href="/blog" secondary>
+          Read My Blog
+        </StyledButton> */}
+      </WrapperBtn>
     </StyledHeader>
   );
 };
