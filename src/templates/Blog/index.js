@@ -50,7 +50,7 @@ const Blog = ({ pageContext, data }) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="BLOG" />
+      <SEO title="Blog Index" />
       <BlogHeader />
       <BlogsWrapper>
         {posts.map(({ node }) => {

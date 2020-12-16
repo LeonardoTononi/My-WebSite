@@ -14,7 +14,7 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="My Ptf" />
+      <SEO title="Homepage" />
       <Header />
       <ProjectPreview
         projects={data.allMarkdownRemark.edges}

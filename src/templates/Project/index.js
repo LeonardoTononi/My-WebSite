@@ -5,6 +5,7 @@ import { ProjectContainer, Row, Content, BackBtn } from './style';
 import { CallToAction } from '../../components/CallToAction';
 import { VscDebugBreakpointLog } from 'react-icons/vsc';
 import { IoIosArrowBack } from 'react-icons/io';
+import SEO from '../../components/seo';
 
 const DiamondIcon = <VscDebugBreakpointLog />;
 
@@ -13,6 +14,10 @@ const Project = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        title={data.markdownRemark.frontmatter.title}
+        description={data.markdownRemark.description}
+      />
       <ProjectContainer>
         <BackBtn to="/">
           <IoIosArrowBack />
