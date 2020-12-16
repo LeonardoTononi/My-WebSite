@@ -127,57 +127,6 @@ module.exports = {
         },
       },
     },
-    /* {
-      resolve: `gatsby-plugin-advanced-sitemap`,
-      options: {
-        // 1 query for each data type
-        query: `
-          {
-            allProject: allMarkdownRemark(filter: { frontmatter: { project: { eq: true } } }) {
-                edges {
-                  node {
-                    id
-                    frontmatter {
-                      slug
-                    }
-                   
-                  }
-                }
-              }
-            allBlogPost: allMarkdownRemark(filter: { frontmatter: { project: { eq: false } } }) {
-                edges {
-                  node {
-                    id
-                    frontmatter {
-                      slug
-                    }
-                  }
-                }
-              }      
-            allSitePage(filter: {componentChunkName: {in: ["component---src-pages-index-js", "component---src-templates-blog-index-js"]}}) {
-                edges {
-                  node {
-                    id
-                    slug: path
-                  }
-                }
-            }   
-          }`,
-        mapping: {
-          allBlogPost: {
-            sitemap: `posts`,
-          },
-          allProject: {
-            sitemap: `projects`,
-          },
-          allSitePage: {
-            sitemap: `pages`,
-          },
-        },
-        exclude: [`/dev-404-page`, `/404`, `/404.html`],
-        createLinkInHead: true, // optional: create a link in the `<head>` of your site
-        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under
-      }, */
-    /*  }, */
+    `gatsby-plugin-sitemap`,
   ],
 };
