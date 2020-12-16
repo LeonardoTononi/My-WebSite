@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { createGlobalStyle } from 'styled-components';
 import { colors } from '../../constants';
-
+import Helmet from 'react-helmet';
 import Contact from '../Contact';
 
 import Emoji from './leo-emoji.jpg';
