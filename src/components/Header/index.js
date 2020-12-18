@@ -18,8 +18,8 @@ const Header = () => {
       <WrapperBtn>
         <StyledButton
           className="circleScaleBtn"
-          href="/static/CV-Leonardo-Tononi-2020.pdf"
-          download
+          href="./cv.pdf"
+          download="cv-leonardo-tononi"
           secondary
         >
           Download Resume
