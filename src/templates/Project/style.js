@@ -1,6 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 import { devices, colors, fonts } from '../../constants';
 import { Link } from 'gatsby';
+import IconIdea from '../../assets/idea.svg';
 
 export const ProjectContainer = styled.section`
   height: 100%;
@@ -101,16 +103,34 @@ export const ProjectContainer = styled.section`
   }
 
   blockquote {
-    border: 2px solid #2c2c32;
+    background: rgba(245, 246, 197, 0.45);
     border-radius: 15px;
     margin: 60px 20px;
     max-width: 760px;
+    position: relative;
 
     p {
       margin: 0;
       width: 100%;
-      padding: 20px;
+      padding: 20px 30px;
     }
+
+    svg {
+      width: 20px;
+    }
+
+    :before {
+      content: url(${IconIdea});
+      position: absolute;
+      right: -60px;
+      top: -30px;
+      z-index: 0;
+      opacity: 0.4;
+    }
+  }
+
+  .link {
+    text-decoration: underline;
   }
 `;
 
