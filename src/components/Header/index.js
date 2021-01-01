@@ -10,8 +10,8 @@ const Header = () => {
         <mark>I'm a Front-End Developer,</mark>
         <br />
         <span>
-          I feel hungry to learn every day, <br /> ready to work and determinate
-          to deal with every kind of problems.
+          I feel hungry to learn every day, <br /> ready to work and to deal
+          with all kinds of problems.
         </span>
       </h1>
 
