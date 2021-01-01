@@ -10,7 +10,7 @@ imagePreview: ./bestfive-3iphone.png
 project: true
 ---
 
-I made this app to solve a problem that my girlfriend and I had before summer (2019), we thought that it would be cool to have a simple app to find where to go in Barcelona, during a sunny day, and then we started adding more categories. At the moment I’m rebuilding this app, with a new style and new functionalities.
+I made this app to solve a problem that my girlfriend and I had before the summer of 2019. We thought that it would be cool to have a simple app to find where to go in Barcelona, during a sunny day, and then we started adding more categories. At the moment I’m rebuilding this app, with a new style and new functionalities.
 
 ![](./bestfive-3iphone.png)
 
@@ -34,9 +34,7 @@ In short:
 
 ![](./twoIphone.png)
 
-> I'm conscious that the code is not well written and organized, I could improve > the use of JavaScript
-> and the data management, also I could improve the file structure. However, it > is for those reasons that
-> I'm re-doing this app with a new design and a new base concept. Stay tuned to > know more!
+> I'm conscious that the code is not well written and organized, I could improve > the use of JavaScript and the data management, also I could improve the file structure. However, it > is for those reasons that I'm re-doing this app with a new design and a new base concept. Stay tuned to > know more!
 
 ### What I've learned?
 

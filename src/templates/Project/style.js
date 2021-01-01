@@ -129,8 +129,13 @@ export const ProjectContainer = styled.section`
     }
   }
 
-  .link {
+  .link,
+  a {
     text-decoration: underline;
+  }
+
+  strong {
+    font-weight: 900;
   }
 `;
 

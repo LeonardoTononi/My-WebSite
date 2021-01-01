@@ -24,10 +24,11 @@ export const SubscribeSection = styled.section`
 
   h4 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 35px;
     text-transform: initial;
     font-weight: 500;
+
     span {
       color: rgb(29, 161, 242);
       font-weight: 800;
@@ -50,7 +51,6 @@ export const SubscribeSection = styled.section`
     }
 
     h4 {
-      font-size: 1.6rem;
       padding: 1rem 0;
     }
   }

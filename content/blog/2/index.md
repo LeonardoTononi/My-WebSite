@@ -9,7 +9,7 @@ tags: ['Coding', 'Productivity', 'Life']
 
 Hi, this is Leonardo.
 
-I'm a simple human that tries to improve day by day, step by step. If it’s your first time here you can read who I am in this blog post “Who am I”, otherwise skip this part.
+I'm a simple human that tries to improve day by day, step by step. If it’s your first time here you can read who I am in this blog post <mark>[“Who am I”](https://www.leonardotononi.com/blog/nice-to-meet-you)</mark>, <strong>otherwise skip this part.</strong>
 
 ### What is this post about?
 
@@ -17,7 +17,7 @@ Eight simple tips on how to structure your work day and your free time and why i
 
 ### What can you do?
 
-1. Not over plan, think small and simple are keys to succeed. For example, trying to accomplish from 3 to 5 important tasks is enough. You are not running a sprint, it’s a marathon.
+1. <strong>Not over plan</strong>, think small and simple are keys to succeed. For example, trying to accomplish from 3 to 5 important tasks is enough. <mark>You are not running a sprint, it’s a marathon</mark>.
 2. Plan just the week in front of you, long term plans are not good because it’s hard to stick to them. Again, you are not running a sprint, it’s a marathon.
 3. Choose something rewarding to do, but remember it is better to privilege healthy activities.
 
@@ -25,7 +25,7 @@ Eight simple tips on how to structure your work day and your free time and why i
 
 4. Try to stay focused when working, it's better to spend less time concentrated but with more quality. Remember that every time you are distracted from your main task, it costs you more effort to return into the previous focus state.
 5. It is better to avoid your smartphone while working / studying, for example, you can use phone time like a reward after ‘x’ time spent focusing. Also try to put your mobile phone in ‘do not disturb’ mode, it helps.
-6. Be clear with yourself, what you expect and want from your day. My suggestion is to write it down, and it doesn't matter if it’s on a paper or on a display, it’s useful to vacuum your mind from distractions.
+6. Be clear with yourself, what you expect and want from your day. My suggestion is to write it down, and it doesn't matter if it’s on a paper or on a display, <mark>it’s useful to vacuum your mind from distractions</mark>.
 
 > At the moment I’m using a minimal calendar app that keeps out noise that other apps have, it’s called [Teux Deux](https://teuxdeux.com/).
 
@@ -36,7 +36,7 @@ Eight simple tips on how to structure your work day and your free time and why i
 
 What is key is that you need to have a kind of organization of what matters for you, and try to stick to it or at least, try to follow a kind of plan.
 
-Sometimes it could become too hard to follow, but this is also normal, don’t worry and don’t be stressed about it.
+Sometimes it could become too hard to follow, but this is also normal, <mark>don’t worry and don’t be stressed about it.</mark>
 
 I'm new to this kind of blog post stuff, and I'm not an english native speaker, therefore I'm trying to keep everything simple.
 
