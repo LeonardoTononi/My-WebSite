@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fonts, devices, colors } from '../../constants/index';
+import { fonts, devices } from '../../constants/index';
 
 export const StyledHeader = styled.header`
   height: 100%;
@@ -12,7 +12,7 @@ export const StyledHeader = styled.header`
   h5 {
     margin: 0;
     text-transform: capitalize;
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     opacity: 0.5;
     font-weight: 400;
     font-size: ${fonts.smalltitle.mobile};
@@ -26,7 +26,7 @@ export const StyledHeader = styled.header`
     letter-spacing: 0.05em;
 
     mark {
-      background: ${colors.mint};
+      background: ${({ theme }) => theme.mint};
     }
 
     span {
@@ -69,11 +69,11 @@ export const WrapperBtn = styled.div`
 export const StyledButton = styled.a`
   width: 250px;
   height: 60px;
-  box-shadow: ${({ secondary }) => secondary && `${colors.base_shadow}`};
-  background: ${({ secondary }) =>
-    (secondary && `${colors.white}`) || `${colors.primary400}`};
-  color: ${({ secondary }) =>
-    (secondary && `${colors.primary}`) || `${colors.white}`};
+  box-shadow: ${({ secondary, theme }) => secondary && `${theme.base_shadow}`};
+  background: ${({ secondary, theme }) =>
+    (secondary && `${theme.white}`) || `${theme.primary400}`};
+  color: ${({ secondary, theme }) =>
+    (secondary && `${theme.primary800}`) || `${theme.white}`};
   display: grid;
   align-items: center;
   place-content: center;
@@ -87,7 +87,7 @@ export const StyledButton = styled.a`
 
   span {
     font-size: 12px;
-    color: #bcbcbc;
+    color: ${({ theme }) => theme.primary200};
     font-style: italic;
     padding-top: 5px;
     opacity: 0;
@@ -95,9 +95,9 @@ export const StyledButton = styled.a`
   }
 
   &:hover {
-    box-shadow: ${colors.base_shadow_hover};
-    background: ${({ secondary }) =>
-      (secondary && `initial`) || `${colors.primary}`};
+    box-shadow: ${({ theme }) => theme.base_shadow_hover};
+    background: ${({ secondary, theme }) =>
+      (secondary && `initial`) || `${theme.primary800}`};
 
     span {
       opacity: 1;

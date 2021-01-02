@@ -23,7 +23,7 @@ export const StyledHeader = styled.header`
 
 	h5 {
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;
@@ -66,7 +66,7 @@ export const DownloadButton = styled.div`
 	a {
 		font-family: "Quicksand";
 		padding: .7rem 1rem;
-		border: 3px solid #3f3d56;
+		border: 3px solid ${({ theme }) => theme.mint};
 		border-radius: 15px;
 		font-weight: 600;
 		letter-spacing: 0.02em;

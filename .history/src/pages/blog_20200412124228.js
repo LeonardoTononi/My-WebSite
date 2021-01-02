@@ -38,7 +38,7 @@ const ArticleContainer = styled.article`
 			display: flex;
 			align-items: center;
 			letter-spacing: 0.05em;
-			color: #3f3d56;
+			color: ${({ theme }) => theme.mint};
 		}
 		small {
 			font-family: "Nunito Sans";

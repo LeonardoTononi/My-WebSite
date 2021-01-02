@@ -31,7 +31,7 @@ export const SkillsContainer = styled.section`
 				display: none;
 				position: absolute;
 				top: 5rem;
-				background: #3f3d56;
+				background: ${({ theme }) => theme.mint};
 			}
 
 			img {

@@ -23,7 +23,7 @@ export const StyledHeader = styled.header`
 
 	h5 {
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;
@@ -60,7 +60,7 @@ export const StyledHeader = styled.header`
 	p {
 		font-size: 1rem;
 		letter-spacing: 0.05em;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: .5;
 	}
 `;
@@ -72,7 +72,7 @@ export const FormSubscribe = styled.form`
 `;
 
 export const EmailInput = styled.input`
-	border: 2px solid #3f3d56;
+	border: 2px solid ${({ theme }) => theme.mint};
 	border-radius: 15px;
 	width: 50%;
 	height: 45px;
@@ -84,8 +84,8 @@ export const EmailInput = styled.input`
 	}
 `;
 export const SubmitInput = styled.input`
-	background: #3f3d56;
-	border: 2px solid #3f3d56;
+	background: ${({ theme }) => theme.mint};
+	border: 2px solid ${({ theme }) => theme.mint};
 	border-radius: 15px;
 	color: #fff;
 	width: 50%;

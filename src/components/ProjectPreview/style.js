@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices, colors, fonts } from '../../constants';
+import { devices, fonts } from '../../constants';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
@@ -51,9 +51,9 @@ export const StyledLink = styled(Link)`
     margin: -25px 0 0 -100px;
     width: 200px;
     height: 50px;
-    border: 1px solid white;
+    border: 1px solid ${({ theme }) => theme.white};
     border-radius: 5px;
-    background-color: white;
+    background-color: ${({ theme }) => theme.white};
     z-index: 1;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@ export const StyledLink = styled(Link)`
     }
 
     ${StyledImg} {
-      box-shadow: ${colors.base_shadow};
+      box-shadow: ${({ theme }) => theme.base_shadow};
     }
   }
 `;

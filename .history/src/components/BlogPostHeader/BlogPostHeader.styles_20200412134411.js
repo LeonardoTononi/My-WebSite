@@ -20,7 +20,7 @@ export const StyledHeader = styled.header`
 
 	h5 {
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;
@@ -47,7 +47,7 @@ export const ButtonSubscribe = styled.div`
 	top: 3rem;
 
 	input {
-		border: 2px solid #3f3d56;
+		border: 2px solid ${({ theme }) => theme.mint};
 		border-radius: 15px 0px 0px 15px;
 		width: 50%;
 		height: 45px;
@@ -60,8 +60,8 @@ export const ButtonSubscribe = styled.div`
 	}
 
 	button {
-		background: #3f3d56;
-		border: 2px solid #3f3d56;
+		background: ${({ theme }) => theme.mint};
+		border: 2px solid ${({ theme }) => theme.mint};
 		border-radius: 0px 15px 15px 0px;
 		color: #fff;
 		width: 40%;

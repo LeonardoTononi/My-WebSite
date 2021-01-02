@@ -10,20 +10,20 @@ export const StyledHeader = styled.header`
   padding: 20px;
 
   mark {
-    background-color: #ceffbb;
+    background-color: ${({ theme }) => theme.mint};
   }
 
   @media (min-width: 900px) {
     justify-content: start;
     align-content: center;
     background-image: none;
-    border-bottom: 6px solid #d3d3de26;
+    border-bottom: 6px solid ${({ theme }) => theme.primary100};
   }
 
   h5 {
     margin: 0;
     text-transform: capitalize;
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     opacity: 0.5;
     font-weight: 400;
     font-size: 1rem;
@@ -61,7 +61,7 @@ export const StyledHeader = styled.header`
   p {
     font-size: 1rem;
     letter-spacing: 0.05em;
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     opacity: 0.5;
     margin: 0;
   }

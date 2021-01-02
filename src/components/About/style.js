@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices, colors, fonts } from '../../constants';
+import { devices, fonts } from '../../constants';
 import { Link } from 'gatsby';
 
 export const AboutContainer = styled.section`
@@ -16,7 +16,7 @@ export const AboutContainer = styled.section`
     width: 100%;
     border-radius: 15px;
     place-self: start;
-    box-shadow: 6px 6px 22px #ebebeb8a, 8px 11px 10px #eeeeee21;
+    box-shadow: ${({ theme }) => theme.base_shadow_light};
     transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
     transform: scale(0.9);
     filter: grayscale(40%);
@@ -27,18 +27,18 @@ export const TextContainer = styled.div`
   text-align: center;
   border-radius: 20px;
   padding: 15px;
-  box-shadow: 6px 6px 22px #ebebeb8a, 8px 11px 10px #eeeeee21;
+  border: ${({ theme }) => `1px solid ${theme.primary200}`};
   width: 90%;
   margin: 0 auto;
   position: relative;
   bottom: 60px;
-  background: white;
+  background: ${({ theme }) => theme.white};
   transform: scale(0.9);
   transition: transform 300ms ease-in-out;
 
   p {
     font-size: ${fonts.text.mobile};
-    color: #423a3a;
+    color: ${({ theme }) => theme.primary400};
   }
 
   h5 {
@@ -53,6 +53,8 @@ export const TextContainer = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.primary800};
+
   &:hover,
   &:active {
     h5 {
@@ -77,7 +79,7 @@ export const Text = styled.div`
   margin: 0;
 
   mark {
-    background: ${colors.mint};
+    background: ${({ theme }) => theme.mint};
   }
 
   @media (min-width: 600px) {
@@ -99,7 +101,8 @@ export const Quote = styled.p`
   font-size: 28px;
   margin: 30px 15px !important;
   line-height: 3.3rem;
-  color: #423a3a;
+  /* color: #423a3a; */
+  color: ${({ theme }) => theme.primary400};
   font-weight: 600;
 `;
 
@@ -114,8 +117,8 @@ export const Button = styled.button`
   position: relative;
   font-size: ${fonts.text.base};
   border-radius: 5px;
-  border: 1px solid ${colors.primary};
-  color: ${colors.primary};
+  border: ${({ theme }) => `1px solid  ${theme.primary600}`};
+  color: ${({ theme }) => theme.primary800};
   outline: none;
 
   @media ${devices.tabletM} {

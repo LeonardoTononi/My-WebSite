@@ -31,7 +31,7 @@ export const SkillsContainer = styled.section`
 				display: none;
 				position: absolute;
 				top: 5rem;
-				background: #3f3d56;
+				background: ${({ theme }) => theme.mint};
 				color: #fff;
 				border-radius: 5px;
 				padding: .3rem .5rem;

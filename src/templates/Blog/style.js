@@ -5,11 +5,11 @@ export const BlogPreviewContainer = styled.article`
   position: relative;
   max-width: 920px;
   padding: 1rem;
-  background: #d3d3de26;
+  background: ${({ theme }) => theme.primary100};
   border-radius: 10px;
   display: grid;
   margin: 60px 20px;
-  transition: background 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
 
   header {
     h3 {
@@ -18,29 +18,29 @@ export const BlogPreviewContainer = styled.article`
       font-weight: bold;
       font-size: 3rem;
       letter-spacing: 0.05em;
-      color: #3f3d56;
+      color: ${({ theme }) => theme.primary600};
     }
     small {
       font-weight: normal;
       line-height: 3rem;
       font-size: 1rem;
       letter-spacing: 0.05em;
-      color: #3f3d56;
+      color: ${({ theme }) => theme.primary600};
     }
   }
 
   section {
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     p {
       margin: 0;
       font-size: 1.1rem;
       letter-spacing: 0.05em;
-      color: #3f3d56;
+      color: ${({ theme }) => theme.primary600};
     }
   }
 
   &:hover {
-    background: #d3d3de6b;
+    transform: scale(1.05);
   }
 `;
 
@@ -63,6 +63,7 @@ export const Tag = styled.div`
   border-radius: 5px;
   margin: 1rem 0.4rem 1rem 0;
   font-size: 0.9rem;
+  color: #2c2c32;
 `;
 
 export const Pagination = styled.div`
@@ -84,5 +85,5 @@ export const PageBtn = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2c2c32;
+  color: ${({ theme }) => theme.primary800};
 `;

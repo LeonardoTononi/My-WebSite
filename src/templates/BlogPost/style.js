@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { colors } from '../../constants';
 
 export const SubscribeSection = styled.section`
+  box-shadow: ${({ theme }) => theme.base_shadow};
   display: grid;
   position: relative;
   max-width: 1000px;
@@ -10,10 +10,9 @@ export const SubscribeSection = styled.section`
   padding: 2rem;
   justify-content: start;
   align-content: center;
-  box-shadow: 6px 6px 22px #ebebeb, -6px -6px 22px #ffffff;
 
   mark {
-    background: ${colors.mint};
+    background: ${({ theme }) => theme.mint};
   }
 
   h3 {
@@ -38,13 +37,14 @@ export const SubscribeSection = styled.section`
   p {
     font-size: 1.2rem;
     margin: 0;
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     opacity: 0.5;
     padding-top: 20px;
   }
 
   @media only screen and (min-width: 600px) {
     margin: 4rem auto 6rem auto;
+
     h3 {
       margin: 0;
       font-size: 4rem;

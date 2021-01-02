@@ -9,12 +9,12 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-family: 'Nunito Sans', sans-serif;
-    color: #3F3D56;
+    color: ${({ theme }) => theme.mint};
   }
   a {
     text-decoration: none;
     box-shadow: none;
-    color: #3F3D56; 
+    color: ${({ theme }) => theme.mint}; 
   }
 `
 

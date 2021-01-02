@@ -1,5 +1,5 @@
-import { fonts } from "./fonts"
-import { devices } from "./devices"
-import { colors } from "./colors"
+import { fonts } from './fonts';
+import { devices } from './devices';
+import { themes } from './themes';
 
-export { fonts, devices, colors }
+export { fonts, devices, themes };

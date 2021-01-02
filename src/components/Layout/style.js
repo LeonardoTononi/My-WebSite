@@ -1,6 +1,33 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { devices, fonts, colors } from '../../constants';
+import { devices } from '../../constants';
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    font-family: 'Raleway';
+    color: ${({ theme }) => theme.primary800};
+    background-color:  ${({ theme }) => theme.white};
+    font-size: 16px;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    box-shadow: none;
+    color: ${({ theme }) => theme.primary800};
+  }
+
+  h2,h4,h5 {
+    font-family: 'Raleway';
+  }
+  h1,h3 {
+    font-family: 'Playfair Display';
+  }
+`;
 
 export const LayoutContainer = styled.div`
   * {
@@ -49,9 +76,10 @@ export const NavList = styled.div`
     box-shadow: 0;
     transition: box-shadow 100ms ease-in-out;
     border-radius: 5px;
+    color: ${({ theme }) => theme.primary800};
 
     &:hover {
-      box-shadow: ${colors.base_shadow};
+      box-shadow: ${({ theme }) => theme.base_shadow};
     }
   }
 
@@ -78,5 +106,4 @@ export const StyledFooter = styled.footer`
   text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
-  background: #d3d3de63;
 `;

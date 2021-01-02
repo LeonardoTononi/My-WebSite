@@ -56,7 +56,7 @@ export const ProjectTitle = styled.h4`
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.05em;
-	color: #3f3d56;
+	color: ${({ theme }) => theme.mint};
 	font-weight: 400;
 `;
 
@@ -129,13 +129,13 @@ export const SocialsContainer = styled.div`
 	a {
 		text-transform: uppercase;
 		padding: .4rem 1rem;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		margin: 0 10px;
 		cursor: pointer;
 		transition: background-color 100ms ease-in;
 
 		&:first-of-type {
-			border: 2px solid #3f3d56;
+			border: 2px solid ${({ theme }) => theme.mint};
 			border-radius: 15px;
 		}
 	}

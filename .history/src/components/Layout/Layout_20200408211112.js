@@ -14,12 +14,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    color: #3F3D56;
+    color: ${({ theme }) => theme.mint};
   }
   a {
     text-decoration: none;
     box-shadow: none;
-    color: #3F3D56; 
+    color: ${({ theme }) => theme.mint}; 
   }
 `
 

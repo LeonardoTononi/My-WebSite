@@ -13,7 +13,7 @@ export const FormSubscribe = styled.form`
 `;
 
 export const EmailInput = styled.input`
-	border: 2px solid #3f3d56;
+	border: 2px solid ${({ theme }) => theme.mint};
 	border-radius: 15px;
 	width: 90%;
 	height: 45px;
@@ -21,8 +21,8 @@ export const EmailInput = styled.input`
 	pa: 0 2rem;
 `;
 export const SubmitInput = styled.input`
-	background: #3f3d56;
-	border: 2px solid #3f3d56;
+	background: ${({ theme }) => theme.mint};
+	border: 2px solid ${({ theme }) => theme.mint};
 	border-radius: 15px;
 	color: #fff;
 	width: 90%;
@@ -35,5 +35,5 @@ export const SubmitInput = styled.input`
 
 export const SuccessModal = styled.div`
 	font-size: 2rem;
-	color: #3f3d56;
+	color: ${({ theme }) => theme.mint};
 `;

@@ -26,7 +26,7 @@ export const BlogPostContainer = styled.article`
 			font-weight: bold;
 			font-size: 3rem;
 			letter-spacing: 0.05em;
-			color: #3f3d56;
+			color: ${({ theme }) => theme.mint};
 		}
 		small {
 			font-weight: normal;
@@ -137,7 +137,7 @@ export const SubscribeSection = styled.section`
 	p {
 		font-size: 1rem;
 		letter-spacing: 0.05em;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: .5;
 	}
 `;
