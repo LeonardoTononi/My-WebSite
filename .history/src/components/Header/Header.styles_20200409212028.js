@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
 
   h5 {
     text-transform: uppercase;
-    color: #3F3D56;
+    color: ${({ theme }) => theme.mint};
     opacity: 0.5;
     font-weight: 400;
     font-size: .9rem;
@@ -34,7 +34,7 @@ export const StyledHeader = styled.header`
   a {
     font-family: 'Quicksand', 'Nunito Sans';
     padding: .7rem 1rem; 
-    border: 3px solid #3F3D56;
+    border: 3px solid ${({ theme }) => theme.mint};
     border-radius: 15px;    
     text-transform: uppercase;
     font-weight: bold;

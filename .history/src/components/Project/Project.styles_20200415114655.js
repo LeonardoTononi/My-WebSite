@@ -112,7 +112,7 @@ export const SocialsContainer = styled.div`
 		padding: .4rem;
 		width: 55px;
 		height: 55px;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		margin: 0 10px;
 		border-radius: 50%;
 		cursor: pointer;

@@ -1,8 +1,16 @@
 import React from 'react';
 
 import { StyledHeader, StyledButton, WrapperBtn } from './style';
+import useSound from 'use-sound';
+
+import success from './success-low.wav';
 
 const Header = () => {
+  const [play] = useSound(success);
+
+  const delay = () => {
+    setTimeout(() => play(), 500);
+  };
   return (
     <StyledHeader>
       <h5>Leonardo Tononi</h5>
@@ -21,6 +29,7 @@ const Header = () => {
           href="./cv.pdf"
           download="cv-leonardo-tononi"
           secondary
+          onClick={delay}
         >
           Download Resume
           <span>Updated on Dec 2020</span>

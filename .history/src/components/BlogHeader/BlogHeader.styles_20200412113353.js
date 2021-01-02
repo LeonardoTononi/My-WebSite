@@ -22,7 +22,7 @@ export const StyledHeader = styled.header`
 
   h5 {
     text-transform: uppercase;
-    color: #3F3D56;
+    color: ${({ theme }) => theme.mint};
     opacity: 0.5;
     font-weight: 400;
     font-size: .9rem;
@@ -59,7 +59,7 @@ export const StyledHeader = styled.header`
   p {
     font-size: 1.2rem;
     letter-spacing: 0.05em;
-    color: #3F3D56;
+    color: ${({ theme }) => theme.mint};
     opacity: .5;
   }
 `

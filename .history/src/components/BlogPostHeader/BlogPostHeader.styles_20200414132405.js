@@ -19,7 +19,7 @@ export const StyledHeader = styled.header`
 
 	h5 {
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;

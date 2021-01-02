@@ -24,7 +24,7 @@ export const StyledHeader = styled.header`
 	h5 {
 		margin: 0;
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;
@@ -71,7 +71,7 @@ export const DownloadButton = styled.div`
 	a {
 		position: relative;
 		padding: .7rem 1rem;
-		background-color: #3f3d56;
+		background-color: ${({ theme }) => theme.mint};
 		color: #fff;
 		border-radius: 15px;
 		font-weight: 300;

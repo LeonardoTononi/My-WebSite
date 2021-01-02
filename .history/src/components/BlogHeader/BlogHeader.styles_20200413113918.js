@@ -24,7 +24,7 @@ export const StyledHeader = styled.header`
 	h5 {
 		margin: 0;
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;
@@ -61,7 +61,7 @@ export const StyledHeader = styled.header`
 	p {
 		font-size: 1rem;
 		letter-spacing: 0.05em;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: .5;
 	}
 `;

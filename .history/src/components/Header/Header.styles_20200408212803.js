@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
 
   h5 {
     text-transform: uppercase;
-    color: #3F3D56;
+    color: ${({ theme }) => theme.mint};
   }
 
   h4 {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { devices, colors, fonts } from '../../constants';
+import { devices, theme, fonts } from '../../constants';
 import { Link } from 'gatsby';
 import IconIdea from '../../assets/idea.svg';
 
@@ -15,14 +15,14 @@ export const ProjectContainer = styled.section`
   h5 {
     margin: 0;
     text-transform: capitalize;
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     opacity: 0.5;
     font-weight: 400;
     font-size: ${fonts.smalltitle.mobile};
   }
 
   mark {
-    background: ${colors.mint};
+    background: ${({ theme }) => theme.mint};
   }
 
   h1 {
@@ -31,7 +31,12 @@ export const ProjectContainer = styled.section`
     letter-spacing: 0.05em;
 
     mark {
-      background: ${colors.mint};
+      background: ${({ theme }) => theme.mint};
+      color: #3f3d56;
+
+      a {
+        color: #3f3d56;
+      }
     }
 
     span {
@@ -103,7 +108,9 @@ export const ProjectContainer = styled.section`
   }
 
   blockquote {
-    background: rgba(245, 246, 197, 0.45);
+    background: ${({ theme }) =>
+      (theme.value === 'dark' && `rgba(245, 246, 197, 0.25)`) ||
+      `rgba(245, 246, 197, 0.45)`};
     border-radius: 15px;
     margin: 60px 20px;
     max-width: 760px;
@@ -125,7 +132,7 @@ export const ProjectContainer = styled.section`
       right: -60px;
       top: -30px;
       z-index: 0;
-      opacity: 0.4;
+      opacity: ${({ theme }) => (theme.value === 'dark' && 1) || 0.4};
     }
   }
 
@@ -152,8 +159,8 @@ export const Row = styled.div`
 
 export const BackBtn = styled(Link)`
   margin-bottom: 20px;
-  border: 1px solid #d3d3de26;
-  background-color: #d3d3de26;
+  border: 1px solid ${({ theme }) => theme.primary100};
+  background-color: ${({ theme }) => theme.primary100};
   width: 60px;
   padding: 0 5px;
   height: 30px;
@@ -173,7 +180,7 @@ export const BackBtn = styled(Link)`
 
   &:hover,
   &:active {
-    box-shadow: ${colors.base_shadow};
+    box-shadow: ${({ theme }) => theme.base_shadow};
     padding: 0 18px;
 
     svg {

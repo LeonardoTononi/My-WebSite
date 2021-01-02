@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { devices, colors, fonts } from '../../constants';
+import { devices, fonts } from '../../constants';
 
 export const ContactContainer = styled.section`
   padding: 20px;
   display: grid;
   place-items: center;
-  background-color: #d3d3de26;
+  background-color: ${({ theme }) => theme.primary100};
   margin: 0 auto;
 
   mark {
-    background-color: ${colors.mint};
+    background-color: ${({ theme }) => theme.mint};
   }
 
   p {
@@ -74,12 +74,13 @@ export const SocialLink = styled.div`
     display: grid;
     place-content: center;
     margin: 1.3rem 0;
-    box-shadow: ${colors.tiny_shadow};
+    box-shadow: ${({ theme }) => theme.tiny_shadow};
     border-radius: 10px;
+    color: ${({ theme }) => theme.primary800};
 
     &:hover,
     &:active {
-      box-shadow: ${colors.base_shadow_hover};
+      box-shadow: ${({ theme }) => theme.base_shadow_hover};
 
       svg {
         transform: scale(1.05);

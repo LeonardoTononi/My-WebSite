@@ -24,7 +24,7 @@ export const StyledHeader = styled.header`
 	h5 {
 		margin: 0;
 		text-transform: uppercase;
-		color: #3f3d56;
+		color: ${({ theme }) => theme.mint};
 		opacity: 0.5;
 		font-weight: 400;
 		font-size: .9rem;
@@ -70,15 +70,15 @@ export const StyledHeader = styled.header`
 export const DownloadButton = styled.div`
 	a {
 		padding: .7rem 1rem;
-		background-color: #3f3d56;
+		background-color: ${({ theme }) => theme.mint};
 		color: #fff;
-		/* border: 3px solid #3f3d56; */
+		/* border: 3px solid ${({ theme }) => theme.mint}; */
 		border-radius: 15px;
 		font-weight: 300;
 		letter-spacing: 0.02em;
 
 		&:hover {
-			box-shadow: 5px 5px 0 0 #3f3d56;
+			box-shadow: 5px 5px 0 0 ${({ theme }) => theme.mint};
 		}
 
 		@media (min-width: 600px) {

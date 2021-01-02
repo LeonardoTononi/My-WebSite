@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   display: grid;
   place-content: center;
   border-radius: 10px;
-  background: #d3d3de26;
+  background: ${({ theme }) => theme.primary100};
 
   @media (min-width: 900px) {
     padding: 2rem 3rem;
@@ -20,7 +20,7 @@ export const StyledHeader = styled.header`
 
   h5 {
     text-transform: capitalize;
-    color: #3f3d56;
+    color: ${({ theme }) => theme.primary600};
     opacity: 0.5;
     font-weight: 400;
     font-size: 0.9rem;
