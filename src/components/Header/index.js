@@ -2,8 +2,8 @@ import React from 'react';
 
 import { StyledHeader, StyledButton, WrapperBtn } from './style';
 import useSound from 'use-sound';
-
-import success from './success-low.wav';
+import Cv from './cv.pdf';
+import success from './pop.wav';
 
 const Header = () => {
   const [play] = useSound(success);
@@ -26,17 +26,17 @@ const Header = () => {
       <WrapperBtn>
         <StyledButton
           className="circleScaleBtn"
-          href="./cv.pdf"
+          href={Cv}
           download="cv-leonardo-tononi"
           secondary
           onClick={delay}
         >
           Download Resume
-          <span>Updated on Dec 2020</span>
+          <span>Updated on Jan 2021</span>
         </StyledButton>
-        {/* <StyledButton className="circleScaleBtn" href="/blog" secondary>
+        <StyledButton className="circleScaleBtn" href="/blog" primary>
           Read My Blog
-        </StyledButton> */}
+        </StyledButton>
       </WrapperBtn>
     </StyledHeader>
   );

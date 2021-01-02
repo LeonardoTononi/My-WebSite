@@ -71,9 +71,12 @@ export const StyledButton = styled.a`
   height: 60px;
   box-shadow: ${({ secondary, theme }) => secondary && `${theme.base_shadow}`};
   background: ${({ secondary, theme }) =>
-    (secondary && `${theme.white}`) || `${theme.primary400}`};
-  color: ${({ secondary, theme }) =>
-    (secondary && `${theme.primary800}`) || `${theme.white}`};
+    (secondary && `${theme.white}`) ||
+    (theme.value === 'dark' && `transparent`) ||
+    `${theme.dirty_white}`};
+  color: ${({ theme }) => theme.primary800};
+  text-decoration: ${({ secondary, theme }) =>
+    theme.value === 'dark' && !secondary && `underline`};
   display: grid;
   align-items: center;
   place-content: center;
@@ -97,7 +100,7 @@ export const StyledButton = styled.a`
   &:hover {
     box-shadow: ${({ theme }) => theme.base_shadow_hover};
     background: ${({ secondary, theme }) =>
-      (secondary && `initial`) || `${theme.primary800}`};
+      (secondary && `initial`) || `${theme.dirty_white}`};
 
     span {
       opacity: 1;

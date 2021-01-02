@@ -11,6 +11,7 @@ import FigmaIcon from '../../assets/skills/figma.svg';
 import GoogleAnalyticsIcon from '../../assets/skills/google-anal.png';
 import StyledCompIcon from '../../assets/skills/styled.png';
 import StrapiIcon from '../../assets/skills/strapi.svg';
+import NextIcon from '../../assets/skills/nextjs.svg';
 import WpIcon from '../../assets/skills/wordpress.png';
 
 export const skillsArray = [
@@ -23,8 +24,12 @@ export const skillsArray = [
     icon: ReactIcon,
   },
   {
-    name: 'Gatsby',
+    name: 'GatsbyJS',
     icon: GatsbyIcon,
+  },
+  {
+    name: 'NextJS',
+    icon: NextIcon,
   },
   {
     name: 'WordPress',

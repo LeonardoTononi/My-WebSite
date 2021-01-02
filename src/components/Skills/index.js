@@ -11,7 +11,10 @@ const Skills = () => (
     <Title>Skills</Title>
     <Carousel>
       {skillsArray.map(skill => {
-        const smallIcon = skill.name === 'WordPress' || skill.name === 'Strapi';
+        const smallIcon =
+          skill.name === 'WordPress' ||
+          skill.name === 'Strapi' ||
+          skill.name === 'NextJS';
         const biggerWidth = {
           width: smallIcon && '80px',
         };
