@@ -72,7 +72,7 @@ export const StyledButton = styled.a`
   height: 60px;
   box-shadow: ${({ secondary, theme }) => secondary && `${theme.base_shadow}`};
   background: ${({ secondary, theme }) =>
-    (secondary && `${theme.white}`) ||
+    (secondary && `${theme.primary100}`) ||
     (theme.value === 'dark' && `transparent`) ||
     `${theme.dirty_white}`};
   color: ${({ theme }) => theme.primary800};
@@ -91,7 +91,7 @@ export const StyledButton = styled.a`
 
   span {
     font-size: 12px;
-    color: ${({ theme }) => theme.primary200};
+    color: ${({ theme }) => theme.primary800};
     font-style: italic;
     padding-top: 5px;
     opacity: 0;
@@ -99,9 +99,9 @@ export const StyledButton = styled.a`
   }
 
   &:hover {
-    box-shadow: ${({ theme }) => theme.base_shadow_hover};
-    background: ${({ secondary, theme }) =>
-      (secondary && `initial`) || `${theme.dirty_white}`};
+   /*  box-shadow: ${({ theme }) => theme.base_shadow_hover}; */
+    background: ${({ theme }) => theme.primary100};
+    color: ${({ secondary, theme }) => secondary && theme.mint};
 
     span {
       opacity: 1;

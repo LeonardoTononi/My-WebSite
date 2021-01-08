@@ -7,7 +7,8 @@ export const SkillsContainer = styled.section`
   max-width: 1920px;
   margin: 0 auto;
   margin: 60px auto;
-  box-shadow: ${({ theme }) => theme.base_shadow_light};
+  background: ${({ theme }) => theme.primary100};
+  //box-shadow: ${({ theme }) => theme.base_shadow_light};
 
   img {
     width: 40px;
@@ -24,6 +25,7 @@ export const SkillCard = styled.div`
   flex-direction: column-reverse;
   align-items: center;
   box-shadow: ${({ theme }) => theme.base_shadow_light};
+  background: ${({ theme }) => theme.white};
   padding: 20px;
   margin-right: 30px;
   border-radius: 20px;

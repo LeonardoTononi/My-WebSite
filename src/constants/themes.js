@@ -21,7 +21,7 @@ export const darkTheme = {
   primary600: '#fff',
   primary400: '#f4f4f4',
   primary200: '#bcbcbc',
-  primary100: '#28282f',
+  primary100: '#212429',
   mint: '#ceffbb',
   white: '#2c2c32',
   dirty_white: '#515161',
