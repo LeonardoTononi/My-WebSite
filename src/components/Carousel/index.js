@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledSwiper = styled.div`
   overflow: scroll hidden;
@@ -11,10 +11,10 @@ const StyledSwiper = styled.div`
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
-`
+`;
 
 const Carousel = ({ children }) => {
-  return <StyledSwiper>{children}</StyledSwiper>
-}
+  return <StyledSwiper>{children}</StyledSwiper>;
+};
 
-export default Carousel
+export default Carousel;

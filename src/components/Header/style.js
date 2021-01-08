@@ -61,8 +61,9 @@ export const StyledHeader = styled.header`
 
 export const WrapperBtn = styled.div`
   @media ${devices.tablet} {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: start;
   }
 `;
 
