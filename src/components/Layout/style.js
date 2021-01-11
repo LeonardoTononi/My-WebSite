@@ -74,12 +74,12 @@ export const NavList = styled.div`
     letter-spacing: 0.1em;
     cursor: pointer;
     box-shadow: 0;
-    transition: box-shadow 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out;
     border-radius: 5px;
     color: ${({ theme }) => theme.primary800};
 
     &:hover {
-      box-shadow: ${({ theme }) => theme.base_shadow};
+      background-color: ${({ theme }) => theme.dirty_white};
     }
   }
 

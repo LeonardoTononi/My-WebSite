@@ -70,7 +70,6 @@ export const WrapperBtn = styled.div`
 export const StyledButton = styled.a`
   width: 250px;
   height: 60px;
-  box-shadow: ${({ secondary, theme }) => secondary && `${theme.base_shadow}`};
   background: ${({ secondary, theme }) =>
     (secondary && `${theme.primary100}`) ||
     (theme.value === 'dark' && `transparent`) ||
@@ -100,8 +99,11 @@ export const StyledButton = styled.a`
 
   &:hover {
    /*  box-shadow: ${({ theme }) => theme.base_shadow_hover}; */
-    background: ${({ theme }) => theme.primary100};
-    color: ${({ secondary, theme }) => secondary && theme.mint};
+    background: ${({ theme, primary }) =>
+      (primary && theme.dirty_white) || theme.primary100};
+    color: ${({ secondary, theme }) => secondary && theme.primary800};
+    box-shadow: ${({ secondary, theme }) =>
+      secondary && `${theme.base_shadow}`};
 
     span {
       opacity: 1;

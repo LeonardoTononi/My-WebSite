@@ -74,16 +74,16 @@ export const SocialLink = styled.div`
     display: grid;
     place-content: center;
     margin: 1.3rem 0;
-    box-shadow: ${({ theme }) => theme.tiny_shadow};
+    background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     color: ${({ theme }) => theme.primary800};
 
     &:hover,
     &:active {
-      box-shadow: ${({ theme }) => theme.base_shadow_hover};
+      background-color: ${({ theme }) => theme.dirty_white};
 
       svg {
-        transform: scale(1.05);
+        transform: scale(1.3);
       }
     }
 
