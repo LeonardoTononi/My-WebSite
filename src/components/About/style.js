@@ -27,14 +27,9 @@ export const TextContainer = styled.div`
   text-align: center;
   border-radius: 20px;
   padding: 15px;
-  border: ${({ theme }) => `1px solid ${theme.primary200}`};
-  width: 90%;
   margin: 0 auto;
-  position: relative;
-  bottom: 60px;
-  background: ${({ theme }) => theme.white};
-  transform: scale(0.9);
-  transition: transform 300ms ease-in-out;
+  background-color: initial;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
 
   p {
     font-size: ${fonts.text.mobile};
@@ -67,6 +62,7 @@ export const StyledLink = styled(Link)`
 
     ${TextContainer} {
       transform: scale(1);
+      background-color: ${({ theme }) => theme.primary100};
     }
   }
 `;
