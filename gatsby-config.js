@@ -5,7 +5,7 @@ module.exports = {
       name: `Leonardo Tononi`,
       summary: `A Front-End Developer.`,
     },
-    description: `Hi, this is my website where I show to people who I am.`,
+    description: `Hi there! This is Leonardo. I’m a passionate and avid learner and I love to experiment new things. I am a self-taught programmer and, in this blog, I’d like to share all my findings, difficulties and achievements while learning everything I can about blockchain technology.`,
     siteUrl: `https://leonardotononi.com/`,
     social: {
       twitter: `_Easaaa_`,

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import Helmet from 'react-helmet';
 
 import { BlogPostContainer, HeaderImg } from './style';
 import { CallToAction } from '../../components/CallToAction';
@@ -17,6 +18,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Helmet>
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <BlogPostHeader
         title={post.frontmatter.title}
         date={post.frontmatter.date}

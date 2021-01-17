@@ -9,8 +9,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import LeoImg from '../assets/leo.png';
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, lang, meta, title, location }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,7 +30,20 @@ const SEO = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description;
 
-  const summary = `Hi there! This is Leonardo. I’m a passionate and avid learner and I love to experiment new things. I am a self-taught programmer and, in this blog, I’d like to share all my findings, difficulties and achievements while learning everything I can about blockchain technology.`;
+  const microformats = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: title,
+    url: 'https://www.leonardotononi.com',
+  };
+
+  const globalMicroformats = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: site.siteMetadata.title,
+    description: site.siteMetadata.description,
+    URL: 'https://www.leonardotononi.com',
+  };
 
   return (
     <Helmet
@@ -56,8 +70,12 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `https://www.leonardotononi.com/`,
         },
         {
+          property: `og:url`,
+          content: location.href,
+        },
+        {
           name: `twitter:card`,
-          content: summary,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -68,11 +86,26 @@ const SEO = ({ description, lang, meta, title }) => {
           content: title,
         },
         {
+          name: `twitter:image`,
+          content: LeoImg,
+        },
+        {
           name: `twitter:description`,
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(microformats)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(globalMicroformats)}
+      </script>
+      <link
+        rel="canonical"
+        href="leonardotononi.com"
+        data-baseprotocol="https:"
+        data-basehost="www.leonardotononi.com"
+      />
+    </Helmet>
   );
 };
 
