@@ -21,6 +21,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
+        time={post.timeToRead}
       />
       <ProjectContainer>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -43,6 +44,7 @@ export const pageQuery = graphql`
       id
       excerpt
       html
+      timeToRead
       frontmatter {
         title
         description

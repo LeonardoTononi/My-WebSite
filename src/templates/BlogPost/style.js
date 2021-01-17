@@ -17,7 +17,7 @@ export const SubscribeSection = styled.section`
 
   h3 {
     margin: 2rem 0;
-    font-size: 4rem;
+    font-size: 2rem;
     letter-spacing: 0.05em;
   }
 
@@ -47,7 +47,7 @@ export const SubscribeSection = styled.section`
 
     h3 {
       margin: 0;
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     h4 {

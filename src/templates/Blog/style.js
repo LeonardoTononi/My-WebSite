@@ -16,24 +16,27 @@ export const BlogPreviewContainer = styled.article`
       margin: 0;
       font-family: 'Playfair Display';
       font-weight: bold;
-      font-size: 3rem;
+      font-size: 2.2rem;
       letter-spacing: 0.05em;
       color: ${({ theme }) => theme.primary600};
     }
-    small {
-      font-weight: normal;
-      line-height: 3rem;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-      color: ${({ theme }) => theme.primary600};
-    }
+  }
+  small {
+    font-weight: normal;
+    line-height: 3rem;
+    font-size: 0.9rem;
+    color: ${({ theme }) => theme.primary600};
+    opacity: 0.7;
+    width: 100%;
+    text-align: end;
+    padding-right: 20px;
   }
 
   section {
     color: ${({ theme }) => theme.primary600};
     p {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       letter-spacing: 0.05em;
       color: ${({ theme }) => theme.primary600};
     }

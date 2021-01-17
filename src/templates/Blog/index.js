@@ -63,7 +63,11 @@ const Blog = ({ pageContext, data }) => {
               <BlogPreviewContainer key={node.frontmatter.slug}>
                 <header>
                   <h3>{title}</h3>
-                  <small>{node.frontmatter.date}</small>
+                  <Tags>
+                    {node.frontmatter.tags.map(tag => (
+                      <Tag type={tag.toLowerCase()}>{tag}</Tag>
+                    ))}
+                  </Tags>
                 </header>
 
                 <section
@@ -71,11 +75,10 @@ const Blog = ({ pageContext, data }) => {
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-                <Tags>
-                  {node.frontmatter.tags.map(tag => (
-                    <Tag type={tag.toLowerCase()}>{tag}</Tag>
-                  ))}
-                </Tags>
+
+                <small className="info">
+                  {node.frontmatter.date} · {node.timeToRead} min read
+                </small>
               </BlogPreviewContainer>
             </Link>
           );
@@ -108,6 +111,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title

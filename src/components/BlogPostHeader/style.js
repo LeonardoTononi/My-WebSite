@@ -33,12 +33,17 @@ export const StyledHeader = styled.header`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 0.05em;
     margin: 0;
+    padding-bottom: 10px;
   }
 
   p {
     margin: 0;
+    width: 100%;
+    text-align: end;
+    padding-right: 10px;
+    opacity: 0.8;
   }
 `;

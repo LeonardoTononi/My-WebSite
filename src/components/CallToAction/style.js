@@ -18,13 +18,13 @@ export const SubscribeSection = styled.section`
 
   h3 {
     margin: 2rem 0;
-    font-size: 4rem;
+    font-size: 2rem;
     letter-spacing: 0.05em;
   }
 
   h4 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 35px;
     text-transform: initial;
     font-weight: 500;
@@ -47,11 +47,11 @@ export const SubscribeSection = styled.section`
     margin: 4rem auto 6rem auto;
     h3 {
       margin: 0;
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     h4 {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       padding: 1rem 0;
     }
   }
@@ -69,9 +69,25 @@ export const FollowMe = styled.a`
   font-size: 12px;
   cursor: pointer;
   color: ${({ theme }) => theme.primary800};
+  transition: transform 100ms ease-in-out;
 
   svg {
     color: rgb(29, 161, 242);
-    font-size: 32px;
+    font-size: 82px;
+    transition: transform 100ms ease-in-out;
+  }
+
+  span {
+    display: none;
+    padding-top: 20px;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.55);
+    }
+    span {
+      display: block;
+    }
   }
 `;

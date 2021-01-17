@@ -16,7 +16,7 @@ export const CallToAction = () => (
     <p>Thanks for reading.</p>
     <FollowMe href="https://twitter.com/_Easaaa_" target="_blank">
       <SiTwitter />
-      Follow Me @_Easaaa_
+      <span>@_Easaaa_</span>
     </FollowMe>
   </SubscribeSection>
 );
