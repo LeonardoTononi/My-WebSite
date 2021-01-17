@@ -9,7 +9,7 @@ import SEO from '../../components/seo';
 
 const DiamondIcon = <VscDebugBreakpointLog />;
 
-const Project = ({ data, pageContext }) => {
+const Project = ({ data, pageContext, location }) => {
   const { description, title } = data.markdownRemark.frontmatter;
 
   return (
@@ -17,6 +17,7 @@ const Project = ({ data, pageContext }) => {
       <SEO
         title={data.markdownRemark.frontmatter.title}
         description={data.markdownRemark.description}
+        location={location}
       />
       <ProjectContainer>
         <BackBtn to="/">

@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        location={location}
       />
       <Helmet>
         <meta name="robots" content="index, follow" />

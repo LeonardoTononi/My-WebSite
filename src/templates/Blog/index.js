@@ -14,7 +14,7 @@ import {
   PageBtn,
 } from './style.js';
 
-const Blog = ({ pageContext, data }) => {
+const Blog = ({ pageContext, data, location }) => {
   const siteTitle = data?.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
   const {
@@ -50,7 +50,7 @@ const Blog = ({ pageContext, data }) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="Blog Index" />
+      <SEO title="My blog posts" location={location} />
       <BlogHeader />
       <BlogsWrapper>
         {posts.map(({ node }) => {

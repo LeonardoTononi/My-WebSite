@@ -71,7 +71,7 @@ const SEO = ({ description, lang, meta, title, location }) => {
         },
         {
           property: `og:url`,
-          content: location.href,
+          content: location?.href,
         },
         {
           name: `twitter:card`,
