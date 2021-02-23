@@ -28,7 +28,7 @@ export const BlogPreviewContainer = styled.article`
     color: ${({ theme }) => theme.primary600};
     opacity: 0.7;
     width: 100%;
-    text-align: end;
+    text-align: start;
     padding-right: 20px;
   }
 

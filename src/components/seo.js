@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import LeoImg from '../assets/leo.png';
+import CardSeoImg from '../assets/card-seo.png';
 
 const SEO = ({ description, lang, meta, title, location }) => {
   const { site } = useStaticQuery(
@@ -63,6 +64,10 @@ const SEO = ({ description, lang, meta, title, location }) => {
           content: `https://www.leonardotononi.com/`,
         },
         {
+          property: `og:image`,
+          content: CardSeoImg,
+        },
+        {
           property: `og:url`,
           content: location?.href,
         },
@@ -80,7 +85,7 @@ const SEO = ({ description, lang, meta, title, location }) => {
         },
         {
           name: `twitter:image`,
-          content: LeoImg,
+          content: CardSeoImg,
         },
         {
           name: `twitter:description`,

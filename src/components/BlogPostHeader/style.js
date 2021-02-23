@@ -42,7 +42,7 @@ export const StyledHeader = styled.header`
   p {
     margin: 0;
     width: 100%;
-    text-align: end;
+    text-align: start;
     padding-right: 10px;
     opacity: 0.8;
   }
