@@ -1,6 +1,6 @@
 ---
-title: 8 Tips on how to face your day as a developer.
-slug: how-to-face-your-day-as-a-dev
+title: 8 Tips on how to improve your day as a developer.
+slug: how-to-improve-your-day-as-a-dev
 date: '2021-01-01T10:40:32.169Z'
 description: Eight simple tips on how to structure your work day and your free time.
 tags: ['Coding', 'Productivity', 'Life']
