@@ -35,6 +35,10 @@ export const LayoutContainer = styled.div`
   }
 `;
 
+export const Logo = styled.img`
+  width: 60px;
+`;
+
 export const NavContainer = styled.nav`
   padding: 10px;
   display: inline-flex;
@@ -42,14 +46,11 @@ export const NavContainer = styled.nav`
   align-items: center;
   width: 100%;
 
-  img {
-    width: 60px;
-  }
   @media ${devices.tablet} {
     justify-content: center;
     position: relative;
 
-    img {
+    ${Logo} {
       width: 80px;
       position: absolute;
       left: 10px;
@@ -106,4 +107,13 @@ export const StyledFooter = styled.footer`
   text-align: center;
   font-weight: bold;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  gap: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
 `;

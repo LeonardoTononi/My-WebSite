@@ -16,6 +16,7 @@ import {
   StyledFooter,
   Icon,
   GlobalStyle,
+  Logo,
 } from './style';
 
 const Layout = ({ children }) => {
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <NavContainer>
           <Icon>
-            <img src={Emoji} />
+            <Logo src={Emoji} />
           </Icon>
           <NavList>
             <Link to="/">Home</Link>
@@ -40,7 +41,15 @@ const Layout = ({ children }) => {
         <main>{children}</main>
 
         <Contact id="contact" />
-        <StyledFooter>leonardotononi@gmail.com</StyledFooter>
+        <StyledFooter>
+          <a href="https://dev.to/easaaa" target="_blank">
+            <img
+              src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+              alt="Leonardo Tononi's DEV Community Profile"
+            />
+          </a>
+          <a href="mailto:leonardotononi@gmail.com">leonardotononi@gmail.com</a>
+        </StyledFooter>
       </LayoutContainer>
     </ThemeProvider>
   );
